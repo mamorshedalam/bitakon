@@ -3,9 +3,61 @@
 @tailwind utilities;
 
 @layer components {
+     .sl-container {
+       @apply max-w-[1380px] w-full px-3 mx-auto;
+     }
 }
 
 @layer base {
+  body {
+    @apply bg-slate-950 text-white text-sm;
+  }
+
+  section {
+    @apply relative;
+  }
+
+  a,
+  button {
+    @apply inline-block cursor-pointer;
+  }
+
+  img {
+    @apply w-full;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply outline-none bg-transparent;
+  }
+
+  a,
+  button,
+  span,
+  p,
+  i,
+  input,
+  select,
+  textarea,
+  li,
+  img,
+  svg,
+  label,
+  svg path,
+  tr,
+  td,
+  *::after,
+  *::before,
+  .transition-3,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply transition-all duration-300 ease-out;
+  }
 }
 
 @layer utilities {
