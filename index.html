@@ -23,14 +23,14 @@
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body x-data="{sidebar : true}">
+<body x-data="{sidebar : false}">
 
      <!-- SIDEBAR -->
      <aside :class="sidebar ? 'left-0':'left-full'" class="fixed top-0 w-full h-full overflow-x-hidden overflow-y-auto transition-all duration-300 z-[999]">
           <div :class="sidebar ? 'block':'hidden'" @click="sidebar = !sidebar" class="absolute inset-0 h-full w-full bg-black/25 -z-10"></div>
-          <div class="relative max-w-[450px] w-full h-full overflow-y-auto ml-auto sm:p-12 p-5 bg-white text-slate-800 rounded-md z-10">
+          <div class="relative max-w-[450px] w-full h-full overflow-y-auto ml-auto sm:p-12 p-5 bg-slate-900 rounded-md z-10">
                <div class="flex flex-items-center justify-between border-b border-neutral-200 pb-5 mb-10">
-                    <a href="index.html" class="flex items-center"><img src="assets/img/logo/logo-black.png" alt="logo"></a>
+                    <a href="index.html" class="flex items-center"><img src="assets/img/logo/logo.png" alt="logo"></a>
                     <button @click="sidebar = !sidebar" class="flex items-center justify-center w-11 h-11 rounded-full bg-purple-500 text-white hover:bg-purple-900"><i
                               class="fa-solid fa-xmark"></i></button>
                </div>
@@ -158,19 +158,19 @@
                               <span
                                    class="mr-3 h-10 w-10 leading-10 rounded-lg text-center border border-neutral-200 text-neutral-400 text-sm group-hover:bg-purple-500 group-hover:text-white group-hover:border-purple-500"><i
                                         class="fa-solid fa-location-dot"></i></span>
-                              <a href="" class="group-hover:text-slate-800">12/A, Mirnada City Tower, NYC</a>
+                              <a href="" class="group-hover:text-purple-500">12/A, Mirnada City Tower, NYC</a>
                          </li>
                          <li class="group flex items-center mb-5">
                               <span
                                    class="mr-3 h-10 w-10 leading-10 rounded-lg text-center border border-neutral-200 text-neutral-400 text-sm group-hover:bg-purple-500 group-hover:text-white group-hover:border-purple-500"><i
                                         class="fa-solid fa-phone"></i></span>
-                              <a href="" class="group-hover:text-slate-800">088889797697</a>
+                              <a href="" class="group-hover:text-purple-500">088889797697</a>
                          </li>
                          <li class="group flex items-center mb-5">
                               <span
                                    class="mr-3 h-10 w-10 leading-10 rounded-lg text-center border border-neutral-200 text-neutral-400 text-sm group-hover:bg-purple-500 group-hover:text-white group-hover:border-purple-500"><i
                                         class="fa-solid fa-envelope"></i></span>
-                              <a href="" class="group-hover:text-slate-800">support@mail.com</a>
+                              <a href="" class="group-hover:text-purple-500">support@mail.com</a>
                          </li>
                     </ul>
                </address>
@@ -203,8 +203,11 @@
                               </form>
                               <nav class="xl:block hidden">
                                    <ul class="flex flex-wrap items-center">
-                                        <li class="group relative mr-7 hover:text-purple-500">
+                                        <li class="sl-submenu-hover relative mr-7 hover:text-purple-500">
                                              <a href="index.html" class="flex items-center py-6 font-medium">Home <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                             <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-slate-900/10 py-4 z-50">
+                                                  <li><a href="" class="">Home Style 1</a></li>
+                                             </ul>
                                         </li>
                                         <li class="group relative mr-7 hover:text-purple-500">
                                              <a href="" class="flex items-center py-6 font-medium">Marketplace <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
