@@ -189,7 +189,7 @@
      <!-- HEADER -->
      <header class="bg-white/5 border-b border-white/10 text-gray-400 sm:py-0 py-5">
           <div class="sl-container">
-               <div class="flex flex-wrap items-center">
+               <div class="relative flex flex-wrap items-center">
                     <div class="xl:w-1/12 lg:w-1/6 md:w-1/2 w-1/3 sm:px-2">
                          <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
                     </div>
@@ -202,27 +202,76 @@
                                    </div>
                               </form>
                               <nav class="xl:block hidden">
-                                   <ul class="flex flex-wrap items-center">
-                                        <li class="sl-submenu-hover relative mr-7 hover:text-purple-500">
-                                             <a href="index.html" class="flex items-center py-6 font-medium">Home <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
-                                             <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-slate-900/10 py-4 z-50">
-                                                  <li><a href="" class="">Home Style 1</a></li>
+                                   <ul class="flex flex-wrap items-center font-medium">
+                                        <li class="sl-submenu-hover relative mr-7">
+                                             <a href="index.html" class="flex items-center py-6 hover:text-purple-500">Home <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                             <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-slate-900/10 py-4 px-2.5 z-50">
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 1</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 2</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 3</a></li>
                                              </ul>
                                         </li>
-                                        <li class="group relative mr-7 hover:text-purple-500">
-                                             <a href="" class="flex items-center py-6 font-medium">Marketplace <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                        <li class="sl-submenu-hover relative mr-7">
+                                             <a href="" class="flex items-center py-6 hover:text-purple-500">Marketplace <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                             <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-slate-900/10 py-4 px-2.5 z-50">
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace Grid</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Carousel</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Filter</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Grid</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product List</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live Carousel</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Simple</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Tab</a></li>
+                                             </ul>
                                         </li>
-                                        <li class="group relative mr-7 hover:text-purple-500">
-                                             <a href="" class="flex items-center py-6 font-medium">Pages <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                        <li class="sl-submenu-hover mr-7">
+                                             <a href="" class="flex items-center py-6 hover:text-purple-500">Pages <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                             <ul class="absolute left-0 w-full grid grid-cols-4 bg-slate-900 shadow-lg rounded-xl border border-slate-900/10 py-7 px-6 z-50">
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">About</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Login</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Our Shop</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Contact Us</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Register</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators Grid</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Shop Grid</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Activity</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Forget Password</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Edit Profile</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Live Auction</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List Square</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Support/FAQ</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create NFT</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Terms & Conditions</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog Details</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Sinle NFT</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Privacy & Policy</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">NFT Ranking</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid Square</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Multiple NFT</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Maintanance</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Upcoming Projects</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Connect Wallet</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Coming Soon</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">404 Error</a></li>
+                                             </ul>
                                         </li>
-                                        <li class="group relative mr-7 hover:text-purple-500">
-                                             <a href="" class="flex items-center py-6 font-medium">Collections</a>
+                                        <li class="mr-7">
+                                             <a href="" class="flex items-center py-6 hover:text-purple-500">Collections </a>
                                         </li>
-                                        <li class="group relative mr-7 hover:text-purple-500">
-                                             <a href="" class="flex items-center py-6 font-medium">Profile</a>
+                                        <li class="mr-7">
+                                             <a href="" class="flex items-center py-6 hover:text-purple-500">Profile </a>
                                         </li>
-                                        <li class="group relative mr-7 hover:text-purple-500">
-                                             <a href="" class="flex items-center py-6 font-medium">Creators</a>
+                                        <li>
+                                             <a href="" class="flex items-center py-6 hover:text-purple-500">Creators </a>
                                         </li>
                                    </ul>
                               </nav>
