@@ -66,11 +66,9 @@
     visibility: hidden;
     opacity: 0;
     transform-origin: top;
-    top: 120%;
     transform: perspective(300px) rotateX(-18deg);
   }
   .sl-submenu-hover:hover > ul {
-    top: 100%;
     visibility: visible;
     opacity: 1;
     transform: perspective(300px) rotateX(0deg);
