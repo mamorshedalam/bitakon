@@ -6,6 +6,9 @@
   .sl-container {
     @apply max-w-[1380px] w-full px-3 mx-auto;
   }
+  .sl-animation {
+    @apply transition-all duration-300 ease-out;
+  }
 }
 
 @layer base {
@@ -41,6 +44,7 @@
   select,
   textarea,
   li,
+  ul,
   img,
   svg,
   label,

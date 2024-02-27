@@ -26,7 +26,7 @@
 <body x-data="{sidebar : false}">
 
      <!-- SIDEBAR -->
-     <aside :class="sidebar ? 'left-0':'left-full'" class="fixed top-0 w-full h-full overflow-x-hidden overflow-y-auto transition-all duration-300 z-[999]">
+     <aside :class="sidebar ? 'left-0':'left-full'" class="fixed top-0 w-full h-full overflow-x-hidden overflow-y-auto sl-animation z-[999]">
           <div :class="sidebar ? 'block':'hidden'" @click="sidebar = !sidebar" class="absolute inset-0 h-full w-full bg-black/25 -z-10"></div>
           <div class="relative max-w-[450px] w-full h-full overflow-y-auto ml-auto sm:p-12 p-5 bg-slate-900 rounded-md z-10">
                <div class="flex flex-items-center justify-between border-b border-neutral-200 pb-5 mb-10">
@@ -50,7 +50,7 @@
                                    <button @click="active = !active" type="button" class="h-8 w-8 leading-8 text-center border border-neutral-200 text-neutral-400 text-lg"><i
                                              :class="active ? 'rotate-45' : ''" class="fa-solid fa-plus"></i></button>
                               </div>
-                              <ul :class="active ? 'max-h-80' : 'max-h-0'" class="transition-all duration-700">
+                              <ul :class="active ? 'max-h-80' : 'max-h-0'">
                                    <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Home Style 1</a></li>
                                    <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Home Style 2</a></li>
                                    <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Home Style 3</a></li>
@@ -62,7 +62,7 @@
                                    <button @click="active = !active" type="button" class="h-8 w-8 leading-8 text-center border border-neutral-200 text-neutral-400 text-lg"><i
                                              :class="active ? 'rotate-45' : ''" class="fa-solid fa-plus"></i></button>
                               </div>
-                              <ul :class="active ? 'max-h-80' : 'max-h-0'" class="transition-all duration-700">
+                              <ul :class="active ? 'max-h-80' : 'max-h-0'">
                                    <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Marketplace</a></li>
                                    <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Marketplace Grid</a></li>
                                    <li class="overflow-hidden" x-data="{subActive: false}">
@@ -71,7 +71,7 @@
                                              <button @click="subActive = !subActive" type="button" class="h-8 w-8 leading-8 text-center border border-neutral-200 text-neutral-400 text-lg"><i
                                                        :class="subActive ? 'rotate-45' : ''" class="fa-solid fa-plus"></i></button>
                                         </div>
-                                        <ul :class="subActive ? 'max-h-80' : 'max-h-0'" class="transition-all duration-700">
+                                        <ul :class="subActive ? 'max-h-80' : 'max-h-0'">
                                              <li><a href="" class="block py-2.5 px-[15%] border-b border-neutral-200 hover:text-purple-500">Product Details Tab</a></li>
                                              <li><a href="" class="block py-2.5 px-[15%] border-b border-neutral-200 hover:text-purple-500">Product Details Grid</a></li>
                                         </ul>
@@ -92,7 +92,7 @@
                                    <button @click="active = !active" type="button" class="h-8 w-8 leading-8 text-center border border-neutral-200 text-neutral-400 text-lg"><i
                                              :class="active ? 'rotate-45' : ''" class="fa-solid fa-plus"></i></button>
                               </div>
-                              <ul :class="active ? 'max-h-[100rem]' : 'max-h-0'" class="transition-all duration-700">
+                              <ul :class="active ? 'max-h-[100rem]' : 'max-h-0'">
                                    <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">About</a></li>
                                    <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Login</a></li>
                                    <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Creators</a></li>
@@ -310,6 +310,174 @@
      </header>
      <!-- HEADER -->
 
+     <!-- MAIN -->
+     <main>
+          <!-- HERO -->
+          <section class="bg-white/5 pt-16 pb-24">
+               <div class="sl-container">
+                    <div class="swiper indexHeroSlider">
+                         <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                   <div class="flex flex-wrap">
+                                        <div class="xl:w-2/5 w-full sm:px-2">
+                                             <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                  <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                       style="background-image: url(assets/img/slider/slider-big-1.jpg);"></div>
+                                                  <div class="relative z-10 pt-10 px-8 sm:pb-[28rem] pb-[24rem]">
+                                                       <h2 class="text-3xl font-bold"><a href="">Get loud for boys</a></h2>
+                                                       <span class="text-white/80 font-medium">PFP by Elizarevfx</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="xl:w-3/5 w-full xl:px-2 flex flex-wrap">
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-1.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">Get loud for boys</a></h2>
+                                                            <span class="text-white/80 font-medium">PFP by Elizarevfx</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-2.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">The Dark Jaegers</a></h2>
+                                                            <span class="text-white/80 font-medium">Mamie Barnett</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-3.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">SitDown LOL</a></h2>
+                                                            <span class="text-white/80 font-medium">Super Rare</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-4.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">The Dark Jaegers</a></h2>
+                                                            <span class="text-white/80 font-medium">Monica Lucas</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-5.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">Ave avatars 1.0</a></h2>
+                                                            <span class="text-white/80 font-medium">Joss Sticks</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-6.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">Paper buddha ꜩ</a></h2>
+                                                            <span class="text-white/80 font-medium">NFT Paris</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="swiper-slide">
+                                   <div class="flex flex-wrap">
+                                        <div class="xl:w-2/5 w-full sm:px-2">
+                                             <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                  <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                       style="background-image: url(assets/img/slider/slider-big-2.jpg);"></div>
+                                                  <div class="relative z-10 pt-10 px-8 sm:pb-[28rem] pb-[24rem]">
+                                                       <h2 class="text-3xl font-bold"><a href="">Get loud for boys</a></h2>
+                                                       <span class="text-white/80 font-medium">PFP by Elizarevfx</span>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="xl:w-3/5 w-full xl:px-2 flex flex-wrap">
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-1.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">Get loud for boys</a></h2>
+                                                            <span class="text-white/80 font-medium">PFP by Elizarevfx</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-2.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">The Dark Jaegers</a></h2>
+                                                            <span class="text-white/80 font-medium">Mamie Barnett</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-3.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">SitDown LOL</a></h2>
+                                                            <span class="text-white/80 font-medium">Super Rare</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-7.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">The Dark Jaegers</a></h2>
+                                                            <span class="text-white/80 font-medium">Monica Lucas</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-5.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">Ave avatars 1.0</a></h2>
+                                                            <span class="text-white/80 font-medium">Joss Sticks</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="lg:w-1/3 sm:w-1/2 w-full sm:px-2">
+                                                  <div class="group relative rounded-2xl overflow-hidden mb-4">
+                                                       <div class="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center -z-0 group-hover:scale-110 sl-animation"
+                                                            style="background-image: url(assets/img/slider/slider-sm-6.jpg);"></div>
+                                                       <div class="relative z-10 p-6 pb-48">
+                                                            <h2 class="text-lg font-bold"><a href="">Paper buddha ꜩ</a></h2>
+                                                            <span class="text-white/80 font-medium">NFT Paris</span>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <button class="indexHeroSlider-next absolute block top-1/2 -translate-y-1/2 right-0 w-12 h-12 leading-10 text-center bg-purple-500 rounded-full border-2 border-slate-950 z-50"><i class="fa-solid fa-chevron-right"></i></button>
+                         <button class="indexHeroSlider-prev absolute block top-1/2 -translate-y-1/2 left-0 w-12 h-12 leading-10 text-center bg-purple-500 rounded-full border-2 border-slate-950 z-50"><i class="fa-solid fa-chevron-left"></i></button>
+                    </div>
+               </div>
+          </section>
+          <!-- HERO -->
+     </main>
+     <!-- MAIN -->
 
      <!-- FOOTER -->
      <footer>
@@ -373,7 +541,7 @@
                                                   class="fa-solid fa-chevron-down"></i></span>
                                    </button>
                                    <ul :class="active ? 'opacity-100 visible h-fit scale-100':'opacity-0 invisible h-0 scale-75'"
-                                        class="absolute top-full left-0 w-full h-full p-2.5 bg-slate-900 border border-white/10 rounded-md transition-all duration-300 ease-out z-50">
+                                        class="absolute top-full left-0 w-full p-2.5 bg-slate-900 border border-white/10 rounded-md z-50">
                                         <li><button @click="active = !active; checked = 'English'" class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
                                                   <span>English</span>
                                                   <span :class="checked == 'English' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
@@ -407,6 +575,16 @@
 
      <!-- SCRIPT LINKS -->
      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     <script>
+          var swiper = new Swiper(".indexHeroSlider", {
+               slidesPerView: 1,
+               loop: true,
+               navigation: {
+                    nextEl: ".indexHeroSlider-next",
+                    prevEl: ".indexHeroSlider-prev",
+               },
+          });
+     </script>
 </body>
 
 </html>
