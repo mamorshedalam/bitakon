@@ -77,4 +77,17 @@
     opacity: 1;
     transform: perspective(300px) rotateX(0deg);
   }
+  .sl-title-shadow{
+    -webkit-text-fill-color: #05092B;
+    background: linear-gradient(360deg, rgba(255, 255, 255, 0) 20%, #fff 100%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(255, 255, 255, 0) 20%, #fff 100%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(360deg, rgba(255, 255, 255, 0) 20%, #fff 100%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(360deg, rgba(255, 255, 255, 0) 20%, #fff 100%, rgba(255, 255, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+    color: #232d2d;
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+  }
 }

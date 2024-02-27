@@ -26,7 +26,7 @@
 <body x-data="{sidebar : false}">
 
      <!-- SIDEBAR -->
-     <aside :class="sidebar ? 'left-0':'left-full'" class="fixed top-0 w-full h-full overflow-x-hidden overflow-y-auto sl-animation z-[999]">
+     <aside x-cloak :class="sidebar ? 'left-0':'left-full'" class="fixed top-0 w-full h-full overflow-x-hidden overflow-y-auto sl-animation z-[999]">
           <div :class="sidebar ? 'block':'hidden'" @click="sidebar = !sidebar" class="absolute inset-0 h-full w-full bg-black/25 -z-10"></div>
           <div class="relative max-w-[450px] w-full h-full overflow-y-auto ml-auto sm:p-12 p-5 bg-slate-900 rounded-md z-10">
                <div class="flex flex-items-center justify-between border-b border-neutral-200 pb-5 mb-10">
@@ -470,12 +470,59 @@
                                    </div>
                               </div>
                          </div>
-                         <button class="indexHeroSlider-next absolute block top-1/2 -translate-y-1/2 right-0 w-12 h-12 leading-10 text-center bg-purple-500 rounded-full border-2 border-slate-950 z-50"><i class="fa-solid fa-chevron-right"></i></button>
-                         <button class="indexHeroSlider-prev absolute block top-1/2 -translate-y-1/2 left-0 w-12 h-12 leading-10 text-center bg-purple-500 rounded-full border-2 border-slate-950 z-50"><i class="fa-solid fa-chevron-left"></i></button>
+                         <button
+                              class="indexHeroSlider-next absolute block top-1/2 -translate-y-1/2 right-0 w-12 h-12 leading-10 text-center bg-purple-500 rounded-full border-2 border-slate-950 z-50"><i
+                                   class="fa-solid fa-chevron-right"></i></button>
+                         <button
+                              class="indexHeroSlider-prev absolute block top-1/2 -translate-y-1/2 left-0 w-12 h-12 leading-10 text-center bg-purple-500 rounded-full border-2 border-slate-950 z-50"><i
+                                   class="fa-solid fa-chevron-left"></i></button>
                     </div>
                </div>
           </section>
           <!-- HERO -->
+
+          <!-- SELLERS -->
+          <section class="pt-20 pb-28">
+               <div class="sl-container">
+                    <div class="flex flex-wrap">
+                         <div class="lg:w-3/4 sm:w-7/12 w-full sm:px-2 mb-10">
+                              <h3 class="sl-title-shadow md:top-5 top-9 sm:-left-2 -left-1 leading-tight md:text-[105px] sm:text-[80px] text-[50px]">Populer</h3>
+                              <span class="text-xl font-bold text-gray-400">Popular</span>
+                              <h2 class="text-4xl font-bold">Sellers</h2>
+                         </div>
+                         <div class="lg:w-1/4 sm:w-5/12 w-full sm:px-2">
+                              <div class="group relative w-full" x-data="{active: false, checked: 'Today',}">
+                                   <h4 class="text-base font-semibold mb-1">Timeframe</h4>
+                                   <button @click="active = !active" class="relative w-full h-10 leading-10 border-2 border-white/10 rounded-full pl-5 text-left font-medium">
+                                        <span x-text="checked"></span>
+                                        <span :class="active ?'rotate-180':'rotate-0'"
+                                             class="absolute top-1/2 -translate-y-1/2 right-1 w-8 h-8 leading-8 rounded-full bg-white/15 text-white text-center text-xs group-hover:bg-purple-500"><i
+                                                  class="fa-solid fa-chevron-down"></i></span>
+                                   </button>
+                                   <ul :class="active ? 'opacity-100 visible h-fit scale-100':'opacity-0 invisible h-0 scale-75'"
+                                        class="absolute top-full left-0 w-full p-2.5 bg-slate-900 border border-white/10 rounded-md z-50">
+                                        <li><button @click="active = !active; checked = 'Today'" class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                  <span>Today</span>
+                                                  <span :class="checked == 'Today' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                            class="fa-solid fa-check"></i></span>
+                                             </button></li>
+                                        <li><button @click="active = !active; checked = 'Tommorow'" class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                  <span>Tommorow</span>
+                                                  <span :class="checked == 'Tommorow' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                            class="fa-solid fa-check"></i></span>
+                                             </button></li>
+                                        <li><button @click="active = !active; checked = 'Yesterday'" class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                  <span>Day before yesterday</span>
+                                                  <span :class="checked == 'Yesterday' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                            class="fa-solid fa-check"></i></span>
+                                             </button></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- SELLERS -->
      </main>
      <!-- MAIN -->
 

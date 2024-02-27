@@ -698,6 +698,34 @@ a,
   top: 100%;
 }
 
+.top-10 {
+  top: 2.5rem;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
+.-left-5 {
+  left: -1.25rem;
+}
+
+.-left-3 {
+  left: -0.75rem;
+}
+
+.-left-2 {
+  left: -0.5rem;
+}
+
+.top-9 {
+  top: 2.25rem;
+}
+
+.-left-1 {
+  left: -0.25rem;
+}
+
 .-z-0 {
   z-index: 0;
 }
@@ -803,6 +831,10 @@ a,
   margin-top: 2rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -831,6 +863,10 @@ a,
   height: 2.75rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -850,10 +886,6 @@ a,
 
 .h-full {
   height: 100%;
-}
-
-.h-12 {
-  height: 3rem;
 }
 
 .max-h-0 {
@@ -882,6 +914,10 @@ a,
 
 .w-11 {
   width: 2.75rem;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-2\/3 {
@@ -925,12 +961,12 @@ a,
   width: 100%;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
 .min-w-56 {
   min-width: 14rem;
+}
+
+.min-w-40 {
+  min-width: 10rem;
 }
 
 .max-w-\[450px\] {
@@ -939,11 +975,6 @@ a,
 
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-1\/2 {
-  --tw-translate-y: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1046,10 +1077,6 @@ a,
   border-width: 2px;
 }
 
-.border-4 {
-  border-width: 4px;
-}
-
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1064,21 +1091,17 @@ a,
   border-color: rgb(168 85 247 / var(--tw-border-opacity));
 }
 
+.border-slate-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(2 6 23 / var(--tw-border-opacity));
+}
+
 .border-transparent {
   border-color: transparent;
 }
 
 .border-white\/10 {
   border-color: rgb(255 255 255 / 0.1);
-}
-
-.border-white\/5 {
-  border-color: rgb(255 255 255 / 0.05);
-}
-
-.border-slate-950 {
-  --tw-border-opacity: 1;
-  border-color: rgb(2 6 23 / var(--tw-border-opacity));
 }
 
 .bg-black\/25 {
@@ -1217,12 +1240,20 @@ a,
   padding-bottom: 6rem;
 }
 
+.pb-28 {
+  padding-bottom: 7rem;
+}
+
+.pb-48 {
+  padding-bottom: 12rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
 }
 
-.pb-\[30rem\] {
-  padding-bottom: 30rem;
+.pb-\[24rem\] {
+  padding-bottom: 24rem;
 }
 
 .pl-11 {
@@ -1237,44 +1268,16 @@ a,
   padding-right: 1.25rem;
 }
 
-.pt-16 {
-  padding-top: 4rem;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
-}
-
-.pt-7 {
-  padding-top: 1.75rem;
-}
-
-.pt-9 {
-  padding-top: 2.25rem;
-}
-
 .pt-10 {
   padding-top: 2.5rem;
 }
 
-.pb-48 {
-  padding-bottom: 12rem;
+.pt-16 {
+  padding-top: 4rem;
 }
 
-.pb-\[29rem\] {
-  padding-bottom: 29rem;
-}
-
-.pb-\[28rem\] {
-  padding-bottom: 28rem;
-}
-
-.pb-\[25rem\] {
-  padding-bottom: 25rem;
-}
-
-.pb-\[24rem\] {
-  padding-bottom: 24rem;
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .text-left {
@@ -1288,6 +1291,20 @@ a,
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-\[105px\] {
+  font-size: 105px;
 }
 
 .text-base {
@@ -1315,9 +1332,17 @@ a,
   line-height: 1rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-\[45px\] {
+  font-size: 45px;
+}
+
+.text-\[50px\] {
+  font-size: 50px;
 }
 
 .font-bold {
@@ -1344,8 +1369,12 @@ a,
   line-height: 2rem;
 }
 
-.leading-\[3rem\] {
-  line-height: 3rem;
+.leading-none {
+  line-height: 1;
+}
+
+.leading-tight {
+  line-height: 1.25;
 }
 
 .text-gray-300 {
@@ -1395,20 +1424,6 @@ a,
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
-}
-
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
 .sl-submenu-hover > ul {
   transition: all 0.3s ease-out 0s;
   visibility: hidden;
@@ -1421,6 +1436,18 @@ a,
   visibility: visible;
   opacity: 1;
   transform: perspective(300px) rotateX(0deg);
+}
+
+.sl-title-shadow{
+  -webkit-text-fill-color: #05092B;
+  background: linear-gradient(360deg, rgba(255, 255, 255, 0) 20%, #fff 100%, rgba(255, 255, 255, 0) 100%);
+  background: -ms-linear-gradient(360deg, rgba(255, 255, 255, 0) 20%, #fff 100%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: #232d2d;
+  opacity: 0.3;
+  position: absolute;
+  z-index: -1;
 }
 
 .hover\:bg-purple-500:hover {
@@ -1506,6 +1533,10 @@ a,
 }
 
 @media (min-width: 640px) {
+  .sm\:-left-2 {
+    left: -0.5rem;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -1524,6 +1555,14 @@ a,
 
   .sm\:w-1\/3 {
     width: 33.333333%;
+  }
+
+  .sm\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .sm\:w-7\/12 {
+    width: 58.333333%;
   }
 
   .sm\:items-end {
@@ -1547,9 +1586,17 @@ a,
   .sm\:pb-\[28rem\] {
     padding-bottom: 28rem;
   }
+
+  .sm\:text-\[80px\] {
+    font-size: 80px;
+  }
 }
 
 @media (min-width: 768px) {
+  .md\:top-5 {
+    top: 1.25rem;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -1567,14 +1614,8 @@ a,
     padding-right: 0.5rem;
   }
 
-  .md\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .md\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+  .md\:text-\[105px\] {
+    font-size: 105px;
   }
 }
 
@@ -1583,16 +1624,28 @@ a,
     display: block;
   }
 
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .lg\:w-1\/4 {
+    width: 25%;
+  }
+
   .lg\:w-1\/6 {
     width: 16.666667%;
+  }
+
+  .lg\:w-3\/4 {
+    width: 75%;
   }
 
   .lg\:w-5\/12 {
     width: 41.666667%;
   }
 
-  .lg\:w-1\/3 {
-    width: 33.333333%;
+  .lg\:text-\[105px\] {
+    font-size: 105px;
   }
 }
 
@@ -1640,5 +1693,15 @@ a,
   .xl\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+
+  .xl\:text-\[105px\] {
+    font-size: 105px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:text-\[105px\] {
+    font-size: 105px;
   }
 }
