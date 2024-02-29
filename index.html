@@ -482,21 +482,21 @@
           <!-- HERO -->
 
           <!-- SELLERS -->
-          <section class="pt-20 pb-28">
+          <section class="pt-20 pb-28"> 
                <div class="sl-container">
-                    <div class="flex flex-wrap">
+                    <header class="flex flex-wrap">
                          <div class="lg:w-3/4 sm:w-7/12 w-full sm:px-2 mb-10">
-                              <h3 class="sl-title-shadow md:top-5 top-9 sm:-left-2 -left-1 leading-tight md:text-[105px] sm:text-[80px] text-[50px]">Populer</h3>
+                              <h3 class="sl-title-shadow md:top-0 top-9 sm:-left-2 -left-1 leading-tight md:text-[105px] sm:text-[80px] text-[50px]">Populer</h3>
                               <span class="text-xl font-bold text-gray-400">Popular</span>
                               <h2 class="text-4xl font-bold">Sellers</h2>
                          </div>
                          <div class="lg:w-1/4 sm:w-5/12 w-full sm:px-2">
-                              <div class="group relative w-full" x-data="{active: false, checked: 'Today',}">
+                              <div class="relative w-full" x-data="{active: false, checked: 'Today',}">
                                    <h4 class="text-base font-semibold mb-1">Timeframe</h4>
                                    <button @click="active = !active" class="relative w-full h-10 leading-10 border-2 border-white/10 rounded-full pl-5 text-left font-medium">
                                         <span x-text="checked"></span>
                                         <span :class="active ?'rotate-180':'rotate-0'"
-                                             class="absolute top-1/2 -translate-y-1/2 right-1 w-8 h-8 leading-8 rounded-full bg-white/15 text-white text-center text-xs group-hover:bg-purple-500"><i
+                                             class="absolute top-1/2 -translate-y-1/2 right-1 w-8 h-8 leading-8 rounded-full bg-white/15 text-white text-center text-xs"><i
                                                   class="fa-solid fa-chevron-down"></i></span>
                                    </button>
                                    <ul :class="active ? 'opacity-100 visible h-fit scale-100':'opacity-0 invisible h-0 scale-75'"
@@ -517,6 +517,170 @@
                                                             class="fa-solid fa-check"></i></span>
                                              </button></li>
                                    </ul>
+                              </div>
+                         </div>
+                    </header>
+                    <div class="flex flex-wrap">
+                         <div class="xl:w-1/6 md:w-1/3 sm:w-1/2 w-full sm:px-2">
+                              <div class="sl-cart-border">
+                                   <div class="bg-slate-950 rounded-xl">
+                                        <div class="bg-white/5 flex justify-between rounded-t-xl py-3 px-5">
+                                             <div class="h-5 leading-5 text-center px-2.5 font-medium bg-blue-500 rounded-full">
+                                                  <i class="fa-solid fa-trophy mr-1.5"></i> #1
+                                             </div>
+                                             <div class="flex items-center gap-2.5 text-white/50 text-base">
+                                                  <a href="" class="group relative block overflow-hidden hover:text-white">
+                                                       <i class="fa-regular fa-square-plus group-hover:opacity-0 group-hover:invisible"></i>
+                                                       <i
+                                                            class="absolute top-1/2 -translate-y-1/2 left-0 opacity-0 invisible fa-regular fa-square-minus group-hover:opacity-100 group-hover:visible"></i>
+                                                  </a>
+                                                  <a href="" class="hover:text-white"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                             </div>
+                                        </div>
+                                        <div class="pt-9 pb-5 text-center">
+                                             <a href="" class="w-16 h-16 rounded-full overflow-hidden mb-5"><img src="assets/img/seller/seller-1.jpg" alt="user"></a>
+                                             <h4 class="text-base font-semibold hover:text-purple-500"><a href="">Robin Milford</a></h4>
+                                             <div class="flex items-center justify-center text-xs gap-1 mt-1">
+                                                  <span class="text-blue-500"><i class="fa-brands fa-ethereum"></i> 00.74</span>
+                                                  <span class="font-bold">ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="xl:w-1/6 md:w-1/3 sm:w-1/2 w-full sm:px-2">
+                              <div class="sl-cart-border">
+                                   <div class="bg-slate-950 rounded-xl">
+                                        <div class="bg-white/5 flex justify-between rounded-t-xl py-3 px-5">
+                                             <div class="h-5 leading-5 text-center px-2.5 font-medium bg-green-500 rounded-full">
+                                                  <i class="fa-solid fa-trophy mr-1.5"></i> #1
+                                             </div>
+                                             <div class="flex items-center gap-2.5 text-white/50 text-base">
+                                                  <a href="" class="group relative block overflow-hidden hover:text-white">
+                                                       <i class="fa-regular fa-square-plus group-hover:opacity-0 group-hover:invisible"></i>
+                                                       <i
+                                                            class="absolute top-1/2 -translate-y-1/2 left-0 opacity-0 invisible fa-regular fa-square-minus group-hover:opacity-100 group-hover:visible"></i>
+                                                  </a>
+                                                  <a href="" class="hover:text-white"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                             </div>
+                                        </div>
+                                        <div class="pt-9 pb-5 text-center">
+                                             <a href="" class="w-16 h-16 rounded-full overflow-hidden mb-5"><img src="assets/img/seller/seller-1.jpg" alt="user"></a>
+                                             <h4 class="text-base font-semibold hover:text-purple-500"><a href="">Robin Milford</a></h4>
+                                             <div class="flex items-center justify-center text-xs gap-1 mt-1">
+                                                  <span class="text-green-500"><i class="fa-brands fa-ethereum"></i> 00.74</span>
+                                                  <span class="font-bold">ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="xl:w-1/6 md:w-1/3 sm:w-1/2 w-full sm:px-2">
+                              <div class="sl-cart-border">
+                                   <div class="bg-slate-950 rounded-xl">
+                                        <div class="bg-white/5 flex justify-between rounded-t-xl py-3 px-5">
+                                             <div class="h-5 leading-5 text-center px-2.5 font-medium bg-orange-500 rounded-full">
+                                                  <i class="fa-solid fa-trophy mr-1.5"></i> #1
+                                             </div>
+                                             <div class="flex items-center gap-2.5 text-white/50 text-base">
+                                                  <a href="" class="group relative block overflow-hidden hover:text-white">
+                                                       <i class="fa-regular fa-square-plus group-hover:opacity-0 group-hover:invisible"></i>
+                                                       <i
+                                                            class="absolute top-1/2 -translate-y-1/2 left-0 opacity-0 invisible fa-regular fa-square-minus group-hover:opacity-100 group-hover:visible"></i>
+                                                  </a>
+                                                  <a href="" class="hover:text-white"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                             </div>
+                                        </div>
+                                        <div class="pt-9 pb-5 text-center">
+                                             <a href="" class="w-16 h-16 rounded-full overflow-hidden mb-5"><img src="assets/img/seller/seller-1.jpg" alt="user"></a>
+                                             <h4 class="text-base font-semibold hover:text-purple-500"><a href="">Robin Milford</a></h4>
+                                             <div class="flex items-center justify-center text-xs gap-1 mt-1">
+                                                  <span class="text-orange-500"><i class="fa-brands fa-ethereum"></i> 00.74</span>
+                                                  <span class="font-bold">ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="xl:w-1/6 md:w-1/3 sm:w-1/2 w-full sm:px-2">
+                              <div class="sl-cart-border">
+                                   <div class="bg-slate-950 rounded-xl">
+                                        <div class="bg-white/5 flex justify-between rounded-t-xl py-3 px-5">
+                                             <div class="h-5 leading-5 text-center px-2.5 font-medium bg-purple-500 rounded-full">
+                                                  <i class="fa-solid fa-trophy mr-1.5"></i> #1
+                                             </div>
+                                             <div class="flex items-center gap-2.5 text-white/50 text-base">
+                                                  <a href="" class="group relative block overflow-hidden hover:text-white">
+                                                       <i class="fa-regular fa-square-plus group-hover:opacity-0 group-hover:invisible"></i>
+                                                       <i
+                                                            class="absolute top-1/2 -translate-y-1/2 left-0 opacity-0 invisible fa-regular fa-square-minus group-hover:opacity-100 group-hover:visible"></i>
+                                                  </a>
+                                                  <a href="" class="hover:text-white"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                             </div>
+                                        </div>
+                                        <div class="pt-9 pb-5 text-center">
+                                             <a href="" class="w-16 h-16 rounded-full overflow-hidden mb-5"><img src="assets/img/seller/seller-1.jpg" alt="user"></a>
+                                             <h4 class="text-base font-semibold hover:text-purple-500"><a href="">Robin Milford</a></h4>
+                                             <div class="flex items-center justify-center text-xs gap-1 mt-1">
+                                                  <span class="text-purple-500"><i class="fa-brands fa-ethereum"></i> 00.74</span>
+                                                  <span class="font-bold">ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="xl:w-1/6 md:w-1/3 sm:w-1/2 w-full sm:px-2">
+                              <div class="sl-cart-border">
+                                   <div class="bg-slate-950 rounded-xl">
+                                        <div class="bg-white/5 flex justify-between rounded-t-xl py-3 px-5">
+                                             <div class="h-5 leading-5 text-center px-2.5 font-medium bg-orange-400 rounded-full">
+                                                  <i class="fa-solid fa-trophy mr-1.5"></i> #1
+                                             </div>
+                                             <div class="flex items-center gap-2.5 text-white/50 text-base">
+                                                  <a href="" class="group relative block overflow-hidden hover:text-white">
+                                                       <i class="fa-regular fa-square-plus group-hover:opacity-0 group-hover:invisible"></i>
+                                                       <i
+                                                            class="absolute top-1/2 -translate-y-1/2 left-0 opacity-0 invisible fa-regular fa-square-minus group-hover:opacity-100 group-hover:visible"></i>
+                                                  </a>
+                                                  <a href="" class="hover:text-white"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                             </div>
+                                        </div>
+                                        <div class="pt-9 pb-5 text-center">
+                                             <a href="" class="w-16 h-16 rounded-full overflow-hidden mb-5"><img src="assets/img/seller/seller-1.jpg" alt="user"></a>
+                                             <h4 class="text-base font-semibold hover:text-purple-500"><a href="">Robin Milford</a></h4>
+                                             <div class="flex items-center justify-center text-xs gap-1 mt-1">
+                                                  <span class="text-orange-400"><i class="fa-brands fa-ethereum"></i> 00.74</span>
+                                                  <span class="font-bold">ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="xl:w-1/6 md:w-1/3 sm:w-1/2 w-full sm:px-2">
+                              <div class="sl-cart-border">
+                                   <div class="bg-slate-950 rounded-xl">
+                                        <div class="bg-white/5 flex justify-between rounded-t-xl py-3 px-5">
+                                             <div class="h-5 leading-5 text-center px-2.5 font-medium bg-red-400 rounded-full">
+                                                  <i class="fa-solid fa-trophy mr-1.5"></i> #1
+                                             </div>
+                                             <div class="flex items-center gap-2.5 text-white/50 text-base">
+                                                  <a href="" class="group relative block overflow-hidden hover:text-white">
+                                                       <i class="fa-regular fa-square-plus group-hover:opacity-0 group-hover:invisible"></i>
+                                                       <i
+                                                            class="absolute top-1/2 -translate-y-1/2 left-0 opacity-0 invisible fa-regular fa-square-minus group-hover:opacity-100 group-hover:visible"></i>
+                                                  </a>
+                                                  <a href="" class="hover:text-white"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                             </div>
+                                        </div>
+                                        <div class="pt-9 pb-5 text-center">
+                                             <a href="" class="w-16 h-16 rounded-full overflow-hidden mb-5"><img src="assets/img/seller/seller-1.jpg" alt="user"></a>
+                                             <h4 class="text-base font-semibold hover:text-purple-500"><a href="">Robin Milford</a></h4>
+                                             <div class="flex items-center justify-center text-xs gap-1 mt-1">
+                                                  <span class="text-red-400"><i class="fa-brands fa-ethereum"></i> 00.74</span>
+                                                  <span class="font-bold">ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
                               </div>
                          </div>
                     </div>
