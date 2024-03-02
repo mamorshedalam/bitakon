@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- TITLE & FAVICON -->
+     <link rel="icon" href="./assets/img/logo/favicon.png" />
+     <title>Bitakon</title>
+
+     <!-- FONT AWESOME -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+     <!-- GOOGLE FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+     <!-- SWIPER CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+     <!-- TAILWIND CSS -->
+     <link href="./assets/css/output.css" rel="stylesheet">
+     <!-- ALPINE JS -->
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{sidebar : false, headerFixed: false,}" @scroll.window="headerFixed = window.pageYOffset > 200">
+
+     <!-- SIDEBAR -->
+     <aside x-cloak :class="sidebar ? 'left-0':'left-full'" class="fixed top-0 w-full h-full overflow-x-hidden overflow-y-auto sl-animation z-[999]">
+          <div :class="sidebar ? 'block':'hidden'" @click="sidebar = !sidebar" class="absolute inset-0 h-full w-full bg-black/25 -z-10"></div>
+          <div class="relative max-w-[450px] w-full h-full overflow-y-auto ml-auto sm:p-12 p-5 bg-slate-900 rounded-md z-10">
+               <div class="flex flex-items-center justify-between border-b border-neutral-200 pb-5 mb-10">
+                    <a href="index.html" class="flex items-center"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                    <button @click="sidebar = !sidebar" class="flex items-center justify-center w-11 h-11 rounded-full bg-purple-500 text-white hover:bg-purple-900"><i
+                              class="fa-solid fa-xmark"></i></button>
+               </div>
+               <div class="mb-6">
+                    <form>
+                         <div class="relative">
+                              <input type="text" placeholder="What are you searching for?" class="w-full h-10 pr-5 text-white border-b border-neutral-200 focus:border-slate-900">
+                              <button type="submit" class="absolute right-0 top-1/2 -translate-y-1/2 text-gray-300"><i class="fa-solid fa-magnifying-glass"></i></button>
+                         </div>
+                    </form>
+               </div>
+               <nav class="mb-10 font-medium">
+                    <ul>
+                         <li class="overflow-hidden" x-data="{active: false}">
+                              <div class="flex items-center justify-between border-b border-neutral-200">
+                                   <a href="index.html" class="block py-2.5 hover:text-purple-500">Home</a>
+                                   <button @click="active = !active" type="button" class="h-8 w-8 leading-8 text-center border border-neutral-200 text-neutral-400 text-lg"><i
+                                             :class="active ? 'rotate-45' : ''" class="fa-solid fa-plus"></i></button>
+                              </div>
+                              <ul :class="active ? 'max-h-80' : 'max-h-0'">
+                                   <li><a href="index.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Home Style 1</a></li>
+                                   <li><a href="index-2.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Home Style 2</a></li>
+                                   <li><a href="index-3.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Home Style 3</a></li>
+                              </ul>
+                         </li>
+                         <li class="overflow-hidden" x-data="{active: false}">
+                              <div class="flex items-center justify-between border-b border-neutral-200">
+                                   <a href="shop.html" class="block py-2.5 hover:text-purple-500">Marketplace</a>
+                                   <button @click="active = !active" type="button" class="h-8 w-8 leading-8 text-center border border-neutral-200 text-neutral-400 text-lg"><i
+                                             :class="active ? 'rotate-45' : ''" class="fa-solid fa-plus"></i></button>
+                              </div>
+                              <ul :class="active ? 'max-h-80' : 'max-h-0'">
+                                   <li><a href="shop.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Marketplace</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Marketplace Grid</a></li>
+                                   <li class="overflow-hidden" x-data="{subActive: false}">
+                                        <div class="flex items-center justify-between border-b border-neutral-200">
+                                             <a href="" class="block py-2.5 px-[10%] hover:text-purple-500">Product Details</a>
+                                             <button @click="subActive = !subActive" type="button" class="h-8 w-8 leading-8 text-center border border-neutral-200 text-neutral-400 text-lg"><i
+                                                       :class="subActive ? 'rotate-45' : ''" class="fa-solid fa-plus"></i></button>
+                                        </div>
+                                        <ul :class="subActive ? 'max-h-80' : 'max-h-0'">
+                                             <li><a href="product-details-tab.html" class="block py-2.5 px-[15%] border-b border-neutral-200 hover:text-purple-500">Product Details Tab</a></li>
+                                             <li><a href="" class="block py-2.5 px-[15%] border-b border-neutral-200 hover:text-purple-500">Product Details Grid</a></li>
+                                        </ul>
+                                   </li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Product Carousel</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Product Filter</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Product Grid</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Product List</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Product Live</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Product Live Carousel</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Product Simple</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Product Tab</a></li>
+                              </ul>
+                         </li>
+                         <li class="overflow-hidden" x-data="{active: false}">
+                              <div class="flex items-center justify-between border-b border-neutral-200">
+                                   <a href="about.html" class="block py-2.5 hover:text-purple-500">Pages</a>
+                                   <button @click="active = !active" type="button" class="h-8 w-8 leading-8 text-center border border-neutral-200 text-neutral-400 text-lg"><i
+                                             :class="active ? 'rotate-45' : ''" class="fa-solid fa-plus"></i></button>
+                              </div>
+                              <ul :class="active ? 'max-h-[100rem]' : 'max-h-0'">
+                                   <li><a href="about.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">About</a></li>
+                                   <li><a href="login.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Login</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Creators</a></li>
+                                   <li><a href="shop.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Our Shop</a></li>
+                                   <li><a href="contact.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Contact Us</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Register</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Creators Grid</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Shop Grid</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Activity</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Forget Password</a></li>
+                                   <li><a href="creator-list.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Creators List</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Product Details</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Edit Profile</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Live Auction</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Creators List Square</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Support/FAQ</a></li>
+                                   <li><a href="blog.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Blog</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Collection</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Create NFT</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Terms & Conditions</a></li>
+                                   <li><a href="blog-details.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Blog Details</a></li>
+                                   <li><a href="collection-grid.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Collection Grid</a></li>
+                                   <li><a href="create-single.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Create Sinle NFT</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Privacy & Policy</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">NFT Ranking</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Collection Grid Square</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Create Multiple NFT</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Maintanance</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Upcoming Projects</a></li>
+                                   <li><a href="wallet.html" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Connect Wallet</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">Coming Soon</a></li>
+                                   <li><a href="" class="block py-2.5 px-[10%] border-b border-neutral-200 hover:text-purple-500">404 Error</a></li>
+                              </ul>
+                         </li>
+                         <li class="border-b border-neutral-200"><a href="" class="block py-2.5 hover:text-purple-500">Collections</a></li>
+                         <li class="border-b border-neutral-200"><a href="profile.html" class="block py-2.5 hover:text-purple-500">Profile</a></li>
+                         <li><a href="" class="block py-2.5 hover:text-purple-500">Creators</a></li>
+                    </ul>
+               </nav>
+               <div class="sm:hidden mb-6">
+                    <a href="" class="flex items-center w-fit font-medium text-white bg-purple-500 rounded-full py-2 px-5 hover:bg-purple-800">
+                         <svg viewBox="0 0 19 16" class="w-4 fill-none mr-1">
+                              <path d="M17.5 5.83333V10.1667C17.5 13.5 15.9 14.5 13.5 14.5H5.5C2.5 14.5 1.5 13 1.5 10.1667V5.83333C1.5 3 2.5 2 4.852 1.552C5.06 1.51733 5.276 1.5 5.5 1.5H13.5C13.708 1.5 13.908 1.50866 14.1 1.54332C16.5 2 17.5 3 17.5 5.83333Z"
+                                   stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M9 5.03314H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M17.2998 5.75061H14.8998C14.0198 5.75061 13.2998 6.65061 13.2998 7.75061C13.2998 8.85061 14.0198 9.75061 14.8998 9.75061H17.2998" stroke="white"
+                                   stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                         </svg>
+                         Wallet
+                    </a>
+               </div>
+               <div class="sm:hidden flex items-center mb-6">
+                    <a href="" class="relative text-lg mr-6">
+                         <span><i class="fa-regular fa-bell"></i></span>
+                         <span class="absolute -top-1 -right-3 flex items-center justify-center w-5 h-5 text-xs font-semibold bg-purple-500 text-white rounded-full">8</span>
+                    </a>
+                    <p class="font-medium">You have <span class="text-purple-500">8</span> notifications <a href="" class="text-purple-500">view</a></p>
+               </div>
+               <address class="mt-8 mb-5 not-italic">
+                    <h3 class="font-semibold text-xl mb-5">Contact Info</h3>
+                    <ul class="text-lg text-neutral-400 font-medium">
+                         <li class="group flex items-center mb-5">
+                              <span
+                                   class="mr-3 h-10 w-10 leading-10 rounded-lg text-center border border-neutral-200 text-neutral-400 text-sm group-hover:bg-purple-500 group-hover:text-white group-hover:border-purple-500"><i
+                                        class="fa-solid fa-location-dot"></i></span>
+                              <a href="" class="group-hover:text-purple-500">12/A, Mirnada City Tower, NYC</a>
+                         </li>
+                         <li class="group flex items-center mb-5">
+                              <span
+                                   class="mr-3 h-10 w-10 leading-10 rounded-lg text-center border border-neutral-200 text-neutral-400 text-sm group-hover:bg-purple-500 group-hover:text-white group-hover:border-purple-500"><i
+                                        class="fa-solid fa-phone"></i></span>
+                              <a href="" class="group-hover:text-purple-500">088889797697</a>
+                         </li>
+                         <li class="group flex items-center mb-5">
+                              <span
+                                   class="mr-3 h-10 w-10 leading-10 rounded-lg text-center border border-neutral-200 text-neutral-400 text-sm group-hover:bg-purple-500 group-hover:text-white group-hover:border-purple-500"><i
+                                        class="fa-solid fa-envelope"></i></span>
+                              <a href="" class="group-hover:text-purple-500">support@mail.com</a>
+                         </li>
+                    </ul>
+               </address>
+               <ul class="flex gap-4">
+                    <li><a href="" class="h-10 w-10 leading-10 rounded-lg text-center bg-white/10 text-purple-500 hover:bg-purple-500 hover:text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li><a href="" class="h-10 w-10 leading-10 rounded-lg text-center bg-white/10 text-purple-500 hover:bg-purple-500 hover:text-white"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="" class="h-10 w-10 leading-10 rounded-lg text-center bg-white/10 text-purple-500 hover:bg-purple-500 hover:text-white"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="" class="h-10 w-10 leading-10 rounded-lg text-center bg-white/10 text-purple-500 hover:bg-purple-500 hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+               </ul>
+          </div>
+     </aside>
+     <!-- SIDEBAR -->
+
+     <!-- HEADER -->
+     <header :class="headerFixed ? 'fixed left-0 top-0 shadow-xl shadow-zinc-900/50 bg-slate-950' : 'bg-white/5'"
+          class="w-full border-b border-white/10 text-gray-400 sm:py-0 py-5 z-[99] sl-animation">
+          <div class="sl-container">
+               <div class="relative flex flex-wrap items-center">
+                    <div class="xl:w-1/12 lg:w-1/6 md:w-1/2 w-1/3 sm:px-2">
+                         <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="lg:block hidden xl:w-2/3 lg:w-5/12 sm:px-2">
+                         <div class="flex flex-wrap items-center">
+                              <form action="#" class="ml-1 mr-8">
+                                   <div class="relative w-64">
+                                        <input type="text" placeholder="Search" class="w-full h-10 px-5 pl-11 text-white bg-white/10 rounded-full border border-transparent focus:border-white">
+                                        <button type="submit" class="absolute left-5 top-1/2 -translate-y-1/2 text-white text-base"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                   </div>
+                              </form>
+                              <nav class="xl:block hidden">
+                                   <ul class="flex flex-wrap items-center font-medium">
+                                        <li class="sl-submenu-hover group relative mr-7">
+                                             <a href="index.html" class="flex items-center py-7 hover:text-purple-500">Home <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                             <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 top-[120%] group-hover:top-full">
+                                                  <li class="px-2.5"><a href="index.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 1</a></li>
+                                                  <li class="px-2.5"><a href="index-2.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 2</a></li>
+                                                  <li class="px-2.5"><a href="index-3.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 3</a></li>
+                                             </ul>
+                                        </li>
+                                        <li class="sl-submenu-hover group/menu relative mr-7">
+                                             <a href="shop.html" class="flex items-center py-7 hover:text-purple-500">Marketplace <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                             <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 top-[120%] group-hover/menu:top-full">
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace Grid</a></li>
+                                                  <li class="sl-submenu-hover relative group/submenu px-2.5">
+                                                       <a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details <i
+                                                                 class="fa-solid fa-chevron-right text-xs ml-1.5"></i></a>
+                                                       <ul class="absolute top-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 left-[120%] group-hover/submenu:left-full">
+                                                            <li class="px-2.5"><a href="product-details-tab.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product
+                                                                      Details Tab</a></li>
+                                                            <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details Grid</a></li>
+                                                       </ul>
+                                                  </li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Carousel</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Filter</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Grid</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product List</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live Carousel</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Simple</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Tab</a></li>
+                                             </ul>
+                                        </li>
+                                        <li class="sl-submenu-hover group mr-7">
+                                             <a href="about.html" class="flex items-center py-7 hover:text-purple-500">Pages <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                             <ul
+                                                  class="absolute left-0 w-full grid grid-cols-4 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-7 px-6 z-50 top-[120%] group-hover:top-full">
+                                                  <li><a href="about.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">About</a></li>
+                                                  <li><a href="login.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Login</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators</a></li>
+                                                  <li><a href="shop.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Our Shop</a></li>
+                                                  <li><a href="contact.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Contact Us</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Register</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators Grid</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Shop Grid</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Activity</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Forget Password</a></li>
+                                                  <li><a href="creator-list.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Edit Profile</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Live Auction</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List Square</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Support/FAQ</a></li>
+                                                  <li><a href="blog.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create NFT</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Terms & Conditions</a></li>
+                                                  <li><a href="blog-details.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog Details</a></li>
+                                                  <li><a href="collection-grid.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid</a></li>
+                                                  <li><a href="create-single.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Sinle NFT</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Privacy & Policy</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">NFT Ranking</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid Square</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Multiple NFT</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Maintanance</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Upcoming Projects</a></li>
+                                                  <li><a href="wallet.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Connect Wallet</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Coming Soon</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">404 Error</a></li>
+                                             </ul>
+                                        </li>
+                                        <li class="mr-7">
+                                             <a href="" class="flex items-center py-7 hover:text-purple-500">Collections </a>
+                                        </li>
+                                        <li class="mr-7">
+                                             <a href="profile.html" class="flex items-center py-7 hover:text-purple-500">Profile </a>
+                                        </li>
+                                        <li>
+                                             <a href="" class="flex items-center py-7 hover:text-purple-500">Creators </a>
+                                        </li>
+                                   </ul>
+                              </nav>
+                         </div>
+                    </div>
+                    <div class="xl:w-1/4 lg:w-5/12 md:w-1/2 w-2/3 sm:px-2">
+                         <div class="flex items-center justify-end">
+                              <a href="" class="relative sm:block hidden text-lg hover:text-white">
+                                   <span><i class="fa-regular fa-bell"></i></span>
+                                   <span class="absolute -top-1 -right-3 flex items-center justify-center w-5 h-5 text-xs font-semibold bg-purple-500 rounded-full">8</span>
+                              </a>
+                              <a href="" class="sm:flex hidden items-center ml-8 font-medium text-white bg-purple-500 rounded-full py-2 px-5 border-2 border-purple-500 hover:bg-transparent">
+                                   <svg viewBox="0 0 19 16" class="w-4 fill-none mr-1">
+                                        <path d="M17.5 5.83333V10.1667C17.5 13.5 15.9 14.5 13.5 14.5H5.5C2.5 14.5 1.5 13 1.5 10.1667V5.83333C1.5 3 2.5 2 4.852 1.552C5.06 1.51733 5.276 1.5 5.5 1.5H13.5C13.708 1.5 13.908 1.50866 14.1 1.54332C16.5 2 17.5 3 17.5 5.83333Z"
+                                             stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M9 5.03314H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M17.2998 5.75061H14.8998C14.0198 5.75061 13.2998 6.65061 13.2998 7.75061C13.2998 8.85061 14.0198 9.75061 14.8998 9.75061H17.2998" stroke="white"
+                                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                   </svg>
+                                   Wallet
+                              </a>
+                              <a href="" class="sm:flex hidden ml-2.5 w-9 h-9 rounded-full overflow-hidden"><img src="assets/img/user/user.jpg" alt="user"></a>
+                              <button @click="sidebar = !sidebar" class="xl:hidden block text-2xl xl:ml-0 ml-2.5 hover:text-white"><i class="fa-solid fa-bars"></i></button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </header>
+     <!-- HEADER -->
+
+     <!-- MAIN -->
+     <main>
+     </main>
+     <!-- MAIN -->
+
+     <!-- FOOTER -->
+     <footer>
+          <div class="sl-container">
+               <div class="flex flex-wrap pt-16 pb-10 border-b border-white/10 text-white/70">
+                    <div class="xl:w-1/4 md:w-1/3 sm:w-1/2 w-full md:px-2 mb-12">
+                         <a href="" class="w-20 mb-6"><img src="assets/img/logo/logo.png" alt=""></a>
+                         <p class="mb-8">Raroin is a shared liquidity NFT market smart contract which is used by multiple websites to provide the users.</p>
+                         <ul class="flex gap-4">
+                              <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center bg-white/10 text-white hover:bg-purple-500"><i class="fa-brands fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center bg-white/10 text-white hover:bg-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                              <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center bg-white/10 text-white hover:bg-purple-500"><i class="fa-brands fa-linkedin"></i></a>
+                              </li>
+                         </ul>
+                    </div>
+                    <div class="xl:w-1/6 sm:w-1/3 w-1/2 flex flex-col sm:items-end md:px-2 mb-12">
+                         <div class="w-fit">
+                              <h3 class="text-lg mb-4 font-bold">Marketplace</h3>
+                              <ul>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Create A Store</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Start Selling</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">My Account</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Job</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">List a Item</a></li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="xl:w-1/6 sm:w-1/3 w-1/2 flex flex-col md:items-end md:px-2 mb-12">
+                         <div class="w-fit">
+                              <h3 class="text-lg mb-4 font-bold">Community</h3>
+                              <ul>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Art</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Digital Art</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Photography</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Games</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Music</a></li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="xl:w-1/6 sm:w-1/3 w-1/2 flex flex-col xl:items-end  md:px-2 mb-12">
+                         <div class="w-fit">
+                              <h3 class="text-lg mb-4 font-bold">Resources</h3>
+                              <ul>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Explore NFTs</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Platform Status</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Help center</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Partners</a></li>
+                                   <li><a href="" class="mb-2.5 hover:text-purple-500">Marketplace</a></li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="xl:w-1/4 sm:w-1/3 w-1/2 flex flex-col md:items-end md:px-2 mb-12">
+                         <div class="w-fit">
+                              <h3 class="text-lg mb-4 font-bold">Language</h3>
+                              <div class="group relative flex items-center justify-between max-w-56 w-full my-6" x-data="{active: false, checked: 'English',}">
+                                   <button @click="active = !active" class="relative w-full h-10 leading-10 border-2 border-white/10 rounded-full pl-5 text-left font-medium">
+                                        <span x-text="checked"></span>
+                                        <span :class="active ?'rotate-180':'rotate-0'"
+                                             class="absolute top-1/2 -translate-y-1/2 right-1 w-8 h-8 leading-8 rounded-full bg-white/15 text-white text-center text-xs group-hover:bg-purple-500"><i
+                                                  class="fa-solid fa-chevron-down"></i></span>
+                                   </button>
+                                   <ul :class="active ? 'opacity-100 visible h-fit scale-100':'opacity-0 invisible h-0 scale-75'"
+                                        class="absolute top-full left-0 w-full p-2.5 bg-slate-900 border border-white/10 rounded-md z-50">
+                                        <li><button @click="active = !active; checked = 'English'" class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                  <span>English</span>
+                                                  <span :class="checked == 'English' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                            class="fa-solid fa-check"></i></span>
+                                             </button></li>
+                                        <li><button @click="active = !active; checked = 'Spanish'" class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                  <span>Spanish</span>
+                                                  <span :class="checked == 'Spanish' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                            class="fa-solid fa-check"></i></span>
+                                             </button></li>
+                                        <li><button @click="active = !active; checked = 'Chines'" class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                  <span>Chines</span>
+                                                  <span :class="checked == 'Chines' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                            class="fa-solid fa-check"></i></span>
+                                             </button></li>
+                                        <li><button @click="active = !active; checked = 'Portuguese'" class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                  <span>Portuguese</span>
+                                                  <span :class="checked == 'Portuguese' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                            class="fa-solid fa-check"></i></span>
+                                             </button></li>
+                                   </ul>
+                              </div>
+                              <div class="px-4"><img src="assets/img/footer/verifay-dark.png" alt=""></div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </footer>
+     <!-- FOOTER -->
+
+
+     <!-- SCRIPT LINKS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     <script>
+     </script>
+</body>
+
+</html>

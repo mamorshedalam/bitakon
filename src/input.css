@@ -10,7 +10,7 @@
     @apply transition-all duration-300 ease-out;
   }
   .sl-cart-border {
-    @apply relative overflow-hidden w-full rounded-xl px-[0.115rem] pt-[0.115rem] bg-gradient-to-b from-white/10 to-white/0 before:absolute before:inset-0 before:w-full before:rounded-xl before:bg-gradient-to-b before:h-full before:from-purple-500 before:to-purple-500/0 before:-z-10 before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible sl-animation;
+    @apply relative overflow-hidden w-full rounded-xl px-[0.115rem] pt-[0.115rem] from-white/10 to-white/0 before:absolute before:inset-0 before:w-full before:rounded-xl before:bg-gradient-to-b before:h-full before:from-purple-500 before:to-purple-500/0 before:-z-10 before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible sl-animation;
   }
 }
 
