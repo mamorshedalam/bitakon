@@ -23,7 +23,7 @@
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body x-data="{sidebar : false, headerFixed: false,}" @scroll.window="headerFixed = window.pageYOffset > 200" x-cloak>
+<body x-data="{sidebar : false, headerFixed: false,}" @scroll.window="headerFixed = window.pageYOffset > 50" x-cloak>
 
      <!-- SIDEBAR -->
      <aside :class="sidebar ? 'left-0':'left-full'" x-cloak class="fixed top-0 w-full h-full overflow-x-hidden overflow-y-auto sl-animation z-[999]">
@@ -187,8 +187,8 @@
      <!-- SIDEBAR -->
 
      <!-- HEADER -->
-     <header :class="headerFixed ? 'fixed left-0 top-0 shadow-xl shadow-zinc-900/50 bg-slate-950' : 'bg-white/5'"
-          class="w-full border-b border-white/10 text-gray-400 sm:py-0 py-5 z-[99] sl-animation">
+     <header :class="headerFixed ? 'bg-slate-950' : 'bg-white/5'"
+          class="fixed left-0 top-0 shadow-xl shadow-zinc-900/50 w-full border-b border-white/10 text-gray-400 sm:py-0 py-5 z-[99] sl-animation">
           <div class="sl-container">
                <div class="relative flex flex-wrap items-center">
                     <div class="xl:w-1/12 lg:w-1/6 md:w-1/2 w-1/3 sm:px-2">
@@ -314,6 +314,221 @@
 
      <!-- MAIN -->
      <main>
+          <!-- BREADCRUMB -->
+          <section class="border-b border-white/10 pt-40 pb-20">
+               <img class="absolute inset-0 -z-10" src="assets/img/banner/breadcrumb-shape-1.png" alt="banner">
+               <div class="sl-container">
+                    <h2 class="sm:text-5xl text-4xl font-semibold text-center">Collection Grid</h2>
+                    <ul class="flex items-center justify-center text-white/60 font-medium gap-2 mt-2">
+                         <li class="hover:text-white"><a href="index.html">Home</a></li>
+                         <li><i class="fa-solid fa-circle text-[4px] leading-[1.25rem]"></i></li>
+                         <li class="hover:text-white">Collection</li>
+                    </ul>
+               </div>
+          </section>
+          <!-- BREADCRUMB -->
+
+          <!-- COLLECTION GRID -->
+          <section class="py-32">
+               <div class="sl-container">
+                    <div class="flex flex-wrap">
+                         <div class="lg:w-1/3 md:w-1/2 md:px-4 md:mb-9 mb-6">
+                              <div class="sl-cart-border">
+                                   <div class="rounded-xl bg-slate-950">
+                                        <div class="py-5 px-3 rounded-xl bg-white/5">
+                                             <div class="flex flex-wrap">
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-1.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-2.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-3.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-full px-2 mb-2.5">
+                                                       <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-1.jpg" alt=""></a>
+                                                  </div>
+                                             </div>
+                                             <div class="text-center">
+                                                  <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img src="assets/img/user/collection-user-1.jpg"
+                                                            alt=""></a>
+                                                  <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                  <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="lg:w-1/3 md:w-1/2 md:px-4 md:mb-9 mb-6">
+                              <div class="sl-cart-border">
+                                   <div class="rounded-xl bg-slate-950">
+                                        <div class="py-5 px-3 rounded-xl bg-white/5">
+                                             <div class="flex flex-wrap">
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-4.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-5.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-6.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-full px-2 mb-2.5">
+                                                       <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-2.jpg" alt=""></a>
+                                                  </div>
+                                             </div>
+                                             <div class="text-center">
+                                                  <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img src="assets/img/user/collection-user-2.jpg"
+                                                            alt=""></a>
+                                                  <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                  <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="lg:w-1/3 md:w-1/2 md:px-4 md:mb-9 mb-6">
+                              <div class="sl-cart-border">
+                                   <div class="rounded-xl bg-slate-950">
+                                        <div class="py-5 px-3 rounded-xl bg-white/5">
+                                             <div class="flex flex-wrap">
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-7.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-8.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-3.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-full px-2 mb-2.5">
+                                                       <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-3.jpg" alt=""></a>
+                                                  </div>
+                                             </div>
+                                             <div class="text-center">
+                                                  <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img src="assets/img/user/collection-user-3.jpg"
+                                                            alt=""></a>
+                                                  <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                  <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="lg:w-1/3 md:w-1/2 md:px-4 md:mb-9 mb-6">
+                              <div class="sl-cart-border">
+                                   <div class="rounded-xl bg-slate-950">
+                                        <div class="py-5 px-3 rounded-xl bg-white/5">
+                                             <div class="flex flex-wrap">
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-10.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-11.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-12.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-full px-2 mb-2.5">
+                                                       <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-4.jpg" alt=""></a>
+                                                  </div>
+                                             </div>
+                                             <div class="text-center">
+                                                  <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img src="assets/img/user/collection-user-4.jpg"
+                                                            alt=""></a>
+                                                  <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                  <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="lg:w-1/3 md:w-1/2 md:px-4 md:mb-9 mb-6">
+                              <div class="sl-cart-border">
+                                   <div class="rounded-xl bg-slate-950">
+                                        <div class="py-5 px-3 rounded-xl bg-white/5">
+                                             <div class="flex flex-wrap">
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-13.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-14.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-15.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-full px-2 mb-2.5">
+                                                       <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-5.jpg" alt=""></a>
+                                                  </div>
+                                             </div>
+                                             <div class="text-center">
+                                                  <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img src="assets/img/user/collection-user-5.jpg"
+                                                            alt=""></a>
+                                                  <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                  <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="lg:w-1/3 md:w-1/2 md:px-4 md:mb-9 mb-6">
+                              <div class="sl-cart-border">
+                                   <div class="rounded-xl bg-slate-950">
+                                        <div class="py-5 px-3 rounded-xl bg-white/5">
+                                             <div class="flex flex-wrap">
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-16.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-17.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-1/3 px-2 mb-2.5">
+                                                       <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-18.jpg" alt=""></a>
+                                                  </div>
+                                                  <div class="w-full px-2 mb-2.5">
+                                                       <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-6.jpg" alt=""></a>
+                                                  </div>
+                                             </div>
+                                             <div class="text-center">
+                                                  <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img src="assets/img/user/collection-user-6.jpg"
+                                                            alt=""></a>
+                                                  <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                  <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="mt-5 text-center">
+                         <a href=""
+                              class="text-base font-medium bg-white text-slate-950 rounded-3xl border-2 border-white py-2 px-20 shadow-md shadow-white/20 hover:bg-transparent hover:text-white"><i
+                                   class="fa-solid fa-rotate-right text-sm mr-2"></i> View all items</a>
+                    </div>
+               </div>
+          </section>
+          <!-- COLLECTION GRID -->
+
+          <!-- MARQUE TEXT -->
+          <section class="border-y border-white/10">
+               <div class="sl-container">
+                    <div class="sl-marque-text">
+                         <ul>
+                              <li>Discover  &  Callect  Extraordinary  Digital  Art  and  Rare   NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover  &  Callect  Extraordinary  Digital  Art  and  Rare   NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover  &  Callect  Extraordinary  Digital  Art  and  Rare   NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover  &  Callect  Extraordinary  Digital  Art  and  Rare   NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover  &  Callect  Extraordinary  Digital  Art  and  Rare   NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover  &  Callect  Extraordinary  Digital  Art  and  Rare   NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover  &  Callect  Extraordinary  Digital  Art  and  Rare   NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover  &  Callect  Extraordinary  Digital  Art  and  Rare   NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover  &  Callect  Extraordinary  Digital  Art  and  Rare   NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                         </ul>
+                    </div>
+               </div>
+          </section>
+          <!-- MARQUE TEXT -->
      </main>
      <!-- MAIN -->
 

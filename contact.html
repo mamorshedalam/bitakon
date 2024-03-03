@@ -23,7 +23,7 @@
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body x-data="{sidebar : false, headerFixed: false,}" @scroll.window="headerFixed = window.pageYOffset > 200" x-cloak>
+<body x-data="{sidebar : false, headerFixed: false,}" @scroll.window="headerFixed = window.pageYOffset > 50" x-cloak>
 
      <!-- SIDEBAR -->
      <aside :class="sidebar ? 'left-0':'left-full'" x-cloak class="fixed top-0 w-full h-full overflow-x-hidden overflow-y-auto sl-animation z-[999]">
@@ -187,130 +187,129 @@
      <!-- SIDEBAR -->
 
      <!-- HEADER -->
-     <header :class="headerFixed ? 'fixed left-0 top-0 shadow-xl shadow-zinc-900/50 bg-slate-950' : 'bg-white/5'"
-          class="w-full border-b border-white/10 text-gray-400 sm:py-0 py-5 z-[99] sl-animation">
-          <div class="sl-container">
-               <div class="relative flex flex-wrap items-center">
-                    <div class="xl:w-1/12 lg:w-1/6 md:w-1/2 w-1/3 sm:px-2">
-                         <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+     <header :class="headerFixed ? 'bg-slate-950' : 'bg-white/5'"
+     class="fixed left-0 top-0 shadow-xl shadow-zinc-900/50 w-full border-b border-white/10 text-gray-400 sm:py-0 py-5 z-[99] sl-animation">
+     <div class="sl-container">
+          <div class="relative flex flex-wrap items-center">
+               <div class="xl:w-1/12 lg:w-1/6 md:w-1/2 w-1/3 sm:px-2">
+                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+               </div>
+               <div class="lg:block hidden xl:w-2/3 lg:w-5/12 sm:px-2">
+                    <div class="flex flex-wrap items-center">
+                         <form action="#" class="ml-1 mr-8">
+                              <div class="relative w-64">
+                                   <input type="text" placeholder="Search" class="w-full h-10 px-5 pl-11 text-white bg-white/10 rounded-full border border-transparent focus:border-white">
+                                   <button type="submit" class="absolute left-5 top-1/2 -translate-y-1/2 text-white text-base"><i class="fa-solid fa-magnifying-glass"></i></button>
+                              </div>
+                         </form>
+                         <nav class="xl:block hidden">
+                              <ul class="flex flex-wrap items-center font-medium">
+                                   <li class="sl-submenu-hover group relative mr-7">
+                                        <a href="index.html" class="flex items-center py-7 hover:text-purple-500">Home <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                        <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 top-[120%] group-hover:top-full">
+                                             <li class="px-2.5"><a href="index.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 1</a></li>
+                                             <li class="px-2.5"><a href="index-2.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 2</a></li>
+                                             <li class="px-2.5"><a href="index-3.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 3</a></li>
+                                        </ul>
+                                   </li>
+                                   <li class="sl-submenu-hover group/menu relative mr-7">
+                                        <a href="shop.html" class="flex items-center py-7 hover:text-purple-500">Marketplace <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                        <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 top-[120%] group-hover/menu:top-full">
+                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace</a></li>
+                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace Grid</a></li>
+                                             <li class="sl-submenu-hover relative group/submenu px-2.5">
+                                                  <a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details <i
+                                                            class="fa-solid fa-chevron-right text-xs ml-1.5"></i></a>
+                                                  <ul class="absolute top-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 left-[120%] group-hover/submenu:left-full">
+                                                       <li class="px-2.5"><a href="product-details-tab.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product
+                                                                 Details Tab</a></li>
+                                                       <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details Grid</a></li>
+                                                  </ul>
+                                             </li>
+                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Carousel</a></li>
+                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Filter</a></li>
+                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Grid</a></li>
+                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product List</a></li>
+                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live</a></li>
+                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live Carousel</a></li>
+                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Simple</a></li>
+                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Tab</a></li>
+                                        </ul>
+                                   </li>
+                                   <li class="sl-submenu-hover group mr-7">
+                                        <a href="about.html" class="flex items-center py-7 hover:text-purple-500">Pages <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                        <ul
+                                             class="absolute left-0 w-full grid grid-cols-4 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-7 px-6 z-50 top-[120%] group-hover:top-full">
+                                             <li><a href="about.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">About</a></li>
+                                             <li><a href="login.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Login</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators</a></li>
+                                             <li><a href="shop.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Our Shop</a></li>
+                                             <li><a href="contact.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Contact Us</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Register</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators Grid</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Shop Grid</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Activity</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Forget Password</a></li>
+                                             <li><a href="creator-list.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Edit Profile</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Live Auction</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List Square</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Support/FAQ</a></li>
+                                             <li><a href="blog.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create NFT</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Terms & Conditions</a></li>
+                                             <li><a href="blog-details.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog Details</a></li>
+                                             <li><a href="collection-grid.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid</a></li>
+                                             <li><a href="create-single.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Sinle NFT</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Privacy & Policy</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">NFT Ranking</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid Square</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Multiple NFT</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Maintanance</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Upcoming Projects</a></li>
+                                             <li><a href="wallet.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Connect Wallet</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Coming Soon</a></li>
+                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">404 Error</a></li>
+                                        </ul>
+                                   </li>
+                                   <li class="mr-7">
+                                        <a href="" class="flex items-center py-7 hover:text-purple-500">Collections </a>
+                                   </li>
+                                   <li class="mr-7">
+                                        <a href="profile.html" class="flex items-center py-7 hover:text-purple-500">Profile </a>
+                                   </li>
+                                   <li>
+                                        <a href="" class="flex items-center py-7 hover:text-purple-500">Creators </a>
+                                   </li>
+                              </ul>
+                         </nav>
                     </div>
-                    <div class="lg:block hidden xl:w-2/3 lg:w-5/12 sm:px-2">
-                         <div class="flex flex-wrap items-center">
-                              <form action="#" class="ml-1 mr-8">
-                                   <div class="relative w-64">
-                                        <input type="text" placeholder="Search" class="w-full h-10 px-5 pl-11 text-white bg-white/10 rounded-full border border-transparent focus:border-white">
-                                        <button type="submit" class="absolute left-5 top-1/2 -translate-y-1/2 text-white text-base"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                   </div>
-                              </form>
-                              <nav class="xl:block hidden">
-                                   <ul class="flex flex-wrap items-center font-medium">
-                                        <li class="sl-submenu-hover group relative mr-7">
-                                             <a href="index.html" class="flex items-center py-7 hover:text-purple-500">Home <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
-                                             <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 top-[120%] group-hover:top-full">
-                                                  <li class="px-2.5"><a href="index.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 1</a></li>
-                                                  <li class="px-2.5"><a href="index-2.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 2</a></li>
-                                                  <li class="px-2.5"><a href="index-3.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 3</a></li>
-                                             </ul>
-                                        </li>
-                                        <li class="sl-submenu-hover group/menu relative mr-7">
-                                             <a href="shop.html" class="flex items-center py-7 hover:text-purple-500">Marketplace <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
-                                             <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 top-[120%] group-hover/menu:top-full">
-                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace</a></li>
-                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace Grid</a></li>
-                                                  <li class="sl-submenu-hover relative group/submenu px-2.5">
-                                                       <a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details <i
-                                                                 class="fa-solid fa-chevron-right text-xs ml-1.5"></i></a>
-                                                       <ul class="absolute top-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 left-[120%] group-hover/submenu:left-full">
-                                                            <li class="px-2.5"><a href="product-details-tab.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product
-                                                                      Details Tab</a></li>
-                                                            <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details Grid</a></li>
-                                                       </ul>
-                                                  </li>
-                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Carousel</a></li>
-                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Filter</a></li>
-                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Grid</a></li>
-                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product List</a></li>
-                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live</a></li>
-                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live Carousel</a></li>
-                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Simple</a></li>
-                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Tab</a></li>
-                                             </ul>
-                                        </li>
-                                        <li class="sl-submenu-hover group mr-7">
-                                             <a href="about.html" class="flex items-center py-7 hover:text-purple-500">Pages <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
-                                             <ul
-                                                  class="absolute left-0 w-full grid grid-cols-4 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-7 px-6 z-50 top-[120%] group-hover:top-full">
-                                                  <li><a href="about.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">About</a></li>
-                                                  <li><a href="login.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Login</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators</a></li>
-                                                  <li><a href="shop.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Our Shop</a></li>
-                                                  <li><a href="contact.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Contact Us</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Register</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators Grid</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Shop Grid</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Activity</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Forget Password</a></li>
-                                                  <li><a href="creator-list.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Edit Profile</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Live Auction</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List Square</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Support/FAQ</a></li>
-                                                  <li><a href="blog.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create NFT</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Terms & Conditions</a></li>
-                                                  <li><a href="blog-details.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog Details</a></li>
-                                                  <li><a href="collection-grid.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid</a></li>
-                                                  <li><a href="create-single.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Sinle NFT</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Privacy & Policy</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">NFT Ranking</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid Square</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Multiple NFT</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Maintanance</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Upcoming Projects</a></li>
-                                                  <li><a href="wallet.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Connect Wallet</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Coming Soon</a></li>
-                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">404 Error</a></li>
-                                             </ul>
-                                        </li>
-                                        <li class="mr-7">
-                                             <a href="" class="flex items-center py-7 hover:text-purple-500">Collections </a>
-                                        </li>
-                                        <li class="mr-7">
-                                             <a href="profile.html" class="flex items-center py-7 hover:text-purple-500">Profile </a>
-                                        </li>
-                                        <li>
-                                             <a href="" class="flex items-center py-7 hover:text-purple-500">Creators </a>
-                                        </li>
-                                   </ul>
-                              </nav>
-                         </div>
-                    </div>
-                    <div class="xl:w-1/4 lg:w-5/12 md:w-1/2 w-2/3 sm:px-2">
-                         <div class="flex items-center justify-end">
-                              <a href="" class="relative sm:block hidden text-lg hover:text-white">
-                                   <span><i class="fa-regular fa-bell"></i></span>
-                                   <span class="absolute -top-1 -right-3 flex items-center justify-center w-5 h-5 text-xs font-semibold bg-purple-500 rounded-full">8</span>
-                              </a>
-                              <a href="" class="sm:flex hidden items-center ml-8 font-medium text-white bg-purple-500 rounded-full py-2 px-5 border-2 border-purple-500 hover:bg-transparent">
-                                   <svg viewBox="0 0 19 16" class="w-4 fill-none mr-1">
-                                        <path d="M17.5 5.83333V10.1667C17.5 13.5 15.9 14.5 13.5 14.5H5.5C2.5 14.5 1.5 13 1.5 10.1667V5.83333C1.5 3 2.5 2 4.852 1.552C5.06 1.51733 5.276 1.5 5.5 1.5H13.5C13.708 1.5 13.908 1.50866 14.1 1.54332C16.5 2 17.5 3 17.5 5.83333Z"
-                                             stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M9 5.03314H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M17.2998 5.75061H14.8998C14.0198 5.75061 13.2998 6.65061 13.2998 7.75061C13.2998 8.85061 14.0198 9.75061 14.8998 9.75061H17.2998" stroke="white"
-                                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                   </svg>
-                                   Wallet
-                              </a>
-                              <a href="" class="sm:flex hidden ml-2.5 w-9 h-9 rounded-full overflow-hidden"><img src="assets/img/user/user.jpg" alt="user"></a>
-                              <button @click="sidebar = !sidebar" class="xl:hidden block text-2xl xl:ml-0 ml-2.5 hover:text-white"><i class="fa-solid fa-bars"></i></button>
-                         </div>
+               </div>
+               <div class="xl:w-1/4 lg:w-5/12 md:w-1/2 w-2/3 sm:px-2">
+                    <div class="flex items-center justify-end">
+                         <a href="" class="relative sm:block hidden text-lg hover:text-white">
+                              <span><i class="fa-regular fa-bell"></i></span>
+                              <span class="absolute -top-1 -right-3 flex items-center justify-center w-5 h-5 text-xs font-semibold bg-purple-500 rounded-full">8</span>
+                         </a>
+                         <a href="" class="sm:flex hidden items-center ml-8 font-medium text-white bg-purple-500 rounded-full py-2 px-5 border-2 border-purple-500 hover:bg-transparent">
+                              <svg viewBox="0 0 19 16" class="w-4 fill-none mr-1">
+                                   <path d="M17.5 5.83333V10.1667C17.5 13.5 15.9 14.5 13.5 14.5H5.5C2.5 14.5 1.5 13 1.5 10.1667V5.83333C1.5 3 2.5 2 4.852 1.552C5.06 1.51733 5.276 1.5 5.5 1.5H13.5C13.708 1.5 13.908 1.50866 14.1 1.54332C16.5 2 17.5 3 17.5 5.83333Z"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                   <path d="M9 5.03314H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                   <path d="M17.2998 5.75061H14.8998C14.0198 5.75061 13.2998 6.65061 13.2998 7.75061C13.2998 8.85061 14.0198 9.75061 14.8998 9.75061H17.2998" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                              Wallet
+                         </a>
+                         <a href="" class="sm:flex hidden ml-2.5 w-9 h-9 rounded-full overflow-hidden"><img src="assets/img/user/user.jpg" alt="user"></a>
+                         <button @click="sidebar = !sidebar" class="xl:hidden block text-2xl xl:ml-0 ml-2.5 hover:text-white"><i class="fa-solid fa-bars"></i></button>
                     </div>
                </div>
           </div>
-     </header>
-     <!-- HEADER -->
+     </div>
+</header>
 
      <!-- MAIN -->
      <main>
