@@ -407,97 +407,198 @@
                                         <button @click="mode = 'multi'" :class="mode == 'multi' ? 'bg-purple-500' : 'bg-transparent'"
                                              class="border border-white/10 rounded-r-full px-6 py-1.5">Multiple</button>
                                    </nav>
-                                   <form action="">
-                                        <div class="mb-6">
-                                             <h4 class="sl-required-mark text-base font-semibold mb-1">Upload File</h4>
-                                             <p class="text-white/70 mb-2.5">Add your unique image / video / audio file</p>
-                                             <div class="relative p-8 bg-white/5 border border-dashed border-white/15 rounded-3xl text-center">
-                                                  <p class="text-white/30 mb-4">JPG, PNG, GIF, WEBP, MP4 or MP3. Max 30mb.</p>
-                                                  <label for="singleFile"
-                                                       class="cursor-pointer text-purple-500 font-semibold h-10 leading-9 px-8 py-2 border-2 border-purple-500/30 rounded-full hover:bg-purple-500 hover:text-white">Select
-                                                       a file</label>
-                                                  <input type="file" id="singleFile" class="hidden">
+                                   <div>
+                                        <form action="" x-show="mode == 'single'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
+                                             x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100"
+                                             x-transition:leave-end="opacity-0">
+                                             <div class="mb-6">
+                                                  <h4 class="sl-required-mark text-base font-semibold mb-1">Upload File</h4>
+                                                  <p class="text-white/70 mb-2.5">Add your unique image / video / audio file</p>
+                                                  <div class="relative p-8 bg-white/5 border border-dashed border-white/15 rounded-3xl text-center">
+                                                       <p class="text-white/30 mb-4">JPG, PNG, GIF, WEBP, MP4 or MP3. Max 30mb.</p>
+                                                       <label for="singleFile"
+                                                            class="cursor-pointer text-purple-500 font-semibold h-10 leading-9 px-8 py-2 border-2 border-purple-500/30 rounded-full hover:bg-purple-500 hover:text-white">Select
+                                                            a file</label>
+                                                       <input type="file" id="singleFile" class="hidden">
+                                                  </div>
                                              </div>
-                                        </div>
-                                        <div class="mb-6">
-                                             <label for="singleName" class="sl-required-mark text-base font-semibold mb-1">Name</label>
-                                             <p class="text-white/70 mb-2.5">Choose a unique name for your NFT</p>
-                                             <input type="text" id="singleName" placeholder="Enter the NFT's name" class="w-full px-7 py-4 bg-white/5 rounded-3xl">
-                                        </div>
-                                        <div class="mb-6">
-                                             <label for="singleDescription" class="sl-required-mark text-base font-semibold mb-1">Description</label>
-                                             <p class="text-white/70 mb-2.5">Describe your NFT, help other users understand what's unique about it</p>
-                                             <textarea type="text" id="singleDescription" placeholder="Enter the NFT's Description" class="w-full px-7 py-3 h-20 bg-white/5 rounded-3xl"></textarea>
-                                        </div>
-                                        <div class="mb-6">
-                                             <label class="sl-required-mark text-base font-semibold mb-1">Properties</label>
-                                             <p class="text-white/70 mb-2.5">List attributes that represents your NFT (color, shape, mood, etc..)</p>
-                                             <div class="flex flex-wrap">
-                                                  <div class="md:w-1/2 w-full lg:pr-4 md:pr-2"><input type="text" placeholder="Property" class="w-full px-7 py-4 bg-white/5 rounded-3xl md:mb-0 mb-6"></div>
-                                                  <div class="md:w-1/2 w-full lg:pl-4 md:pl-2"><input type="text" placeholder="Value" class="w-full px-7 py-4 bg-white/5 rounded-3xl"></div>
+                                             <div class="mb-6">
+                                                  <label for="singleName" class="sl-required-mark text-base font-semibold mb-1">Name</label>
+                                                  <p class="text-white/70 mb-2.5">Choose a unique name for your NFT</p>
+                                                  <input type="text" id="singleName" placeholder="Enter the NFT's name" class="w-full px-7 py-4 bg-white/5 rounded-3xl">
                                              </div>
-                                        </div>
-                                        <div class="mb-6">
-                                             <label class="sl-required-mark text-base font-semibold mb-1">Collection</label>
-                                             <p class="text-white/70 mb-2.5">The collection where your NFT will appear.</p>
-                                             <div class="relative" x-data="{active: false, checked: 'Select a Collection',}">
-                                                  <button type="button" @click="active = !active" class="relative w-full px-7 py-4 bg-white/5 rounded-3xl text-left font-medium">
-                                                       <span x-text="checked"></span>
-                                                       <span :class="active ?'rotate-180':'rotate-0'"
-                                                            class="absolute top-1/2 -translate-y-1/2 right-2.5 w-8 h-8 leading-8 rounded-full bg-white/15 text-white text-center text-xs"><i
-                                                                 class="fa-solid fa-chevron-down"></i></span>
-                                                  </button>
-                                                  <ul :class="active ? 'opacity-100 visible h-fit scale-100':'opacity-0 invisible h-0 scale-75'"
-                                                       class="absolute top-full left-0 w-full p-2.5 text-white/60 bg-slate-900 border border-white/10 rounded-xl z-50">
-                                                       <li><button type="button" @click="active = !active; checked = 'Select a Collection'"
-                                                                 class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
-                                                                 <span>Select a Collection</span>
-                                                                 <span :class="checked == 'Select a Collection' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
-                                                                           class="fa-solid fa-check"></i></span>
-                                                            </button></li>
-                                                       <li><button type="button" @click="active = !active; checked = 'Collection 1'"
-                                                                 class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
-                                                                 <span>Collection 1</span>
-                                                                 <span :class="checked == 'Collection 1' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
-                                                                           class="fa-solid fa-check"></i></span>
-                                                            </button></li>
-                                                       <li><button type="button" @click="active = !active; checked = 'Collection 2'"
-                                                                 class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
-                                                                 <span>Collection 2</span>
-                                                                 <span :class="checked == 'Collection 2' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
-                                                                           class="fa-solid fa-check"></i></span>
-                                                            </button></li>
-                                                       <li><button type="button" @click="active = !active; checked = 'Collection 3'"
-                                                                 class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
-                                                                 <span>Collection 3</span>
-                                                                 <span :class="checked == 'Collection 3' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
-                                                                           class="fa-solid fa-check"></i></span>
-                                                            </button></li>
-                                                       <li><button type="button" @click="active = !active; checked = 'Collection 4'"
-                                                                 class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
-                                                                 <span>Collection 4</span>
-                                                                 <span :class="checked == 'Collection 4' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
-                                                                           class="fa-solid fa-check"></i></span>
-                                                            </button></li>
-                                                  </ul>
+                                             <div class="mb-6">
+                                                  <label for="singleDescription" class="sl-required-mark text-base font-semibold mb-1">Description</label>
+                                                  <p class="text-white/70 mb-2.5">Describe your NFT, help other users understand what's unique about it</p>
+                                                  <textarea type="text" id="singleDescription" placeholder="Enter the NFT's Description"
+                                                       class="w-full px-7 py-3 h-20 bg-white/5 rounded-3xl"></textarea>
                                              </div>
-                                        </div>
-                                        <div class="flex flex-wrap mb-6">
-                                             <div class="flex items-center gap-2 mb-2">
-                                                  <input class="sl-checkBlue" id="checkbox1" type="checkbox">
-                                                  <label for="checkbox1" class="mr-10 text-white/60 font-medium">Put on Sale</label>
+                                             <div class="mb-6">
+                                                  <label class="sl-required-mark text-base font-semibold mb-1">Properties</label>
+                                                  <p class="text-white/70 mb-2.5">List attributes that represents your NFT (color, shape, mood, etc..)</p>
+                                                  <div class="flex flex-wrap">
+                                                       <div class="md:w-1/2 w-full lg:pr-4 md:pr-2"><input type="text" placeholder="Property"
+                                                                 class="w-full px-7 py-4 bg-white/5 rounded-3xl md:mb-0 mb-6"></div>
+                                                       <div class="md:w-1/2 w-full lg:pl-4 md:pl-2"><input type="text" placeholder="Value" class="w-full px-7 py-4 bg-white/5 rounded-3xl"></div>
+                                                  </div>
                                              </div>
-                                             <div class="flex items-center gap-2 mb-2">
-                                                  <input class="sl-checkBlue" id="checkbox2" type="checkbox">
-                                                  <label for="checkbox2" class="mr-10 text-white/60 font-medium">Instant sale price</label>
+                                             <div class="mb-6">
+                                                  <label class="sl-required-mark text-base font-semibold mb-1">Collection</label>
+                                                  <p class="text-white/70 mb-2.5">The collection where your NFT will appear.</p>
+                                                  <div class="relative" x-data="{active: false, checked: 'Select a Collection',}">
+                                                       <button type="button" @click="active = !active" class="relative w-full px-7 py-4 bg-white/5 rounded-3xl text-left font-medium">
+                                                            <span x-text="checked"></span>
+                                                            <span :class="active ?'rotate-180':'rotate-0'"
+                                                                 class="absolute top-1/2 -translate-y-1/2 right-2.5 w-8 h-8 leading-8 rounded-full bg-white/15 text-white text-center text-xs"><i
+                                                                      class="fa-solid fa-chevron-down"></i></span>
+                                                       </button>
+                                                       <ul :class="active ? 'opacity-100 visible h-fit scale-100':'opacity-0 invisible h-0 scale-75'"
+                                                            class="absolute top-full left-0 w-full p-2.5 text-white/60 bg-slate-900 border border-white/10 rounded-xl z-50">
+                                                            <li><button type="button" @click="active = !active; checked = 'Select a Collection'"
+                                                                      class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                                      <span>Select a Collection</span>
+                                                                      <span :class="checked == 'Select a Collection' ? 'block':'hidden'"
+                                                                           class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i class="fa-solid fa-check"></i></span>
+                                                                 </button></li>
+                                                            <li><button type="button" @click="active = !active; checked = 'Collection 1'"
+                                                                      class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                                      <span>Collection 1</span>
+                                                                      <span :class="checked == 'Collection 1' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                                class="fa-solid fa-check"></i></span>
+                                                                 </button></li>
+                                                            <li><button type="button" @click="active = !active; checked = 'Collection 2'"
+                                                                      class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                                      <span>Collection 2</span>
+                                                                      <span :class="checked == 'Collection 2' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                                class="fa-solid fa-check"></i></span>
+                                                                 </button></li>
+                                                            <li><button type="button" @click="active = !active; checked = 'Collection 3'"
+                                                                      class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                                      <span>Collection 3</span>
+                                                                      <span :class="checked == 'Collection 3' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                                class="fa-solid fa-check"></i></span>
+                                                                 </button></li>
+                                                            <li><button type="button" @click="active = !active; checked = 'Collection 4'"
+                                                                      class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                                      <span>Collection 4</span>
+                                                                      <span :class="checked == 'Collection 4' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                                class="fa-solid fa-check"></i></span>
+                                                                 </button></li>
+                                                       </ul>
+                                                  </div>
                                              </div>
-                                             <div class="flex items-center gap-2 mb-2">
-                                                  <input class="sl-checkBlue" id="checkbox3" type="checkbox">
-                                                  <label for="checkbox3" class="mr-10 text-white/60 font-medium">Unlock one purchased</label>
+                                             <div class="flex flex-wrap mb-6">
+                                                  <div class="flex items-center gap-2 mb-2">
+                                                       <input class="sl-checkBlue" id="checkbox1" type="checkbox">
+                                                       <label for="checkbox1" class="mr-10 text-white/60 font-medium">Put on Sale</label>
+                                                  </div>
+                                                  <div class="flex items-center gap-2 mb-2">
+                                                       <input class="sl-checkBlue" id="checkbox2" type="checkbox">
+                                                       <label for="checkbox2" class="mr-10 text-white/60 font-medium">Instant sale price</label>
+                                                  </div>
+                                                  <div class="flex items-center gap-2 mb-2">
+                                                       <input class="sl-checkBlue" id="checkbox3" type="checkbox">
+                                                       <label for="checkbox3" class="mr-10 text-white/60 font-medium">Unlock one purchased</label>
+                                                  </div>
                                              </div>
-                                        </div>
-                                        <button class="border-2 border-purple-500 bg-purple-500 hover:bg-transparent text-base py-2 px-12 rounded-md">Create Item</button>
-                                   </form>
+                                             <button class="border-2 border-purple-500 bg-purple-500 hover:bg-transparent text-base py-2 px-12 rounded-md">Create Item</button>
+                                        </form>
+                                        <form action="" x-show="mode == 'multi'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
+                                             x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100"
+                                             x-transition:leave-end="opacity-0">
+                                             <div class="mb-6">
+                                                  <h4 class="sl-required-mark text-base font-semibold mb-1">Upload File</h4>
+                                                  <p class="text-white/70 mb-2.5">Add your unique image / video / audio file</p>
+                                                  <div class="relative p-8 bg-white/5 border border-dashed border-white/15 rounded-3xl text-center">
+                                                       <p class="text-white/30 mb-4">JPG, PNG, GIF, WEBP, MP4 or MP3. Max 30mb.</p>
+                                                       <label for="singleFile"
+                                                            class="cursor-pointer text-purple-500 font-semibold h-10 leading-9 px-8 py-2 border-2 border-purple-500/30 rounded-full hover:bg-purple-500 hover:text-white">Select
+                                                            a file</label>
+                                                       <input type="file" id="singleFile" class="hidden">
+                                                  </div>
+                                             </div>
+                                             <div class="mb-6">
+                                                  <label for="singleName" class="sl-required-mark text-base font-semibold mb-1">Name</label>
+                                                  <p class="text-white/70 mb-2.5">Choose a unique name for your NFT</p>
+                                                  <input type="text" id="singleName" placeholder="Enter the NFT's name" class="w-full px-7 py-4 bg-white/5 rounded-3xl">
+                                             </div>
+                                             <div class="mb-6">
+                                                  <label for="singleDescription" class="sl-required-mark text-base font-semibold mb-1">Description</label>
+                                                  <p class="text-white/70 mb-2.5">Describe your NFT, help other users understand what's unique about it</p>
+                                                  <textarea type="text" id="singleDescription" placeholder="Enter the NFT's Description"
+                                                       class="w-full px-7 py-3 h-20 bg-white/5 rounded-3xl"></textarea>
+                                             </div>
+                                             <div class="mb-6">
+                                                  <label class="sl-required-mark text-base font-semibold mb-1">Properties</label>
+                                                  <p class="text-white/70 mb-2.5">List attributes that represents your NFT (color, shape, mood, etc..)</p>
+                                                  <div class="flex flex-wrap">
+                                                       <div class="md:w-1/2 w-full lg:pr-4 md:pr-2"><input type="text" placeholder="Property"
+                                                                 class="w-full px-7 py-4 bg-white/5 rounded-3xl md:mb-0 mb-6"></div>
+                                                       <div class="md:w-1/2 w-full lg:pl-4 md:pl-2"><input type="text" placeholder="Value" class="w-full px-7 py-4 bg-white/5 rounded-3xl"></div>
+                                                  </div>
+                                             </div>
+                                             <div class="mb-6">
+                                                  <label class="sl-required-mark text-base font-semibold mb-1">Collection</label>
+                                                  <p class="text-white/70 mb-2.5">The collection where your NFT will appear.</p>
+                                                  <div class="relative" x-data="{active: false, checked: 'Select a Collection',}">
+                                                       <button type="button" @click="active = !active" class="relative w-full px-7 py-4 bg-white/5 rounded-3xl text-left font-medium">
+                                                            <span x-text="checked"></span>
+                                                            <span :class="active ?'rotate-180':'rotate-0'"
+                                                                 class="absolute top-1/2 -translate-y-1/2 right-2.5 w-8 h-8 leading-8 rounded-full bg-white/15 text-white text-center text-xs"><i
+                                                                      class="fa-solid fa-chevron-down"></i></span>
+                                                       </button>
+                                                       <ul :class="active ? 'opacity-100 visible h-fit scale-100':'opacity-0 invisible h-0 scale-75'"
+                                                            class="absolute top-full left-0 w-full p-2.5 text-white/60 bg-slate-900 border border-white/10 rounded-xl z-50">
+                                                            <li><button type="button" @click="active = !active; checked = 'Select a Collection'"
+                                                                      class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                                      <span>Select a Collection</span>
+                                                                      <span :class="checked == 'Select a Collection' ? 'block':'hidden'"
+                                                                           class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i class="fa-solid fa-check"></i></span>
+                                                                 </button></li>
+                                                            <li><button type="button" @click="active = !active; checked = 'Collection 1'"
+                                                                      class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                                      <span>Collection 1</span>
+                                                                      <span :class="checked == 'Collection 1' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                                class="fa-solid fa-check"></i></span>
+                                                                 </button></li>
+                                                            <li><button type="button" @click="active = !active; checked = 'Collection 2'"
+                                                                      class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                                      <span>Collection 2</span>
+                                                                      <span :class="checked == 'Collection 2' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                                class="fa-solid fa-check"></i></span>
+                                                                 </button></li>
+                                                            <li><button type="button" @click="active = !active; checked = 'Collection 3'"
+                                                                      class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                                      <span>Collection 3</span>
+                                                                      <span :class="checked == 'Collection 3' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                                class="fa-solid fa-check"></i></span>
+                                                                 </button></li>
+                                                            <li><button type="button" @click="active = !active; checked = 'Collection 4'"
+                                                                      class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                                      <span>Collection 4</span>
+                                                                      <span :class="checked == 'Collection 4' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                                class="fa-solid fa-check"></i></span>
+                                                                 </button></li>
+                                                       </ul>
+                                                  </div>
+                                             </div>
+                                             <div class="flex flex-wrap mb-6">
+                                                  <div class="flex items-center gap-2 mb-2">
+                                                       <input class="sl-checkBlue" id="checkbox1" type="checkbox">
+                                                       <label for="checkbox1" class="mr-10 text-white/60 font-medium">Put on Sale</label>
+                                                  </div>
+                                                  <div class="flex items-center gap-2 mb-2">
+                                                       <input class="sl-checkBlue" id="checkbox2" type="checkbox">
+                                                       <label for="checkbox2" class="mr-10 text-white/60 font-medium">Instant sale price</label>
+                                                  </div>
+                                                  <div class="flex items-center gap-2 mb-2">
+                                                       <input class="sl-checkBlue" id="checkbox3" type="checkbox">
+                                                       <label for="checkbox3" class="mr-10 text-white/60 font-medium">Unlock one purchased</label>
+                                                  </div>
+                                             </div>
+                                             <button class="border-2 border-purple-500 bg-purple-500 hover:bg-transparent text-base py-2 px-12 rounded-md">Create Item</button>
+                                        </form>
+                                   </div>
                               </div>
                          </div>
                     </div>
