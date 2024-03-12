@@ -25,7 +25,6 @@
   .sl-marque-text li {
     @apply relative w-1/2 h-10 leading-10;
   }
-
   .sl-required-mark {
     @apply relative w-fit after:absolute after:-right-2.5 after:top-0 after:text-purple-500 after:content-['*'];
   }
