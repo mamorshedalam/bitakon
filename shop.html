@@ -188,131 +188,1154 @@
 
      <!-- HEADER -->
      <header :class="headerFixed ? 'bg-slate-950' : 'bg-white/5'"
-     class="fixed left-0 top-0 shadow-xl shadow-zinc-900/50 w-full border-b border-white/10 text-gray-400 sm:py-0 py-5 z-[99] sl-animation">
-     <div class="sl-container">
-          <div class="relative flex flex-wrap items-center">
-               <div class="xl:w-1/12 lg:w-1/6 md:w-1/2 w-1/3 sm:px-2">
-                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
-               </div>
-               <div class="lg:block hidden xl:w-2/3 lg:w-5/12 sm:px-2">
-                    <div class="flex flex-wrap items-center">
-                         <form action="#" class="ml-1 mr-8">
-                              <div class="relative w-64">
-                                   <input type="text" placeholder="Search" class="w-full h-10 px-5 pl-11 text-white bg-white/10 rounded-full border border-transparent focus:border-white">
-                                   <button type="submit" class="absolute left-5 top-1/2 -translate-y-1/2 text-white text-base"><i class="fa-solid fa-magnifying-glass"></i></button>
-                              </div>
-                         </form>
-                         <nav class="xl:block hidden">
-                              <ul class="flex flex-wrap items-center font-medium">
-                                   <li class="sl-submenu-hover group relative mr-7">
-                                        <a href="index.html" class="flex items-center py-7 hover:text-purple-500">Home <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
-                                        <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 top-[120%] group-hover:top-full">
-                                             <li class="px-2.5"><a href="index.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 1</a></li>
-                                             <li class="px-2.5"><a href="index-2.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 2</a></li>
-                                             <li class="px-2.5"><a href="index-3.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 3</a></li>
-                                        </ul>
-                                   </li>
-                                   <li class="sl-submenu-hover group/menu relative mr-7">
-                                        <a href="shop.html" class="flex items-center py-7 hover:text-purple-500">Marketplace <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
-                                        <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 top-[120%] group-hover/menu:top-full">
-                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace</a></li>
-                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace Grid</a></li>
-                                             <li class="sl-submenu-hover relative group/submenu px-2.5">
-                                                  <a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details <i
-                                                            class="fa-solid fa-chevron-right text-xs ml-1.5"></i></a>
-                                                  <ul class="absolute top-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 left-[120%] group-hover/submenu:left-full">
-                                                       <li class="px-2.5"><a href="product-details-tab.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product
-                                                                 Details Tab</a></li>
-                                                       <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details Grid</a></li>
-                                                  </ul>
-                                             </li>
-                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Carousel</a></li>
-                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Filter</a></li>
-                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Grid</a></li>
-                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product List</a></li>
-                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live</a></li>
-                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live Carousel</a></li>
-                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Simple</a></li>
-                                             <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Tab</a></li>
-                                        </ul>
-                                   </li>
-                                   <li class="sl-submenu-hover group mr-7">
-                                        <a href="about.html" class="flex items-center py-7 hover:text-purple-500">Pages <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
-                                        <ul
-                                             class="absolute left-0 w-full grid grid-cols-4 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-7 px-6 z-50 top-[120%] group-hover:top-full">
-                                             <li><a href="about.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">About</a></li>
-                                             <li><a href="login.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Login</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators</a></li>
-                                             <li><a href="shop.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Our Shop</a></li>
-                                             <li><a href="contact.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Contact Us</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Register</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators Grid</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Shop Grid</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Activity</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Forget Password</a></li>
-                                             <li><a href="creator-list.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Edit Profile</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Live Auction</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List Square</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Support/FAQ</a></li>
-                                             <li><a href="blog.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create NFT</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Terms & Conditions</a></li>
-                                             <li><a href="blog-details.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog Details</a></li>
-                                             <li><a href="collection-grid.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid</a></li>
-                                             <li><a href="create-single.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Sinle NFT</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Privacy & Policy</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">NFT Ranking</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid Square</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Multiple NFT</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Maintanance</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Upcoming Projects</a></li>
-                                             <li><a href="wallet.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Connect Wallet</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Coming Soon</a></li>
-                                             <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">404 Error</a></li>
-                                        </ul>
-                                   </li>
-                                   <li class="mr-7">
-                                        <a href="" class="flex items-center py-7 hover:text-purple-500">Collections </a>
-                                   </li>
-                                   <li class="mr-7">
-                                        <a href="profile.html" class="flex items-center py-7 hover:text-purple-500">Profile </a>
-                                   </li>
-                                   <li>
-                                        <a href="" class="flex items-center py-7 hover:text-purple-500">Creators </a>
-                                   </li>
-                              </ul>
-                         </nav>
+          class="fixed left-0 top-0 shadow-xl shadow-zinc-900/50 w-full border-b border-white/10 text-gray-400 sm:py-0 py-5 z-[99] sl-animation">
+          <div class="sl-container">
+               <div class="relative flex flex-wrap items-center">
+                    <div class="xl:w-1/12 lg:w-1/6 md:w-1/2 w-1/3 sm:px-2">
+                         <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
                     </div>
-               </div>
-               <div class="xl:w-1/4 lg:w-5/12 md:w-1/2 w-2/3 sm:px-2">
-                    <div class="flex items-center justify-end">
-                         <a href="" class="relative sm:block hidden text-lg hover:text-white">
-                              <span><i class="fa-regular fa-bell"></i></span>
-                              <span class="absolute -top-1 -right-3 flex items-center justify-center w-5 h-5 text-xs font-semibold bg-purple-500 rounded-full">8</span>
-                         </a>
-                         <a href="" class="sm:flex hidden items-center ml-8 font-medium text-white bg-purple-500 rounded-full py-2 px-5 border-2 border-purple-500 hover:bg-transparent">
-                              <svg viewBox="0 0 19 16" class="w-4 fill-none mr-1">
-                                   <path d="M17.5 5.83333V10.1667C17.5 13.5 15.9 14.5 13.5 14.5H5.5C2.5 14.5 1.5 13 1.5 10.1667V5.83333C1.5 3 2.5 2 4.852 1.552C5.06 1.51733 5.276 1.5 5.5 1.5H13.5C13.708 1.5 13.908 1.50866 14.1 1.54332C16.5 2 17.5 3 17.5 5.83333Z"
-                                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                   <path d="M9 5.03314H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                   <path d="M17.2998 5.75061H14.8998C14.0198 5.75061 13.2998 6.65061 13.2998 7.75061C13.2998 8.85061 14.0198 9.75061 14.8998 9.75061H17.2998" stroke="white"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg>
-                              Wallet
-                         </a>
-                         <a href="" class="sm:flex hidden ml-2.5 w-9 h-9 rounded-full overflow-hidden"><img src="assets/img/user/user.jpg" alt="user"></a>
-                         <button @click="sidebar = !sidebar" class="xl:hidden block text-2xl xl:ml-0 ml-2.5 hover:text-white"><i class="fa-solid fa-bars"></i></button>
+                    <div class="lg:block hidden xl:w-2/3 lg:w-5/12 sm:px-2">
+                         <div class="flex flex-wrap items-center">
+                              <form action="#" class="ml-1 mr-8">
+                                   <div class="relative w-64">
+                                        <input type="text" placeholder="Search" class="w-full h-10 px-5 pl-11 text-white bg-white/10 rounded-full border border-transparent focus:border-white">
+                                        <button type="submit" class="absolute left-5 top-1/2 -translate-y-1/2 text-white text-base"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                   </div>
+                              </form>
+                              <nav class="xl:block hidden">
+                                   <ul class="flex flex-wrap items-center font-medium">
+                                        <li class="sl-submenu-hover group relative mr-7">
+                                             <a href="index.html" class="flex items-center py-7 hover:text-purple-500">Home <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                             <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 top-[120%] group-hover:top-full">
+                                                  <li class="px-2.5"><a href="index.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 1</a></li>
+                                                  <li class="px-2.5"><a href="index-2.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 2</a></li>
+                                                  <li class="px-2.5"><a href="index-3.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Home Style 3</a></li>
+                                             </ul>
+                                        </li>
+                                        <li class="sl-submenu-hover group/menu relative mr-7">
+                                             <a href="shop.html" class="flex items-center py-7 hover:text-purple-500">Marketplace <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                             <ul class="absolute left-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 top-[120%] group-hover/menu:top-full">
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Marketplace Grid</a></li>
+                                                  <li class="sl-submenu-hover relative group/submenu px-2.5">
+                                                       <a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details <i
+                                                                 class="fa-solid fa-chevron-right text-xs ml-1.5"></i></a>
+                                                       <ul class="absolute top-0 min-w-56 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-4 z-50 left-[120%] group-hover/submenu:left-full">
+                                                            <li class="px-2.5"><a href="product-details-tab.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product
+                                                                      Details Tab</a></li>
+                                                            <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details Grid</a></li>
+                                                       </ul>
+                                                  </li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Carousel</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Filter</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Grid</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product List</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Live Carousel</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Simple</a></li>
+                                                  <li class="px-2.5"><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Tab</a></li>
+                                             </ul>
+                                        </li>
+                                        <li class="sl-submenu-hover group mr-7">
+                                             <a href="about.html" class="flex items-center py-7 hover:text-purple-500">Pages <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i></a>
+                                             <ul
+                                                  class="absolute left-0 w-full grid grid-cols-4 bg-slate-900 shadow-lg rounded-xl border border-white/10 py-7 px-6 z-50 top-[120%] group-hover:top-full">
+                                                  <li><a href="about.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">About</a></li>
+                                                  <li><a href="login.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Login</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators</a></li>
+                                                  <li><a href="shop.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Our Shop</a></li>
+                                                  <li><a href="contact.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Contact Us</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Register</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators Grid</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Shop Grid</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Activity</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Forget Password</a></li>
+                                                  <li><a href="creator-list.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Product Details</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Edit Profile</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Live Auction</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Creators List Square</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Support/FAQ</a></li>
+                                                  <li><a href="blog.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create NFT</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Terms & Conditions</a></li>
+                                                  <li><a href="blog-details.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Blog Details</a></li>
+                                                  <li><a href="collection-grid.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid</a></li>
+                                                  <li><a href="create-single.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Sinle NFT</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Privacy & Policy</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">NFT Ranking</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Collection Grid Square</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Create Multiple NFT</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Maintanance</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Upcoming Projects</a></li>
+                                                  <li><a href="wallet.html" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Connect Wallet</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">Coming Soon</a></li>
+                                                  <li><a href="" class="w-full py-2 px-3 rounded-md hover:text-purple-500 hover:bg-slate-800">404 Error</a></li>
+                                             </ul>
+                                        </li>
+                                        <li class="mr-7">
+                                             <a href="" class="flex items-center py-7 hover:text-purple-500">Collections </a>
+                                        </li>
+                                        <li class="mr-7">
+                                             <a href="profile.html" class="flex items-center py-7 hover:text-purple-500">Profile </a>
+                                        </li>
+                                        <li>
+                                             <a href="" class="flex items-center py-7 hover:text-purple-500">Creators </a>
+                                        </li>
+                                   </ul>
+                              </nav>
+                         </div>
+                    </div>
+                    <div class="xl:w-1/4 lg:w-5/12 md:w-1/2 w-2/3 sm:px-2">
+                         <div class="flex items-center justify-end">
+                              <a href="" class="relative sm:block hidden text-lg hover:text-white">
+                                   <span><i class="fa-regular fa-bell"></i></span>
+                                   <span class="absolute -top-1 -right-3 flex items-center justify-center w-5 h-5 text-xs font-semibold bg-purple-500 rounded-full">8</span>
+                              </a>
+                              <a href="" class="sm:flex hidden items-center ml-8 font-medium text-white bg-purple-500 rounded-full py-2 px-5 border-2 border-purple-500 hover:bg-transparent">
+                                   <svg viewBox="0 0 19 16" class="w-4 fill-none mr-1">
+                                        <path d="M17.5 5.83333V10.1667C17.5 13.5 15.9 14.5 13.5 14.5H5.5C2.5 14.5 1.5 13 1.5 10.1667V5.83333C1.5 3 2.5 2 4.852 1.552C5.06 1.51733 5.276 1.5 5.5 1.5H13.5C13.708 1.5 13.908 1.50866 14.1 1.54332C16.5 2 17.5 3 17.5 5.83333Z"
+                                             stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M9 5.03314H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M17.2998 5.75061H14.8998C14.0198 5.75061 13.2998 6.65061 13.2998 7.75061C13.2998 8.85061 14.0198 9.75061 14.8998 9.75061H17.2998" stroke="white"
+                                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                   </svg>
+                                   Wallet
+                              </a>
+                              <a href="" class="sm:flex hidden ml-2.5 w-9 h-9 rounded-full overflow-hidden"><img src="assets/img/user/user.jpg" alt="user"></a>
+                              <button @click="sidebar = !sidebar" class="xl:hidden block text-2xl xl:ml-0 ml-2.5 hover:text-white"><i class="fa-solid fa-bars"></i></button>
+                         </div>
                     </div>
                </div>
           </div>
-     </div>
-</header>
+     </header>
+     <!-- HEADER -->
 
      <!-- MAIN -->
-     <main>
+     <main x-data="{active: 'nft'}">
+          <!-- BREADCRUMB -->
+          <section class="pt-40 pb-20">
+               <img class="absolute inset-0 -z-10" src="assets/img/banner/breadcrumb-shape-1.png" alt="banner">
+               <div class="sl-container">
+                    <h2 class="sm:text-5xl text-4xl font-semibold text-center">Marketplace</h2>
+                    <ul class="flex items-center justify-center text-white/60 font-medium gap-2 mt-2">
+                         <li class="hover:text-white"><a href="index.html">Home</a></li>
+                         <li><i class="fa-solid fa-circle text-[4px] leading-[1.25rem]"></i></li>
+                         <li class="hover:text-white">Marketplace</li>
+                    </ul>
+               </div>
+          </section>
+          <!-- BREADCRUMB -->
+
+          <!-- COLLECTION NAV -->
+          <nav class="border-b border-white/10">
+               <div class="sl-container">
+                    <div class="flex flex-wrap">
+                         <div class="xl:w-1/4 lg:w-1/3 w-full lg:order-1 order-2 lg:px-2 lg:py-0 py-2">
+                              <div class="flex justify-between items-center">
+                                   <p class="font-semibold"><i class="fa-solid fa-sliders mr-2"></i> Filter</p>
+                                   <button class=""><i class="fa-solid fa-xmark"></i></button>
+                              </div>
+                         </div>
+                         <div class="xl:w-3/4 lg:w-2/3 w-full lg:order-2 order-1 lg:px-2 lg:mb-0 mb-5">
+                              <div class="flex flex-wrap justify-between">
+                                   <ul class="flex flex-wrap items-center lg:mb-0 mb-4">
+                                        <li><button @click="active = 'nft'"
+                                                  :class="active == 'nft' ? 'after:opacity-100 after:visible before:opacity-100 before:visible' : 'after:opacity-0 after:invisible before:opacity-0 before:invisible'"
+                                                  class="relative font-semibold py-1.5 px-10 after:absolute after:left-0 after:top-full after:w-full after:h-0.5 after:bg-purple-500 before:absolute before:inset-0 before:w-full before:h-full before:bg-gradient-to-t before:from-purple-500/30 before:to-purple-500/0">
+                                                  NFTs
+                                                  <span :class="active == 'nft' ? 'text-white' : 'text-white/60'">154,087</span>
+                                             </button></li>
+                                        <li><button @click="active = 'collection'"
+                                                  :class="active == 'collection' ? 'after:opacity-100 after:visible before:opacity-100 before:visible' : 'after:opacity-0 after:invisible before:opacity-0 before:invisible'"
+                                                  class="relative font-semibold py-1.5 px-10 after:absolute after:left-0 after:top-full after:w-full after:h-0.5 after:bg-purple-500 before:absolute before:inset-0 before:w-full before:h-full before:bg-gradient-to-t before:from-purple-500/30 before:to-purple-500/0">
+                                                  Collections
+                                                  <span :class="active == 'collection' ? 'text-white' : 'text-white/60'">12,627</span>
+                                             </button></li>
+                                        <li><button @click="active = 'create'"
+                                                  :class="active == 'create' ? 'after:opacity-100 after:visible before:opacity-100 before:visible' : 'after:opacity-0 after:invisible before:opacity-0 before:invisible'"
+                                                  class="relative font-semibold py-1.5 px-10 after:absolute after:left-0 after:top-full after:w-full after:h-0.5 after:bg-purple-500 before:absolute before:inset-0 before:w-full before:h-full before:bg-gradient-to-t before:from-purple-500/30 before:to-purple-500/0">
+                                                  Creators
+                                                  <span :class="active == 'create' ? 'text-white' : 'text-white/60'">1,07,368</span>
+                                             </button></li>
+                                   </ul>
+                                   <div class="relative flex items-center" x-data="{active: false, checked: 'Low to High',}">
+                                        <span class="text-white/60">Sort by Price:</span>
+                                        <button @click="active = !active" class="font-medium h-9 leading-9 px-3">
+                                             <span x-text="checked"></span>
+                                             <i :class="active ?'rotate-180':'rotate-0'" class="fa-solid fa-chevron-down ml-2"></i></button>
+                                        <ul :class="active ? 'opacity-100 visible h-fit scale-100':'opacity-0 invisible h-0 scale-75'"
+                                             class="absolute top-full left-0 w-full p-2.5 bg-slate-900 border border-white/10 rounded-md z-50">
+                                             <li><button @click="active = !active; checked = 'Low to High'"
+                                                       class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                       <span>Low to High</span>
+                                                       <span :class="checked == 'Low to High' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                 class="fa-solid fa-check"></i></span>
+                                                  </button></li>
+                                             <li><button @click="active = !active; checked = 'High to Low'"
+                                                       class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                       <span>High to Low</span>
+                                                       <span :class="checked == 'High to Low' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                 class="fa-solid fa-check"></i></span>
+                                                  </button></li>
+                                             <li><button @click="active = !active; checked = 'Recently Added'"
+                                                       class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                       <span>Recently Added</span>
+                                                       <span :class="checked == 'Recently Added' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                 class="fa-solid fa-check"></i></span>
+                                                  </button></li>
+                                             <li><button @click="active = !active; checked = 'Top Ranking'"
+                                                       class="relative w-full py-2 px-3 text-left rounded-md hover:text-purple-500 hover:bg-slate-800">
+                                                       <span>Top Ranking</span>
+                                                       <span :class="checked == 'Top Ranking' ? 'block':'hidden'" class="absolute top-1/2 -translate-y-1/2 right-3 text-purple-500"><i
+                                                                 class="fa-solid fa-check"></i></span>
+                                                  </button></li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </nav>
+          <!-- COLLECTION NAV -->
+
+          <!-- COLLECTION GRID -->
+          <section class="pb-28">
+               <div class="sl-container">
+                    <div class="flex flex-wrap">
+                         <div class="xl:w-1/4 lg:w-1/3 w-full lg:px-2">
+                              <div class="border-x border-white/10" x-data="{active: true}">
+                                   <h2 @click="active = !active" class="flex justify-between items-center p-5 border-b border-white/10 text-base font-medium">Status
+                                        <span :class="active ? 'rotate-0' : '-rotate-90'" class="w-7 h-7 leading-7 rounded-full text-center text-xs bg-white/5"><i
+                                                  class="fa-solid fa-chevron-down"></i></span>
+                                   </h2>
+                                   <div :class="active ? 'max-h-80' : 'max-h-0'" class=" overflow-hidden sl-animation">
+                                        <form action="#" class="py-2.5 px-5 bg-white/5">
+                                             <div class="flex items-center gap-3 mb-3">
+                                                  <input class="sl-checkBlue" id="mBuy" type="checkbox">
+                                                  <label for="mBuy" class="text-white/60 font-medium">Buy Now</label>
+                                             </div>
+                                             <div class="flex items-center gap-3 mb-3">
+                                                  <input class="sl-checkBlue" id="mAuction" type="checkbox">
+                                                  <label for="mAuction" class="text-white/60 font-medium">On Auction</label>
+                                             </div>
+                                             <div class="flex items-center gap-3 mb-3">
+                                                  <input class="sl-checkBlue" id="mSell" type="checkbox">
+                                                  <label for="mSell" class="text-white/60 font-medium">Looking to Sell</label>
+                                             </div>
+                                             <div class="flex items-center gap-3 mb-3">
+                                                  <input class="sl-checkBlue" id="mOffer" type="checkbox">
+                                                  <label for="mOffer" class="text-white/60 font-medium">Hes offers</label>
+                                             </div>
+                                        </form>
+                                   </div>
+                              </div>
+                              <div class="border-x border-white/10" x-data="{active: false}">
+                                   <h2 @click="active = !active" class="flex justify-between items-center p-5 border-b border-white/10 text-base font-medium">Price
+                                        <span :class="active ? 'rotate-0' : '-rotate-90'" class="w-7 h-7 leading-7 rounded-full text-center text-xs bg-white/5"><i
+                                                  class="fa-solid fa-chevron-down"></i></span>
+                                   </h2>
+                                   <div :class="active ? 'max-h-80' : 'max-h-0'" class=" overflow-hidden sl-animation">
+                                        <form action="#" class="py-2.5 px-5 bg-white/5">
+
+                                        </form>
+                                   </div>
+                              </div>
+                              <div class="border-x border-white/10" x-data="{active: false}">
+                                   <h2 @click="active = !active" class="flex justify-between items-center p-5 border-b border-white/10 text-base font-medium">Collection
+                                        <span :class="active ? 'rotate-0' : '-rotate-90'" class="w-7 h-7 leading-7 rounded-full text-center text-xs bg-white/5"><i
+                                                  class="fa-solid fa-chevron-down"></i></span>
+                                   </h2>
+                                   <div :class="active ? 'max-h-80' : 'max-h-0'" class=" overflow-hidden sl-animation">
+                                        <form action="#" class="py-2.5 px-5 bg-white/5">
+                                             <div class="relative mb-3">
+                                                  <input class="w-full h-9 leading-9 bg-slate-950 border border-white/10 rounded-md pl-10 pr-3" placeholder="Search Collect" id="mSearch" type="text">
+                                                  <label for="mSearch" class="absolute top-1/2 -translate-y-1/2 left-3"><i class="fa-solid fa-magnifying-glass"></i></label>
+                                             </div>
+                                             <div class="flex items-center gap-3 mb-3">
+                                                  <input class="sl-checkBlue" id="mGen" type="checkbox">
+                                                  <label for="mGen" class="text-white/60 font-medium">Generative Art</label>
+                                             </div>
+                                             <div class="flex items-center gap-3 mb-3">
+                                                  <input class="sl-checkBlue" id="mMono" type="checkbox">
+                                                  <label for="mMono" class="text-white/60 font-medium">Mono Art</label>
+                                             </div>
+                                             <div class="flex items-center gap-3 mb-3">
+                                                  <input class="sl-checkBlue" id="mPaper" type="checkbox">
+                                                  <label for="mPaper" class="text-white/60 font-medium">Paper Dreams</label>
+                                             </div>
+                                             <div class="flex items-center gap-3 mb-3">
+                                                  <input class="sl-checkBlue" id="mTravel" type="checkbox">
+                                                  <label for="mTravel" class="text-white/60 font-medium">Travel Without Moving</label>
+                                             </div>
+                                             <div class="flex items-center gap-3 mb-3">
+                                                  <input class="sl-checkBlue" id="mDante" type="checkbox">
+                                                  <label for="mDante" class="text-white/60 font-medium">Dante's Inferno</label>
+                                             </div>
+                                             <div class="flex items-center gap-3 mb-3">
+                                                  <input class="sl-checkBlue" id="mIneffable" type="checkbox">
+                                                  <label for="mIneffable" class="text-white/60 font-medium">The Ineffable</label>
+                                             </div>
+                                        </form>
+                                   </div>
+                              </div>
+                              <div class="border-x border-white/10" x-data="{active: false}">
+                                   <h2 @click="active = !active" class="flex justify-between items-center p-5 border-b border-white/10 text-base font-medium">Caregories
+                                        <span :class="active ? 'rotate-0' : '-rotate-90'" class="w-7 h-7 leading-7 rounded-full text-center text-xs bg-white/5"><i
+                                                  class="fa-solid fa-chevron-down"></i></span>
+                                   </h2>
+                                   <div :class="active ? 'max-h-80' : 'max-h-0'" class=" overflow-hidden sl-animation">
+                                        <ul class="py-5 px-2 flex flex-wrap bg-white/5">
+                                             <li class="w-1/3 px-4 mb-4 text-center">
+                                                  <div class="group">
+                                                       <span class="w-11 h-11 flex justify-center items-center rounded-xl border-2 border-white/10 group-hover:border-purple-500 mx-auto mb-1">
+                                                            <svg class="w-5 h-5" viewBox="0 0 19 20" fill="none">
+                                                                 <path d="M2.3216 8.51562H1.39296C0.622188 8.51562 0 9.13781 0 9.90858V10.8372C0 11.608 0.622188 12.2302 1.39296 12.2302H2.3216C3.09237 12.2302 3.71455 11.608 3.71455 10.8372V9.90858C3.71455 9.13781 3.08308 8.51562 2.3216 8.51562Z"
+                                                                      fill="white"></path>
+                                                                 <path d="M9.98273 0H9.05409C8.28332 0 7.66113 0.622188 7.66113 1.39296V2.3216C7.66113 3.09237 8.28332 3.71455 9.05409 3.71455H9.98273C10.7535 3.71455 11.3757 3.09237 11.3757 2.3216V1.39296C11.3757 0.622188 10.7535 0 9.98273 0Z"
+                                                                      fill="white"></path>
+                                                                 <path d="M17.6072 8.51562H16.6786C15.9078 8.51562 15.2856 9.13781 15.2856 9.90858V10.8372C15.2856 11.608 15.9078 12.2302 16.6786 12.2302H17.6072C18.378 12.2302 19.0002 11.608 19.0002 10.8372V9.90858C19.0002 9.13781 18.378 8.51562 17.6072 8.51562Z"
+                                                                      fill="white"></path>
+                                                                 <path opacity="0.6"
+                                                                      d="M1.83808 9.67644C1.45734 9.67644 1.1416 9.3607 1.1416 8.97996C1.1416 5.01467 4.11325 1.68088 8.05067 1.21656C8.42213 1.17941 8.77501 1.44869 8.82144 1.82943C8.86788 2.21017 8.58928 2.55379 8.20854 2.60022C4.97688 2.98096 2.53456 5.72044 2.53456 8.97996C2.53456 9.3607 2.21882 9.67644 1.83808 9.67644Z"
+                                                                      fill="white"></path>
+                                                                 <path opacity="0.6"
+                                                                      d="M17.1609 9.67636C16.7801 9.67636 16.4644 9.36062 16.4644 8.97988C16.4644 5.73893 14.0407 2.99946 10.8276 2.60943C10.4468 2.563 10.1775 2.21939 10.224 1.83865C10.2704 1.4579 10.6233 1.18863 11.004 1.23506C14.9136 1.70867 17.8666 5.04246 17.8666 8.98917C17.8574 9.36063 17.5509 9.67636 17.1609 9.67636Z"
+                                                                      fill="white"></path>
+                                                                 <path opacity="0.6"
+                                                                      d="M10.6978 19.0464H8.31122C7.45688 19.0464 6.8254 18.3592 6.98326 17.6163L7.3733 15.8983H11.6358L12.0258 17.6163C12.2022 18.4056 11.6079 19.0464 10.6978 19.0464Z"
+                                                                      fill="white"></path>
+                                                                 <path d="M13.2802 14.4402L11.6365 15.8981H7.37406L5.73037 14.4402C4.77387 13.6601 4.77387 13.0565 5.49821 12.1372L8.39555 8.47834C8.59985 8.2276 8.83202 8.05117 9.08275 7.9676C9.35206 7.87473 9.64922 7.87473 9.91852 7.9676C10.1693 8.06046 10.4014 8.2276 10.6057 8.47834L13.5031 12.1372C14.2274 13.0565 14.1996 13.6323 13.2802 14.4402Z"
+                                                                      fill="white"></path>
+                                                            </svg>
+                                                       </span>
+                                                       <a href="" class="text-white/70 hover:text-white">Art</a>
+                                                  </div>
+                                             </li>
+                                             <li class="w-1/3 px-4 mb-4 text-center">
+                                                  <div class="group">
+                                                       <span class="w-11 h-11 flex justify-center items-center rounded-xl border-2 border-white/10 group-hover:border-purple-500 mx-auto mb-1">
+                                                            <svg class="w-5 h-5" viewBox="0 0 17 18" fill="none">
+                                                                 <path d="M6.4624 7.50537V14.7688C6.4624 16.5509 5.00431 18 3.2312 18C1.44909 18 0 16.5509 0 14.7688C0 12.9957 1.44909 11.5466 3.2312 11.5466C3.97824 11.5466 4.65329 11.8076 5.20232 12.2307V7.86539L6.4624 7.50537Z"
+                                                                      fill="white"></path>
+                                                                 <path d="M16.0024 4.78711V13.0316C16.0024 14.8137 14.5533 16.2628 12.7712 16.2628C10.9981 16.2628 9.54004 14.8137 9.54004 13.0316C9.54004 11.2585 10.9981 9.80942 12.7712 9.80942C13.5273 9.80942 14.2023 10.0704 14.7514 10.5025V5.14713L16.0024 4.78711Z"
+                                                                      fill="white"></path>
+                                                                 <path opacity="0.6"
+                                                                      d="M16.0023 2.86092V4.78704L5.20166 7.86523V4.27401C5.20166 2.95093 6.00271 1.92486 7.27179 1.58284L12.4741 0.160754C13.5272 -0.127264 14.4182 -0.0282576 15.0483 0.457772C15.6873 0.934802 16.0023 1.74485 16.0023 2.86092Z"
+                                                                      fill="white"></path>
+                                                            </svg>
+                                                       </span>
+                                                       <a href="" class="text-white/70 hover:text-white">Music</a>
+                                                  </div>
+                                             </li>
+                                             <li class="w-1/3 px-4 mb-4 text-center">
+                                                  <div class="group">
+                                                       <span class="w-11 h-11 flex justify-center items-center rounded-xl border-2 border-white/10 group-hover:border-purple-500 mx-auto mb-1">
+                                                            <svg class="w-5 h-5" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                 <path d="M2.4751 11.6099V1.88998C2.4751 0.539994 3.05109 0 4.48208 0H5.41807C6.84905 0 7.42504 0.539994 7.42504 1.88998V11.6099C7.42504 12.9599 6.84905 13.4999 5.41807 13.4999H4.48208C3.05109 13.4999 2.4751 12.9599 2.4751 11.6099Z"
+                                                                      fill="white"></path>
+                                                                 <path d="M2.47497 7.42481H0.674993C0.305997 7.42481 0 7.11882 0 6.74982C0 6.38083 0.305997 6.07483 0.674993 6.07483H2.47497V7.42481Z"
+                                                                      fill="white"></path>
+                                                                 <path d="M10.1248 6.07483H7.4248V7.42481H10.1248V6.07483Z" fill="white"></path>
+                                                                 <path d="M17.3252 7.42481H15.0752V6.07483H17.3252C17.6942 6.07483 18.0002 6.38083 18.0002 6.74982C18.0002 7.11882 17.6942 7.42481 17.3252 7.42481Z"
+                                                                      fill="white"></path>
+                                                                 <path opacity="0.6"
+                                                                      d="M10.125 9.80996V3.69003C10.125 2.34004 10.701 1.80005 12.132 1.80005H13.068C14.499 1.80005 15.0749 2.34004 15.0749 3.69003V9.80996C15.0749 11.1599 14.499 11.6999 13.068 11.6999H12.132C10.701 11.6999 10.125 11.1599 10.125 9.80996Z"
+                                                                      fill="white"></path>
+                                                            </svg>
+                                                       </span>
+                                                       <a href="" class="text-white/70 hover:text-white">Sports</a>
+                                                  </div>
+                                             </li>
+                                             <li class="w-1/3 px-4 mb-4 text-center">
+                                                  <div class="group">
+                                                       <span class="w-11 h-11 flex justify-center items-center rounded-xl border-2 border-white/10 group-hover:border-purple-500 mx-auto mb-1">
+                                                            <svg class="w-5 h-5" viewBox="0 0 18 19" fill="none">
+                                                                 <path opacity="0.6"
+                                                                      d="M14.9167 15.5C14.75 15.5 14.5833 15.4167 14.5 15.3333C14.25 15.0833 14.25 14.6667 14.5 14.4167C15.9167 13 16.6667 11.0833 16.6667 9C16.6667 4.75 13.25 1.33333 9 1.33333C4.75 1.33333 1.33333 4.75 1.33333 9C1.33333 11 2.08333 12.9167 3.5 14.4167C3.75 14.6667 3.75 15.0833 3.5 15.3333C3.25 15.5833 2.83333 15.5833 2.58333 15.3333C0.916667 13.6667 0 11.4167 0 9.08333C0 4.08333 4.08333 0 9 0C13.9167 0 18 4 18 9C18 11.3333 17.0833 13.5833 15.4167 15.25C15.25 15.4167 15.0833 15.5 14.9167 15.5Z"
+                                                                      fill="white"></path>
+                                                                 <path d="M9 18.5834C10.6569 18.5834 12 17.2402 12 15.5834C12 13.9265 10.6569 12.5834 9 12.5834C7.34315 12.5834 6 13.9265 6 15.5834C6 17.2402 7.34315 18.5834 9 18.5834Z"
+                                                                      fill="white"></path>
+                                                                 <path d="M10.6665 6.66675C9.5665 6.66675 8.6665 7.56675 8.6665 8.66675V9.46675C8.6665 10.1667 9.2665 10.6667 9.8665 10.6667H10.6665C11.7665 10.6667 12.6665 9.76675 12.6665 8.66675C12.6665 7.56675 11.7665 6.66675 10.6665 6.66675Z"
+                                                                      fill="white"></path>
+                                                            </svg>
+                                                       </span>
+                                                       <a href="" class="text-white/70 hover:text-white">Utility</a>
+                                                  </div>
+                                             </li>
+                                             <li class="w-1/3 px-4 mb-4 text-center">
+                                                  <div class="group">
+                                                       <span class="w-11 h-11 flex justify-center items-center rounded-xl border-2 border-white/10 group-hover:border-purple-500 mx-auto mb-1">
+                                                            <svg class="w-5 h-5" viewBox="0 0 19 18" fill="none">
+                                                                 <path d="M18.6378 7.5204L17.7094 11.4802C16.9137 14.9001 15.3411 16.2832 12.3854 15.999C11.9118 15.9611 11.4002 15.8758 10.8508 15.7432L9.25927 15.3643C5.30891 14.4264 4.08686 12.4749 5.01524 8.51509L5.94362 4.54579C6.13309 3.74056 6.36045 3.03954 6.64464 2.46167C7.75302 0.169139 9.6382 -0.446624 12.8023 0.301765L14.3843 0.671223C18.3536 1.5996 19.5662 3.56057 18.6378 7.5204Z"
+                                                                      fill="white"></path>
+                                                                 <path opacity="0.6"
+                                                                      d="M12.3854 15.999C11.798 16.3969 11.0591 16.7284 10.1592 17.0221L8.66237 17.5147C4.90148 18.7273 2.92157 17.7136 1.69952 13.9527L0.486939 10.2108C-0.72564 6.44992 0.278526 4.46053 4.03942 3.24795L5.53619 2.75534C5.9246 2.63219 6.29405 2.52798 6.64457 2.46167C6.36037 3.03954 6.13301 3.74056 5.94354 4.54579L5.01516 8.51509C4.08678 12.4749 5.30883 14.4264 9.25919 15.3643L10.8507 15.7432C11.4001 15.8758 11.9117 15.9611 12.3854 15.999Z"
+                                                                      fill="white"></path>
+                                                            </svg>
+                                                       </span>
+                                                       <a href="" class="text-white/70 hover:text-white">Cards</a>
+                                                  </div>
+                                             </li>
+                                             <li class="w-1/3 px-4 mb-4 text-center">
+                                                  <div class="group">
+                                                       <span class="w-11 h-11 flex justify-center items-center rounded-xl border-2 border-white/10 group-hover:border-purple-500 mx-auto mb-1">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                       </span>
+                                                       <a href="" class="text-white/70 hover:text-white">More</a>
+                                                  </div>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="xl:w-3/4 lg:w-2/3 w-full lg:px-2 pt-10">
+                              <div x-show="active == 'nft'" class="flex flex-wrap" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
+                                   x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                                   class="flex flex-wrap">
+                                   <div class="xl:w-1/3 md:w-1/2 w-full md:px-3 lg:mb-8 mb-6">
+                                        <div class="bg-slate-950 rounded-3xl border-2 border-white/10 hover:border-purple-500">
+                                             <div class="flex items-center justify-between py-4 px-5">
+                                                  <ul class="flex items-center">
+                                                       <li><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-1.jpg" alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-3.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-2.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2 mt-1.5 text-yellow-400"><i class="fa-solid fa-circle-check"></i></li>
+                                                  </ul>
+                                                  <div class="relative" x-data="{active: false}">
+                                                       <button @click="active = !active" class="text-2xl text-white/60"><i class="fa-solid fa-ellipsis"></i></button>
+                                                       <div x-cloak :class="active ? 'opacity-100 visible h-auto': 'opacity-0 invisible h-0'"
+                                                            class="absolute right-0 top-full min-w-40 bg-slate-900 rounded border border-black/15 px-2.5 py-4 z-40 sl-animation-fade">
+                                                            <ul>
+                                                                 <li><button @click="active = !active; share = !share" class="pb-2 hover:text-purple-500">Share</button></li>
+                                                                 <li><button @click="active = !active; report = !report" class="hover:text-purple-500">Report</button></li>
+                                                            </ul>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+                                             <div class="relative mb-5 px-5">
+                                                  <a href="" class="block">
+                                                       <img src="assets/img/bid/bid-img-20.jpg" alt="Bid" class="rounded-2xl h-60">
+                                                  </a>
+                                                  <a href=""
+                                                       class="absolute bottom-3 right-8 py-2 px-1.5 bg-white/60 rounded-full text-slate-950 border border-white h-14 text-center hover:bg-white"><i
+                                                            class="fa-solid fa-heart text-red-500"></i> <br> 24</a>
+                                             </div>
+                                             <div class="flex justify-between items-center mb-3 px-5">
+                                                  <h3 class="text-base font-bold hover:text-purple-500"><a href="">Amazing digital art</a></h3>
+                                                  <span class="w-7 h-7 leading-7 rounded-full text-center bg-purple-500/30 border border-purple-500 text-purple-500"><i
+                                                            class="fa-brands fa-ethereum"></i></span>
+                                             </div>
+                                             <div class="flex justify-between items-center pb-3 px-5">
+                                                  <span class="font-semibold bg-purple-500/30 border border-purple-500 text-purple-500 rounded-md py-1 px-3">3.54 ETH</span>
+                                                  <span class="text-white/60 font-medium">6 in stock</span>
+                                             </div>
+                                             <div class="flex justify-between items-center bg-white/5 py-3 px-5 rounded-b-3xl">
+                                                  <span class="text-white/70"><i class="fa-solid fa-code-fork mr-1"></i> Highest bid</span>
+                                                  <span class="text-white/60 font-medium">0.001 ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="xl:w-1/3 md:w-1/2 w-full md:px-3 lg:mb-8 mb-6">
+                                        <div class="bg-slate-950 rounded-3xl border-2 border-white/10 hover:border-purple-500">
+                                             <div class="flex items-center justify-between py-4 px-5">
+                                                  <ul class="flex items-center">
+                                                       <li><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-1.jpg" alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-3.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-2.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2 mt-1.5 text-yellow-400"><i class="fa-solid fa-circle-check"></i></li>
+                                                  </ul>
+                                                  <div class="relative" x-data="{active: false}">
+                                                       <button @click="active = !active" class="text-2xl text-white/60"><i class="fa-solid fa-ellipsis"></i></button>
+                                                       <div x-cloak :class="active ? 'opacity-100 visible h-auto': 'opacity-0 invisible h-0'"
+                                                            class="absolute right-0 top-full min-w-40 bg-slate-900 rounded border border-black/15 px-2.5 py-4 z-40 sl-animation-fade">
+                                                            <ul>
+                                                                 <li><button @click="active = !active; share = !share" class="pb-2 hover:text-purple-500">Share</button></li>
+                                                                 <li><button @click="active = !active; report = !report" class="hover:text-purple-500">Report</button></li>
+                                                            </ul>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+                                             <div class="relative mb-5 px-5">
+                                                  <a href="" class="block">
+                                                       <img src="assets/img/bid/bid-img-14.jpg" alt="Bid" class="rounded-2xl h-60">
+                                                  </a>
+                                                  <a href=""
+                                                       class="absolute bottom-3 right-8 py-2 px-1.5 bg-white/60 rounded-full text-slate-950 border border-white h-14 text-center hover:bg-white"><i
+                                                            class="fa-solid fa-heart text-red-500"></i> <br> 24</a>
+                                             </div>
+                                             <div class="flex justify-between items-center mb-3 px-5">
+                                                  <h3 class="text-base font-bold hover:text-purple-500"><a href="">Amazing digital art</a></h3>
+                                                  <span class="w-7 h-7 leading-7 rounded-full text-center bg-purple-500/30 border border-purple-500 text-purple-500"><i
+                                                            class="fa-brands fa-ethereum"></i></span>
+                                             </div>
+                                             <div class="flex justify-between items-center pb-3 px-5">
+                                                  <span class="font-semibold bg-purple-500/30 border border-purple-500 text-purple-500 rounded-md py-1 px-3">3.54 ETH</span>
+                                                  <span class="text-white/60 font-medium">6 in stock</span>
+                                             </div>
+                                             <div class="flex justify-between items-center bg-white/5 py-3 px-5 rounded-b-3xl">
+                                                  <span class="text-white/70"><i class="fa-solid fa-code-fork mr-1"></i> Highest bid</span>
+                                                  <span class="text-white/60 font-medium">0.001 ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="xl:w-1/3 md:w-1/2 w-full md:px-3 lg:mb-8 mb-6">
+                                        <div class="bg-slate-950 rounded-3xl border-2 border-white/10 hover:border-purple-500">
+                                             <div class="flex items-center justify-between py-4 px-5">
+                                                  <ul class="flex items-center">
+                                                       <li><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-1.jpg" alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-3.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-2.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2 mt-1.5 text-yellow-400"><i class="fa-solid fa-circle-check"></i></li>
+                                                  </ul>
+                                                  <div class="relative" x-data="{active: false}">
+                                                       <button @click="active = !active" class="text-2xl text-white/60"><i class="fa-solid fa-ellipsis"></i></button>
+                                                       <div x-cloak :class="active ? 'opacity-100 visible h-auto': 'opacity-0 invisible h-0'"
+                                                            class="absolute right-0 top-full min-w-40 bg-slate-900 rounded border border-black/15 px-2.5 py-4 z-40 sl-animation-fade">
+                                                            <ul>
+                                                                 <li><button @click="active = !active; share = !share" class="pb-2 hover:text-purple-500">Share</button></li>
+                                                                 <li><button @click="active = !active; report = !report" class="hover:text-purple-500">Report</button></li>
+                                                            </ul>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+                                             <div class="relative mb-5 px-5">
+                                                  <a href="" class="block">
+                                                       <img src="assets/img/bid/bid-img-5.jpg" alt="Bid" class="rounded-2xl h-60">
+                                                  </a>
+                                                  <a href=""
+                                                       class="absolute bottom-3 right-8 py-2 px-1.5 bg-white/60 rounded-full text-slate-950 border border-white h-14 text-center hover:bg-white"><i
+                                                            class="fa-solid fa-heart text-red-500"></i> <br> 24</a>
+                                             </div>
+                                             <div class="flex justify-between items-center mb-3 px-5">
+                                                  <h3 class="text-base font-bold hover:text-purple-500"><a href="">Amazing digital art</a></h3>
+                                                  <span class="w-7 h-7 leading-7 rounded-full text-center bg-purple-500/30 border border-purple-500 text-purple-500"><i
+                                                            class="fa-brands fa-ethereum"></i></span>
+                                             </div>
+                                             <div class="flex justify-between items-center pb-3 px-5">
+                                                  <span class="font-semibold bg-purple-500/30 border border-purple-500 text-purple-500 rounded-md py-1 px-3">3.54 ETH</span>
+                                                  <span class="text-white/60 font-medium">6 in stock</span>
+                                             </div>
+                                             <div class="flex justify-between items-center bg-white/5 py-3 px-5 rounded-b-3xl">
+                                                  <span class="text-white/70"><i class="fa-solid fa-code-fork mr-1"></i> Highest bid</span>
+                                                  <span class="text-white/60 font-medium">0.001 ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="xl:w-1/3 md:w-1/2 w-full md:px-3 lg:mb-8 mb-6">
+                                        <div class="bg-slate-950 rounded-3xl border-2 border-white/10 hover:border-purple-500">
+                                             <div class="flex items-center justify-between py-4 px-5">
+                                                  <ul class="flex items-center">
+                                                       <li><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-1.jpg" alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-3.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-2.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2 mt-1.5 text-yellow-400"><i class="fa-solid fa-circle-check"></i></li>
+                                                  </ul>
+                                                  <div class="relative" x-data="{active: false}">
+                                                       <button @click="active = !active" class="text-2xl text-white/60"><i class="fa-solid fa-ellipsis"></i></button>
+                                                       <div x-cloak :class="active ? 'opacity-100 visible h-auto': 'opacity-0 invisible h-0'"
+                                                            class="absolute right-0 top-full min-w-40 bg-slate-900 rounded border border-black/15 px-2.5 py-4 z-40 sl-animation-fade">
+                                                            <ul>
+                                                                 <li><button @click="active = !active; share = !share" class="pb-2 hover:text-purple-500">Share</button></li>
+                                                                 <li><button @click="active = !active; report = !report" class="hover:text-purple-500">Report</button></li>
+                                                            </ul>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+                                             <div class="relative mb-5 px-5">
+                                                  <a href="" class="block">
+                                                       <img src="assets/img/bid/bid-img-6.jpg" alt="Bid" class="rounded-2xl h-60">
+                                                  </a>
+                                                  <a href=""
+                                                       class="absolute bottom-3 right-8 py-2 px-1.5 bg-white/60 rounded-full text-slate-950 border border-white h-14 text-center hover:bg-white"><i
+                                                            class="fa-solid fa-heart text-red-500"></i> <br> 24</a>
+                                             </div>
+                                             <div class="flex justify-between items-center mb-3 px-5">
+                                                  <h3 class="text-base font-bold hover:text-purple-500"><a href="">Amazing digital art</a></h3>
+                                                  <span class="w-7 h-7 leading-7 rounded-full text-center bg-purple-500/30 border border-purple-500 text-purple-500"><i
+                                                            class="fa-brands fa-ethereum"></i></span>
+                                             </div>
+                                             <div class="flex justify-between items-center pb-3 px-5">
+                                                  <span class="font-semibold bg-purple-500/30 border border-purple-500 text-purple-500 rounded-md py-1 px-3">3.54 ETH</span>
+                                                  <span class="text-white/60 font-medium">6 in stock</span>
+                                             </div>
+                                             <div class="flex justify-between items-center bg-white/5 py-3 px-5 rounded-b-3xl">
+                                                  <span class="text-white/70"><i class="fa-solid fa-code-fork mr-1"></i> Highest bid</span>
+                                                  <span class="text-white/60 font-medium">0.001 ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="xl:w-1/3 md:w-1/2 w-full md:px-3 lg:mb-8 mb-6">
+                                        <div class="bg-slate-950 rounded-3xl border-2 border-white/10 hover:border-purple-500">
+                                             <div class="flex items-center justify-between py-4 px-5">
+                                                  <ul class="flex items-center">
+                                                       <li><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-1.jpg" alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-3.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-2.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2 mt-1.5 text-yellow-400"><i class="fa-solid fa-circle-check"></i></li>
+                                                  </ul>
+                                                  <div class="relative" x-data="{active: false}">
+                                                       <button @click="active = !active" class="text-2xl text-white/60"><i class="fa-solid fa-ellipsis"></i></button>
+                                                       <div x-cloak :class="active ? 'opacity-100 visible h-auto': 'opacity-0 invisible h-0'"
+                                                            class="absolute right-0 top-full min-w-40 bg-slate-900 rounded border border-black/15 px-2.5 py-4 z-40 sl-animation-fade">
+                                                            <ul>
+                                                                 <li><button @click="active = !active; share = !share" class="pb-2 hover:text-purple-500">Share</button></li>
+                                                                 <li><button @click="active = !active; report = !report" class="hover:text-purple-500">Report</button></li>
+                                                            </ul>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+                                             <div class="relative mb-5 px-5">
+                                                  <a href="" class="block">
+                                                       <img src="assets/img/bid/bid-img-7.jpg" alt="Bid" class="rounded-2xl h-60">
+                                                  </a>
+                                                  <a href=""
+                                                       class="absolute bottom-3 right-8 py-2 px-1.5 bg-white/60 rounded-full text-slate-950 border border-white h-14 text-center hover:bg-white"><i
+                                                            class="fa-solid fa-heart text-red-500"></i> <br> 24</a>
+                                             </div>
+                                             <div class="flex justify-between items-center mb-3 px-5">
+                                                  <h3 class="text-base font-bold hover:text-purple-500"><a href="">Amazing digital art</a></h3>
+                                                  <span class="w-7 h-7 leading-7 rounded-full text-center bg-purple-500/30 border border-purple-500 text-purple-500"><i
+                                                            class="fa-brands fa-ethereum"></i></span>
+                                             </div>
+                                             <div class="flex justify-between items-center pb-3 px-5">
+                                                  <span class="font-semibold bg-purple-500/30 border border-purple-500 text-purple-500 rounded-md py-1 px-3">3.54 ETH</span>
+                                                  <span class="text-white/60 font-medium">6 in stock</span>
+                                             </div>
+                                             <div class="flex justify-between items-center bg-white/5 py-3 px-5 rounded-b-3xl">
+                                                  <span class="text-white/70"><i class="fa-solid fa-code-fork mr-1"></i> Highest bid</span>
+                                                  <span class="text-white/60 font-medium">0.001 ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="xl:w-1/3 md:w-1/2 w-full md:px-3 lg:mb-8 mb-6">
+                                        <div class="bg-slate-950 rounded-3xl border-2 border-white/10 hover:border-purple-500">
+                                             <div class="flex items-center justify-between py-4 px-5">
+                                                  <ul class="flex items-center">
+                                                       <li><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-1.jpg" alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-3.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-2.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2 mt-1.5 text-yellow-400"><i class="fa-solid fa-circle-check"></i></li>
+                                                  </ul>
+                                                  <div class="relative" x-data="{active: false}">
+                                                       <button @click="active = !active" class="text-2xl text-white/60"><i class="fa-solid fa-ellipsis"></i></button>
+                                                       <div x-cloak :class="active ? 'opacity-100 visible h-auto': 'opacity-0 invisible h-0'"
+                                                            class="absolute right-0 top-full min-w-40 bg-slate-900 rounded border border-black/15 px-2.5 py-4 z-40 sl-animation-fade">
+                                                            <ul>
+                                                                 <li><button @click="active = !active; share = !share" class="pb-2 hover:text-purple-500">Share</button></li>
+                                                                 <li><button @click="active = !active; report = !report" class="hover:text-purple-500">Report</button></li>
+                                                            </ul>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+                                             <div class="relative mb-5 px-5">
+                                                  <a href="" class="block">
+                                                       <img src="assets/img/bid/bid-img-9.jpg" alt="Bid" class="rounded-2xl h-60">
+                                                  </a>
+                                                  <a href=""
+                                                       class="absolute bottom-3 right-8 py-2 px-1.5 bg-white/60 rounded-full text-slate-950 border border-white h-14 text-center hover:bg-white"><i
+                                                            class="fa-solid fa-heart text-red-500"></i> <br> 24</a>
+                                             </div>
+                                             <div class="flex justify-between items-center mb-3 px-5">
+                                                  <h3 class="text-base font-bold hover:text-purple-500"><a href="">Amazing digital art</a></h3>
+                                                  <span class="w-7 h-7 leading-7 rounded-full text-center bg-purple-500/30 border border-purple-500 text-purple-500"><i
+                                                            class="fa-brands fa-ethereum"></i></span>
+                                             </div>
+                                             <div class="flex justify-between items-center pb-3 px-5">
+                                                  <span class="font-semibold bg-purple-500/30 border border-purple-500 text-purple-500 rounded-md py-1 px-3">3.54 ETH</span>
+                                                  <span class="text-white/60 font-medium">6 in stock</span>
+                                             </div>
+                                             <div class="flex justify-between items-center bg-white/5 py-3 px-5 rounded-b-3xl">
+                                                  <span class="text-white/70"><i class="fa-solid fa-code-fork mr-1"></i> Highest bid</span>
+                                                  <span class="text-white/60 font-medium">0.001 ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="xl:w-1/3 md:w-1/2 w-full md:px-3 lg:mb-8 mb-6">
+                                        <div class="bg-slate-950 rounded-3xl border-2 border-white/10 hover:border-purple-500">
+                                             <div class="flex items-center justify-between py-4 px-5">
+                                                  <ul class="flex items-center">
+                                                       <li><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-1.jpg" alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-3.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-2.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2 mt-1.5 text-yellow-400"><i class="fa-solid fa-circle-check"></i></li>
+                                                  </ul>
+                                                  <div class="relative" x-data="{active: false}">
+                                                       <button @click="active = !active" class="text-2xl text-white/60"><i class="fa-solid fa-ellipsis"></i></button>
+                                                       <div x-cloak :class="active ? 'opacity-100 visible h-auto': 'opacity-0 invisible h-0'"
+                                                            class="absolute right-0 top-full min-w-40 bg-slate-900 rounded border border-black/15 px-2.5 py-4 z-40 sl-animation-fade">
+                                                            <ul>
+                                                                 <li><button @click="active = !active; share = !share" class="pb-2 hover:text-purple-500">Share</button></li>
+                                                                 <li><button @click="active = !active; report = !report" class="hover:text-purple-500">Report</button></li>
+                                                            </ul>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+                                             <div class="relative mb-5 px-5">
+                                                  <a href="" class="block">
+                                                       <img src="assets/img/bid/bid-img-10.jpg" alt="Bid" class="rounded-2xl h-60">
+                                                  </a>
+                                                  <a href=""
+                                                       class="absolute bottom-3 right-8 py-2 px-1.5 bg-white/60 rounded-full text-slate-950 border border-white h-14 text-center hover:bg-white"><i
+                                                            class="fa-solid fa-heart text-red-500"></i> <br> 24</a>
+                                             </div>
+                                             <div class="flex justify-between items-center mb-3 px-5">
+                                                  <h3 class="text-base font-bold hover:text-purple-500"><a href="">Amazing digital art</a></h3>
+                                                  <span class="w-7 h-7 leading-7 rounded-full text-center bg-purple-500/30 border border-purple-500 text-purple-500"><i
+                                                            class="fa-brands fa-ethereum"></i></span>
+                                             </div>
+                                             <div class="flex justify-between items-center pb-3 px-5">
+                                                  <span class="font-semibold bg-purple-500/30 border border-purple-500 text-purple-500 rounded-md py-1 px-3">3.54 ETH</span>
+                                                  <span class="text-white/60 font-medium">6 in stock</span>
+                                             </div>
+                                             <div class="flex justify-between items-center bg-white/5 py-3 px-5 rounded-b-3xl">
+                                                  <span class="text-white/70"><i class="fa-solid fa-code-fork mr-1"></i> Highest bid</span>
+                                                  <span class="text-white/60 font-medium">0.001 ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="xl:w-1/3 md:w-1/2 w-full md:px-3 lg:mb-8 mb-6">
+                                        <div class="bg-slate-950 rounded-3xl border-2 border-white/10 hover:border-purple-500">
+                                             <div class="flex items-center justify-between py-4 px-5">
+                                                  <ul class="flex items-center">
+                                                       <li><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-1.jpg" alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-3.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-2.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2 mt-1.5 text-yellow-400"><i class="fa-solid fa-circle-check"></i></li>
+                                                  </ul>
+                                                  <div class="relative" x-data="{active: false}">
+                                                       <button @click="active = !active" class="text-2xl text-white/60"><i class="fa-solid fa-ellipsis"></i></button>
+                                                       <div x-cloak :class="active ? 'opacity-100 visible h-auto': 'opacity-0 invisible h-0'"
+                                                            class="absolute right-0 top-full min-w-40 bg-slate-900 rounded border border-black/15 px-2.5 py-4 z-40 sl-animation-fade">
+                                                            <ul>
+                                                                 <li><button @click="active = !active; share = !share" class="pb-2 hover:text-purple-500">Share</button></li>
+                                                                 <li><button @click="active = !active; report = !report" class="hover:text-purple-500">Report</button></li>
+                                                            </ul>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+                                             <div class="relative mb-5 px-5">
+                                                  <a href="" class="block">
+                                                       <img src="assets/img/bid/bid-img-11.jpg" alt="Bid" class="rounded-2xl h-60">
+                                                  </a>
+                                                  <a href=""
+                                                       class="absolute bottom-3 right-8 py-2 px-1.5 bg-white/60 rounded-full text-slate-950 border border-white h-14 text-center hover:bg-white"><i
+                                                            class="fa-solid fa-heart text-red-500"></i> <br> 24</a>
+                                             </div>
+                                             <div class="flex justify-between items-center mb-3 px-5">
+                                                  <h3 class="text-base font-bold hover:text-purple-500"><a href="">Amazing digital art</a></h3>
+                                                  <span class="w-7 h-7 leading-7 rounded-full text-center bg-purple-500/30 border border-purple-500 text-purple-500"><i
+                                                            class="fa-brands fa-ethereum"></i></span>
+                                             </div>
+                                             <div class="flex justify-between items-center pb-3 px-5">
+                                                  <span class="font-semibold bg-purple-500/30 border border-purple-500 text-purple-500 rounded-md py-1 px-3">3.54 ETH</span>
+                                                  <span class="text-white/60 font-medium">6 in stock</span>
+                                             </div>
+                                             <div class="flex justify-between items-center bg-white/5 py-3 px-5 rounded-b-3xl">
+                                                  <span class="text-white/70"><i class="fa-solid fa-code-fork mr-1"></i> Highest bid</span>
+                                                  <span class="text-white/60 font-medium">0.001 ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="xl:w-1/3 md:w-1/2 w-full md:px-3 lg:mb-8 mb-6">
+                                        <div class="bg-slate-950 rounded-3xl border-2 border-white/10 hover:border-purple-500">
+                                             <div class="flex items-center justify-between py-4 px-5">
+                                                  <ul class="flex items-center">
+                                                       <li><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-1.jpg" alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-3.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2"><a href="" class="w-8 h-8 rounded-full border-2 border-slate-950 overflow-hidden"><img src="assets/img/user/bid-user-2.jpg"
+                                                                      alt=""></a>
+                                                       </li>
+                                                       <li class="-ml-2 mt-1.5 text-yellow-400"><i class="fa-solid fa-circle-check"></i></li>
+                                                  </ul>
+                                                  <div class="relative" x-data="{active: false}">
+                                                       <button @click="active = !active" class="text-2xl text-white/60"><i class="fa-solid fa-ellipsis"></i></button>
+                                                       <div x-cloak :class="active ? 'opacity-100 visible h-auto': 'opacity-0 invisible h-0'"
+                                                            class="absolute right-0 top-full min-w-40 bg-slate-900 rounded border border-black/15 px-2.5 py-4 z-40 sl-animation-fade">
+                                                            <ul>
+                                                                 <li><button @click="active = !active; share = !share" class="pb-2 hover:text-purple-500">Share</button></li>
+                                                                 <li><button @click="active = !active; report = !report" class="hover:text-purple-500">Report</button></li>
+                                                            </ul>
+                                                       </div>
+                                                  </div>
+
+                                             </div>
+                                             <div class="relative mb-5 px-5">
+                                                  <a href="" class="block">
+                                                       <img src="assets/img/bid/bid-img-14.jpg" alt="Bid" class="rounded-2xl h-60">
+                                                  </a>
+                                                  <a href=""
+                                                       class="absolute bottom-3 right-8 py-2 px-1.5 bg-white/60 rounded-full text-slate-950 border border-white h-14 text-center hover:bg-white"><i
+                                                            class="fa-solid fa-heart text-red-500"></i> <br> 24</a>
+                                             </div>
+                                             <div class="flex justify-between items-center mb-3 px-5">
+                                                  <h3 class="text-base font-bold hover:text-purple-500"><a href="">Amazing digital art</a></h3>
+                                                  <span class="w-7 h-7 leading-7 rounded-full text-center bg-purple-500/30 border border-purple-500 text-purple-500"><i
+                                                            class="fa-brands fa-ethereum"></i></span>
+                                             </div>
+                                             <div class="flex justify-between items-center pb-3 px-5">
+                                                  <span class="font-semibold bg-purple-500/30 border border-purple-500 text-purple-500 rounded-md py-1 px-3">3.54 ETH</span>
+                                                  <span class="text-white/60 font-medium">6 in stock</span>
+                                             </div>
+                                             <div class="flex justify-between items-center bg-white/5 py-3 px-5 rounded-b-3xl">
+                                                  <span class="text-white/70"><i class="fa-solid fa-code-fork mr-1"></i> Highest bid</span>
+                                                  <span class="text-white/60 font-medium">0.001 ETH</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="w-full mt-5 text-center">
+                                        <a href=""
+                                             class="text-base font-medium bg-white text-slate-950 rounded-3xl border-2 border-white py-2 px-20 shadow-md shadow-white/20 hover:bg-transparent hover:text-white"><i
+                                                  class="fa-solid fa-rotate-right text-sm mr-2"></i> View all items</a>
+                                   </div>
+                              </div>
+                              <div x-show="active == 'collection'" class="flex flex-wrap" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
+                                   x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                                   class="flex flex-wrap">
+                                   <div class="md:w-1/2 md:px-3 md:mb-8 mb-6">
+                                        <div class="sl-cart-border">
+                                             <div class="rounded-xl bg-slate-950">
+                                                  <div class="py-5 px-3 rounded-xl bg-white/5">
+                                                       <div class="flex flex-wrap">
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-1.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-2.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-3.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-full px-2 mb-2.5">
+                                                                 <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-1.jpg" alt=""></a>
+                                                            </div>
+                                                       </div>
+                                                       <div class="text-center">
+                                                            <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img
+                                                                      src="assets/img/user/collection-user-1.jpg" alt=""></a>
+                                                            <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                            <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="md:w-1/2 md:px-3 md:mb-8 mb-6">
+                                        <div class="sl-cart-border">
+                                             <div class="rounded-xl bg-slate-950">
+                                                  <div class="py-5 px-3 rounded-xl bg-white/5">
+                                                       <div class="flex flex-wrap">
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-4.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-5.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-6.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-full px-2 mb-2.5">
+                                                                 <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-2.jpg" alt=""></a>
+                                                            </div>
+                                                       </div>
+                                                       <div class="text-center">
+                                                            <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img
+                                                                      src="assets/img/user/collection-user-2.jpg" alt=""></a>
+                                                            <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                            <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="md:w-1/2 md:px-3 md:mb-8 mb-6">
+                                        <div class="sl-cart-border">
+                                             <div class="rounded-xl bg-slate-950">
+                                                  <div class="py-5 px-3 rounded-xl bg-white/5">
+                                                       <div class="flex flex-wrap">
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-7.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-8.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-3.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-full px-2 mb-2.5">
+                                                                 <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-3.jpg" alt=""></a>
+                                                            </div>
+                                                       </div>
+                                                       <div class="text-center">
+                                                            <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img
+                                                                      src="assets/img/user/collection-user-3.jpg" alt=""></a>
+                                                            <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                            <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="md:w-1/2 md:px-3 md:mb-8 mb-6">
+                                        <div class="sl-cart-border">
+                                             <div class="rounded-xl bg-slate-950">
+                                                  <div class="py-5 px-3 rounded-xl bg-white/5">
+                                                       <div class="flex flex-wrap">
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-10.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-11.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-12.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-full px-2 mb-2.5">
+                                                                 <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-4.jpg" alt=""></a>
+                                                            </div>
+                                                       </div>
+                                                       <div class="text-center">
+                                                            <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img
+                                                                      src="assets/img/user/collection-user-4.jpg" alt=""></a>
+                                                            <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                            <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="md:w-1/2 md:px-3 md:mb-8 mb-6">
+                                        <div class="sl-cart-border">
+                                             <div class="rounded-xl bg-slate-950">
+                                                  <div class="py-5 px-3 rounded-xl bg-white/5">
+                                                       <div class="flex flex-wrap">
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-13.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-14.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-15.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-full px-2 mb-2.5">
+                                                                 <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-5.jpg" alt=""></a>
+                                                            </div>
+                                                       </div>
+                                                       <div class="text-center">
+                                                            <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img
+                                                                      src="assets/img/user/collection-user-5.jpg" alt=""></a>
+                                                            <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                            <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="md:w-1/2 md:px-3 md:mb-8 mb-6">
+                                        <div class="sl-cart-border">
+                                             <div class="rounded-xl bg-slate-950">
+                                                  <div class="py-5 px-3 rounded-xl bg-white/5">
+                                                       <div class="flex flex-wrap">
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-16.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-17.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-1/3 px-2 mb-2.5">
+                                                                 <a href=""><img class="rounded-2xl" src="assets/img/collection/collection-18.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="w-full px-2 mb-2.5">
+                                                                 <a href="" class="block"><img class="rounded-2xl" src="assets/img/collection/collection-big-6.jpg" alt=""></a>
+                                                            </div>
+                                                       </div>
+                                                       <div class="text-center">
+                                                            <a href="" class="-mt-16 mb-3 w-20 h-20 rounded-full border-4 border-slate-950 overflow-hidden"><img
+                                                                      src="assets/img/user/collection-user-6.jpg" alt=""></a>
+                                                            <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="">Modern Art collection</a></h3>
+                                                            <p class="text-gray-400 font-medium mb-2.5">152 Resources</p>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="w-full mt-5 text-center">
+                                        <a href=""
+                                             class="text-base font-medium bg-white text-slate-950 rounded-3xl border-2 border-white py-2 px-20 shadow-md shadow-white/20 hover:bg-transparent hover:text-white"><i
+                                                  class="fa-solid fa-rotate-right text-sm mr-2"></i> View all items</a>
+                                   </div>
+                              </div>
+                              <div x-show="active == 'create'" class="flex flex-wrap" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
+                                   x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                                   class="flex flex-wrap">
+                                   <div class="2xl:w-1/3 md:w-1/2 w-full px-3 sm:mb-8 mb-6">
+                                        <div class="p-4 text-center border border-white/10 rounded-3xl">
+                                             <a href="" class="block"><img class="rounded-3xl" src="assets/img/creator/creator-bg-1.jpg" alt="creator"></a>
+                                             <a href="" class="-mt-10"><img src="assets/img/user/collection-user-1.jpg" alt="user" class="w-20 h-20 rounded-full border-8 border-slate-950"></a>
+                                             <h3 class="text-lg font-semibold mb-2 hover:text-purple-500"><a href="profile.html">Benjamin_025</a></h3>
+                                             <ul class="flex items-end justify-center flex-wrap gap-4 mb-4">
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-dribbble"></i></a></li>
+                                             </ul>
+                                             <p class="text-white/60 pb-2">NFT gem artist.wonderful gems Collect new stories.</p>
+                                        </div>
+                                   </div>
+                                   <div class="2xl:w-1/3 md:w-1/2 w-full px-3 sm:mb-8 mb-6">
+                                        <div class="p-4 text-center border border-white/10 rounded-3xl">
+                                             <a href="" class="block"><img class="rounded-3xl" src="assets/img/creator/creator-bg-2.jpg" alt="creator"></a>
+                                             <a href="" class="-mt-10"><img src="assets/img/user/collection-user-2.jpg" alt="user" class="w-20 h-20 rounded-full border-8 border-slate-950"></a>
+                                             <h3 class="text-lg font-semibold mb-2 hover:text-purple-500"><a href="profile.html">Jimmy_Wright</a></h3>
+                                             <ul class="flex items-end justify-center flex-wrap gap-4 mb-4">
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-dribbble"></i></a></li>
+                                             </ul>
+                                             <p class="text-white/60 pb-2">NFT gem artist.wonderful gems Collect new stories.</p>
+                                        </div>
+                                   </div>
+                                   <div class="2xl:w-1/3 md:w-1/2 w-full px-3 sm:mb-8 mb-6">
+                                        <div class="p-4 text-center border border-white/10 rounded-3xl">
+                                             <a href="" class="block"><img class="rounded-3xl" src="assets/img/creator/creator-bg-3.jpg" alt="creator"></a>
+                                             <a href="" class="-mt-10"><img src="assets/img/user/collection-user-3.jpg" alt="user" class="w-20 h-20 rounded-full border-8 border-slate-950"></a>
+                                             <h3 class="text-lg font-semibold mb-2 hover:text-purple-500"><a href="profile.html">CloneX_#11070</a></h3>
+                                             <ul class="flex items-end justify-center flex-wrap gap-4 mb-4">
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-dribbble"></i></a></li>
+                                             </ul>
+                                             <p class="text-white/60 pb-2">NFT gem artist.wonderful gems Collect new stories.</p>
+                                        </div>
+                                   </div>
+                                   <div class="2xl:w-1/3 md:w-1/2 w-full px-3 sm:mb-8 mb-6">
+                                        <div class="p-4 text-center border border-white/10 rounded-3xl">
+                                             <a href="" class="block"><img class="rounded-3xl" src="assets/img/creator/creator-bg-4.jpg" alt="creator"></a>
+                                             <a href="" class="-mt-10"><img src="assets/img/user/collection-user-4.jpg" alt="user" class="w-20 h-20 rounded-full border-8 border-slate-950"></a>
+                                             <h3 class="text-lg font-semibold mb-2 hover:text-purple-500"><a href="profile.html">Montiya_monk</a></h3>
+                                             <ul class="flex items-end justify-center flex-wrap gap-4 mb-4">
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-dribbble"></i></a></li>
+                                             </ul>
+                                             <p class="text-white/60 pb-2">NFT gem artist.wonderful gems Collect new stories.</p>
+                                        </div>
+                                   </div>
+                                   <div class="2xl:w-1/3 md:w-1/2 w-full px-3 sm:mb-8 mb-6">
+                                        <div class="p-4 text-center border border-white/10 rounded-3xl">
+                                             <a href="" class="block"><img class="rounded-3xl" src="assets/img/creator/creator-bg-5.jpg" alt="creator"></a>
+                                             <a href="" class="-mt-10"><img src="assets/img/user/collection-user-5.jpg" alt="user" class="w-20 h-20 rounded-full border-8 border-slate-950"></a>
+                                             <h3 class="text-lg font-semibold mb-2 hover:text-purple-500"><a href="profile.html">Ida _Chapman</a></h3>
+                                             <ul class="flex items-end justify-center flex-wrap gap-4 mb-4">
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-dribbble"></i></a></li>
+                                             </ul>
+                                             <p class="text-white/60 pb-2">NFT gem artist.wonderful gems Collect new stories.</p>
+                                        </div>
+                                   </div>
+                                   <div class="2xl:w-1/3 md:w-1/2 w-full px-3 sm:mb-8 mb-6">
+                                        <div class="p-4 text-center border border-white/10 rounded-3xl">
+                                             <a href="" class="block"><img class="rounded-3xl" src="assets/img/creator/creator-bg-6.jpg" alt="creator"></a>
+                                             <a href="" class="-mt-10"><img src="assets/img/user/collection-user-6.jpg" alt="user" class="w-20 h-20 rounded-full border-8 border-slate-950"></a>
+                                             <h3 class="text-lg font-semibold mb-2 hover:text-purple-500"><a href="profile.html">@xander_hall</a></h3>
+                                             <ul class="flex items-end justify-center flex-wrap gap-4 mb-4">
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                                  <li><a href="" class="text-white/60 hover:text-purple-500"><i class="fa-brands fa-dribbble"></i></a></li>
+                                             </ul>
+                                             <p class="text-white/60 pb-2">NFT gem artist.wonderful gems Collect new stories.</p>
+                                        </div>
+                                   </div>
+                                   <div class="w-full mt-5 text-center">
+                                        <a href=""
+                                             class="text-base font-medium bg-white text-slate-950 rounded-3xl border-2 border-white py-2 px-20 shadow-md shadow-white/20 hover:bg-transparent hover:text-white"><i
+                                                  class="fa-solid fa-rotate-right text-sm mr-2"></i> View all items</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- COLLECTION GRID -->
+
+          <!-- MARQUE TEXT -->
+          <section class="border-y border-white/10">
+               <div class="sl-container">
+                    <div class="sl-marque-text">
+                         <ul>
+                              <li>Discover & Callect Extraordinary Digital Art and Rare NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover & Callect Extraordinary Digital Art and Rare NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover & Callect Extraordinary Digital Art and Rare NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover & Callect Extraordinary Digital Art and Rare NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover & Callect Extraordinary Digital Art and Rare NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover & Callect Extraordinary Digital Art and Rare NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover & Callect Extraordinary Digital Art and Rare NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover & Callect Extraordinary Digital Art and Rare NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                              <li>Discover & Callect Extraordinary Digital Art and Rare NFT’s <i class="fa-regular fa-star text-yellow-400 px-3"></i></li>
+                         </ul>
+                    </div>
+               </div>
+          </section>
+          <!-- MARQUE TEXT -->
      </main>
      <!-- MAIN -->
 
