@@ -209,4 +209,18 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+  .indexBidSlider-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .indexBidSlider-pagination .swiper-pagination-bullet-active {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #007aff;
+  }
 }
