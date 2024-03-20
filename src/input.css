@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  .sl-container {
+  .sl-container-fluid {
     @apply max-w-[1380px] w-full px-3 mx-auto;
+  }
+  .sl-container {
+    @apply 2xl:max-w-[1200px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full px-3 mx-auto;
   }
   .sl-animation {
     @apply transition-all duration-300 ease-out;
@@ -84,7 +87,8 @@
 }
 
 @layer utilities {
-  .sl-submenu-hover > ul {
+  .sl-submenu-hover > ul,
+  .sl-submenu-hover > div {
     transition: all 0.3s ease-out 0s;
     visibility: hidden;
     opacity: 0;
@@ -92,10 +96,27 @@
     transform: perspective(300px) rotateX(-18deg);
   }
 
-  .sl-submenu-hover:hover > ul {
+  .sl-submenu-hover:hover > ul,
+  .sl-submenu-hover:hover > div {
     visibility: visible;
     opacity: 1;
     transform: perspective(300px) rotateX(0deg);
+  }
+
+  .sl-shadow-green {
+    box-shadow: inset 0px -4px 10px #04a038;
+  }
+
+  .sl-shadow-purple {
+    box-shadow: inset 0px -4px 10px #d333ff;
+  }
+
+  .sl-shadow-blue {
+    box-shadow: inset 0px -4px 10px #007bff;
+  }
+
+  .sl-shadow-orange {
+    box-shadow: inset 0px -4px 10px #ff8e2f;
   }
 
   .sl-title-shadow {
@@ -132,6 +153,13 @@
     z-index: -1;
   }
 
+  .sl-clip-rightBottom {
+    clip-path: polygon(100% 0, 100% 58%, 58% 100%, 0 100%, 0 0);
+  }
+
+  .sl-clip-leftTop {
+    clip-path: polygon(42% 0, 100% 0, 100% 100%, 0 100%, 0 42%);
+  }
   .sl-marque-text ul {
     animation: marquee 40s linear infinite forwards;
   }
