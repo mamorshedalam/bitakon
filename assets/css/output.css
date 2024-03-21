@@ -706,7 +706,8 @@ a,
   opacity: 1;
 }
 
-.sl-marque-text {
+.sl-marquee-rotate,
+  .sl-marque-text {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -753,9 +754,40 @@ a,
   }
 }
 
-.sl-marque-text ul {
+.sl-marquee-rotate ul,
+  .sl-marque-text ul {
   display: flex;
   width: 300%;
+}
+
+.sl-marquee-rotate {
+  --tw-rotate: 3deg;
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+  --tw-gradient-from: #f43f5e var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(244 63 94 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-from-position: 5%;
+  --tw-gradient-to: #a855f7 var(--tw-gradient-to-position);
+  --tw-gradient-to-position: 50%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.sl-marquee-rotate li {
+  padding-right: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .sl-marquee-rotate li {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 .sl-marque-text li {
@@ -1160,6 +1192,10 @@ a,
   margin-bottom: 5rem;
 }
 
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -1292,6 +1328,10 @@ a,
   margin-top: 2.5rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1310,14 +1350,6 @@ a,
 
 .mt-\[70px\] {
   margin-top: 70px;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
-.mt-14 {
-  margin-top: 3.5rem;
 }
 
 .block {
@@ -1830,6 +1862,11 @@ a,
   border-bottom-left-radius: 0.75rem;
 }
 
+.rounded-e-full {
+  border-start-end-radius: 9999px;
+  border-end-end-radius: 9999px;
+}
+
 .rounded-r-full {
   border-top-right-radius: 9999px;
   border-bottom-right-radius: 9999px;
@@ -1853,11 +1890,6 @@ a,
 .rounded-t-xl {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
-}
-
-.rounded-e-full {
-  border-start-end-radius: 9999px;
-  border-end-end-radius: 9999px;
 }
 
 .rounded-es-none {
@@ -2157,12 +2189,6 @@ a,
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-white {
-  --tw-gradient-from: #fff var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .via-white\/10 {
   --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(255 255 255 / 0.1) var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -2402,6 +2428,11 @@ a,
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .py-24 {
@@ -2814,6 +2845,10 @@ a,
   line-height: 1.25rem;
 }
 
+.leading-\[2\.75rem\] {
+  line-height: 2.75rem;
+}
+
 .leading-\[2\.8rem\] {
   line-height: 2.8rem;
 }
@@ -2852,10 +2887,6 @@ a,
 
 .leading-tight {
   line-height: 1.25;
-}
-
-.leading-\[2\.75rem\] {
-  line-height: 2.75rem;
 }
 
 .text-blue-500 {
@@ -3136,7 +3167,8 @@ a,
           clip-path: polygon(42% 0, 100% 0, 100% 100%, 0 100%, 0 42%);
 }
 
-.sl-marque-text ul {
+.sl-marquee-rotate ul,
+  .sl-marque-text ul {
   animation: marquee 40s linear infinite forwards;
 }
 
@@ -3227,6 +3259,34 @@ a,
   height: 14px;
   border-radius: 50%;
   border: 2px solid #007aff;
+}
+
+.sliderBox .noUi-target {
+  border-radius: 12px;
+  margin-top: 15px;
+  height: 6px;
+  background: #191c3c;
+  box-shadow: none;
+  border: none;
+}
+
+.sliderBox .noUi-connect {
+  background: #a855f7;
+}
+
+.sliderBox .noUi-horizontal .noUi-handle {
+  height: 24px;
+  width: 24px;
+  background: #a855f7;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0px 4px 10px rgba(5, 9, 43, 0.3);
+  top: -9px;
+}
+
+.sliderBox .noUi-horizontal .noUi-handle::after,
+  .sliderBox .noUi-horizontal .noUi-handle::before {
+  display: none;
 }
 
 .before\:visible::before {
@@ -4272,6 +4332,11 @@ a,
     padding-right: 0.5rem;
   }
 
+  .sm\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -4290,11 +4355,6 @@ a,
   .sm\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
-  }
-
-  .sm\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
   }
 
   .sm\:pb-\[28rem\] {
@@ -4685,6 +4745,10 @@ a,
     width: 25%;
   }
 
+  .xl\:w-1\/5 {
+    width: 20%;
+  }
+
   .xl\:w-1\/6 {
     width: 16.666667%;
   }
@@ -4719,10 +4783,6 @@ a,
 
   .xl\:w-7\/12 {
     width: 58.333333%;
-  }
-
-  .xl\:w-1\/5 {
-    width: 20%;
   }
 
   .xl\:items-end {

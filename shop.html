@@ -17,6 +17,8 @@
      <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
      <!-- SWIPER CSS -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+     <!-- NOUI SLIDER -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.0/nouislider.min.css">
      <!-- TAILWIND CSS -->
      <link href="./assets/css/output.css" rel="stylesheet">
      <!-- ALPINE JS -->
@@ -437,8 +439,18 @@
                                                   class="fa-solid fa-chevron-down"></i></span>
                                    </h2>
                                    <div :class="active ? 'max-h-80' : 'max-h-0'" class=" overflow-hidden sl-animation">
-                                        <form action="#" class="py-2.5 px-5 bg-white/5">
-
+                                        <form action="#" class="sliderBox py-2.5 px-5 bg-white/5">
+                                             <div id="indexRangeSlider"></div>
+                                             <div class="flex items-center justify-between mt-5">
+                                                  <div class="flex items-center text-xs">
+                                                       <input type="text" id="indexProductMin" class="font-medium w-12">
+                                                       <span class="font-semibold">ETH</span>
+                                                  </div>
+                                                  <div class="flex items-center text-xs">
+                                                       <input type="text" id="indexProductMax" class="font-medium w-12">
+                                                       <span class="font-semibold">ETH</span>
+                                                  </div>
+                                             </div>
                                         </form>
                                    </div>
                               </div>
@@ -1435,7 +1447,38 @@
 
      <!-- SCRIPT LINKS -->
      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.0/nouislider.min.js"></script>
      <script>
+          
+          var slider = document.getElementById('indexRangeSlider');
+          noUiSlider.create(slider, {
+               start: [0, 4],
+               connect: true,
+               margin: 0.10,
+               range: {
+                    'min': 0,
+                    'max': 10
+               },
+               format: {
+                    to: function (value) {
+                         return value;
+                    },
+                    from: function (value) {
+                         return Number(value.replace());
+                    }
+               }
+          });
+          var marginMin = document.getElementById('indexProductMin'),
+               marginMax = document.getElementById('indexProductMax');
+
+          slider.noUiSlider.on('update', function (values, handle) {
+               if (handle) {
+                    marginMax.value = values[handle].toFixed(2);
+               } else {
+                    marginMin.value = values[handle].toFixed(2);
+               }
+          });
+
      </script>
 </body>
 

@@ -19,11 +19,22 @@
   .sl-cart-border {
     @apply relative overflow-hidden w-full rounded-xl px-[0.115rem] pt-[0.115rem] from-white/10 to-white/0 before:absolute before:inset-0 before:w-full before:rounded-xl before:bg-gradient-to-b before:h-full before:from-purple-500 before:to-purple-500/0 before:-z-10 before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible sl-animation;
   }
+  .sl-marquee-rotate,
   .sl-marque-text {
-    @apply relative w-full text-nowrap overflow-hidden md:before:absolute before:left-0 before:top-0 before:h-full before:w-96 before:bg-gradient-to-l before:from-white/0 before:to-slate-950 before:z-10 md:after:absolute after:right-0 after:top-0 after:h-full after:w-96 after:bg-gradient-to-r after:from-white/0 after:to-slate-950 after:z-10;
+    @apply relative w-full text-nowrap overflow-hidden;
   }
+  .sl-marque-text {
+    @apply md:before:absolute before:left-0 before:top-0 before:h-full before:w-96 before:bg-gradient-to-l before:from-white/0 before:to-slate-950 before:z-10 md:after:absolute after:right-0 after:top-0 after:h-full after:w-96 after:bg-gradient-to-r after:from-white/0 after:to-slate-950 after:z-10;
+  }
+  .sl-marquee-rotate ul,
   .sl-marque-text ul {
     @apply flex w-[300%];
+  }
+  .sl-marquee-rotate {
+    @apply py-6 bg-gradient-to-l from-rose-500 to-purple-500 from-5% to-50% rotate-3 scale-105;
+  }
+  .sl-marquee-rotate li {
+    @apply md:text-4xl text-2xl pr-8 font-semibold leading-10;
   }
   .sl-marque-text li {
     @apply relative w-1/2 h-10 leading-10;
@@ -160,9 +171,11 @@
   .sl-clip-leftTop {
     clip-path: polygon(42% 0, 100% 0, 100% 100%, 0 100%, 0 42%);
   }
+  .sl-marquee-rotate ul,
   .sl-marque-text ul {
     animation: marquee 40s linear infinite forwards;
   }
+
   @keyframes marquee {
     0% {
       transform: translateX(0);
@@ -247,5 +260,30 @@
     height: 14px;
     border-radius: 50%;
     border: 2px solid #007aff;
+  }
+  .sliderBox .noUi-target {
+    border-radius: 12px;
+    margin-top: 15px;
+    height: 6px;
+    background: #191c3c;
+    box-shadow: none;
+    border: none;
+  }
+  .sliderBox .noUi-connect {
+    background: #a855f7;
+  }
+  .sliderBox .noUi-horizontal .noUi-handle {
+    height: 24px;
+    width: 24px;
+    background: #a855f7;
+
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0px 4px 10px rgba(5, 9, 43, 0.3);
+    top: -9px;
+  }
+  .sliderBox .noUi-horizontal .noUi-handle::after,
+  .sliderBox .noUi-horizontal .noUi-handle::before {
+    display: none;
   }
 }
