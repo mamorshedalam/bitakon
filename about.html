@@ -303,7 +303,35 @@
                                    </svg>
                                    Wallet
                               </a>
-                              <a href="" class="sm:flex hidden ml-2.5 w-9 h-9 rounded-full overflow-hidden"><img src="assets/img/user/user.jpg" alt="user"></a>
+                              <div class="sl-submenu-hover relative sm:flex hidden ml-2.5 py-5">
+                                   <a href=""><img class="w-9 h-9 rounded-full" src="assets/img/user/user.jpg" alt="user"></a>
+                                   <div class="absolute top-full right-0 w-56 bg-slate-900 border border-white/10 shadow-md shadow-slate-950/20 rounded-xl z-50">
+                                        <img src="assets/img/banner/user-cover.png" alt="cover">
+                                        <div class="flex items-end -mt-6 mb-4 px-5">
+                                             <img src="assets/img/user/user.jpg" alt="logo" class="mr-4 w-14 h-14 rounded-full border-4 border-slate-950">
+                                             <h4 class="text-base font-semibold mb-1 text-white">Robin Milford</h4>
+                                        </div>
+                                        <div class="px-5">
+                                             <h5 class="text-white font-medium mb-1">Wallet:</h5>
+                                             <p class="mb-1">0xF74d ... 12hf204
+                                                  <button class="float-right">
+                                                       <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M5.80388 13.2632H3.5941C1.28115 13.2632 0 11.9967 0 9.68638V3.57677C0 1.27497 1.27255 0 3.5941 0H7.52354C9.83649 0 11.1176 1.26642 11.1176 3.57677C11.1176 3.92761 10.8253 4.21854 10.4728 4.21854C10.1202 4.21854 9.8279 3.92761 9.8279 3.57677C9.8279 1.96808 9.14003 1.28353 7.52354 1.28353H3.5941C1.97762 1.28353 1.28975 1.96808 1.28975 3.57677V9.68638C1.28975 11.2951 1.97762 11.9796 3.5941 11.9796H5.80388C6.15641 11.9796 6.44875 12.2706 6.44875 12.6214C6.44875 12.9722 6.15641 13.2632 5.80388 13.2632Z"
+                                                                 fill="#3771FE"></path>
+                                                            <path d="M11.8705 14H9.54195C8.17131 14 7.41211 13.1959 7.41211 11.729V7.84992C7.41211 6.38846 8.16622 5.57895 9.54195 5.57895H11.8705C13.2411 5.57895 14.0003 6.38302 14.0003 7.84992V11.729C14.0003 13.1959 13.2462 14 11.8705 14ZM9.54195 6.39389C8.58403 6.39389 8.17641 6.82852 8.17641 7.84992V11.729C8.17641 12.7504 8.58403 13.1851 9.54195 13.1851H11.8705C12.8284 13.1851 13.236 12.7504 13.236 11.729V7.84992C13.236 6.82852 12.8284 6.39389 11.8705 6.39389H9.54195Z"
+                                                                 fill="#3771FE" stroke="#3771FE" stroke-width="0.2"></path>
+                                                       </svg>
+                                                  </button>
+                                             </p>
+                                             <p class="text-white font-medium my-2.5">Balance: <span class="text-purple-500">0.075ETH</span></p>
+                                        </div>
+                                        <ul class="border-t border-white/10 font-medium px-5 py-2.5">
+                                             <li class="mb-1.5"><a href="profile.html" class="hover:text-purple-500"><i class="fa-regular fa-user mr-1"></i> Profile</a></li>
+                                             <li class="mb-1.5"><a href="" class="hover:text-purple-500"><i class="fa-solid fa-gear mr-1"></i> Settings</a></li>
+                                             <li class="mb-1.5"><a href="login.html" class="hover:text-purple-500"><i class="fa-solid fa-right-from-bracket mr-1"></i> Logout</a></li>
+                                        </ul>
+                                   </div>
+                              </div>
                               <button @click="sidebar = !sidebar" class="xl:hidden block text-2xl xl:ml-0 ml-2.5 hover:text-white"><i class="fa-solid fa-bars"></i></button>
                          </div>
                     </div>
@@ -313,6 +341,288 @@
 
      <!-- MAIN -->
      <main>
+          <!-- BREADCRUMB -->
+          <section class="pt-40 pb-10">
+               <img class="absolute inset-0 -z-10" src="assets/img/banner/breadcrumb-shape-1.png" alt="banner">
+          </section>
+          <!-- BREADCRUMB -->
+
+          <!-- ABOUT -->
+          <section>
+               <div class="sl-container">
+                    <div class="flex flex-wrap justify-center text-center">
+                         <div class="md:w-5/6 w-full">
+                              <div class="md:px-8 mb-16">
+                                   <span class="font-medium text-purple-500">About Foundation</span>
+                                   <h3 class="sm:text-6xl text-3xl font-semibold">We do not create the future. We explore it.</h3>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                         <div class="xl:w-1/4 lg:w-1/3 w-full lg:px-2">
+                              <img src="assets/img/about/about-1.jpg" alt="" class="rounded-[28px] mb-8">
+                         </div>
+                         <div class="xl:w-3/4 lg:w-2/3 w-full lg:px-2">
+                              <div class="flex flex-wrap items-end">
+                                   <div class="md:w-1/2 w-full md:px-3">
+                                        <img src="assets/img/about/about-2.jpg" alt="" class="rounded-[28px] mb-8">
+                                   </div>
+                                   <div class="md:w-1/4 sm:w-1/2 w-full md:px-3">
+                                        <img src="assets/img/about/about-3.jpg" alt="" class="rounded-[28px] mb-8">
+                                   </div>
+                                   <div class="md:w-1/4 sm:w-1/2 w-full md:px-3">
+                                        <img src="assets/img/about/about-4.jpg" alt="" class="rounded-[28px] mb-8">
+                                   </div>
+                              </div>
+                              <div class="flex flex-wrap items-start">
+                                   <div class="lg:w-1/3 w-full md:px-3">
+                                        <img src="assets/img/about/about-5.jpg" alt="" class="rounded-[28px] mb-8">
+                                   </div>
+                                   <div class="lg:w-5/12 sm:w-1/2 w-full md:px-3">
+                                        <img src="assets/img/about/about-6.jpg" alt="" class="rounded-[28px] mb-8">
+                                   </div>
+                                   <div class="lg:w-1/4 sm:w-1/2 w-full md:px-3">
+                                        <img src="assets/img/about/about-7.jpg" alt="" class="rounded-[28px] mb-8">
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- ABOUT -->
+
+          <!-- MISSION -->
+          <section class="pb-14">
+               <div class="sl-container">
+                    <div class="flex flex-wrap justify-center">
+                         <div class="xl:w-4/6 lg:w-5/6 w-full">
+                              <span class="font-medium text-purple-500">OUR MISSION</span>
+                              <p class="text-xl font-medium mb-11 mt-2 leading-9">At Bitakon, we're excited about a brand new type of digital good called a non-fungible token, or NFT. NFTs have
+                                   exciting new properties:unique, provably scarce, tradeable, and usable across multiple applications. Just like physical goods, you can do whatever you want with
+                                   them!</p>
+                              <div class="relative">
+                                   <span class="absolute md:block hidden top-0 left-[30%] w-px h-[200px] bg-gradient-to-t from-white/0 via-white/10 to-white/0"></span>
+                                   <span class="absolute md:block hidden top-0 right-[30%] w-px h-[200px] bg-gradient-to-t from-white/0 via-white/10 to-white/0"></span>
+                                   <span class="absolute md:block hidden left-0 top-[34%] h-px w-full bg-gradient-to-r from-white/0 via-white/10 to-white/0"></span>
+                                   <div class="flex flex-wrap">
+                                        <div class="md:w-1/3 sm:w-1/2 w-full pb-8 md:mb-8">
+                                             <div class="flex items-start">
+                                                  <div class="mt-1 mr-2.5">
+                                                       <img src="assets/img/icon/counter-1.png" alt="">
+                                                  </div>
+                                                  <div>
+                                                       <h4 class="text-4xl font-semibold mb-0.5">0</h4>
+                                                       <p class="text-white/60">Since Launching</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="md:w-1/3 sm:w-1/2 w-full pb-8 md:mb-8">
+                                             <div class="flex items-start md:justify-center">
+                                                  <div class="mt-1 mr-2.5">
+                                                       <img src="assets/img/icon/counter-2.png" alt="">
+                                                  </div>
+                                                  <div>
+                                                       <h4 class="text-4xl font-semibold mb-0.5">0M+</h4>
+                                                       <p class="text-white/60">Total User</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="md:w-1/3 sm:w-1/2 w-full pb-8 md:mb-8">
+                                             <div class="flex items-start md:justify-end">
+                                                  <div class="mt-1 mr-2.5">
+                                                       <img src="assets/img/icon/counter-3.png" alt="">
+                                                  </div>
+                                                  <div>
+                                                       <h4 class="text-4xl font-semibold mb-0.5">0+</h4>
+                                                       <p class="text-white/60">Total Employees</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="md:w-1/3 sm:w-1/2 w-full pb-8 md:mb-8">
+                                             <div class="flex items-start">
+                                                  <div class="mt-1 mr-2.5">
+                                                       <img src="assets/img/icon/counter-4.png" alt="">
+                                                  </div>
+                                                  <div>
+                                                       <h4 class="text-4xl font-semibold mb-0.5">0M+</h4>
+                                                       <p class="text-white/60">Total Collections</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="md:w-1/3 sm:w-1/2 w-full pb-8 md:mb-8">
+                                             <div class="flex items-start md:justify-center">
+                                                  <div class="mt-1 mr-2.5">
+                                                       <img src="assets/img/icon/counter-5.png" alt="">
+                                                  </div>
+                                                  <div>
+                                                       <h4 class="text-4xl font-semibold mb-0.5">0k+</h4>
+                                                       <p class="text-white/60">NFT Created</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="md:w-1/3 sm:w-1/2 w-full pb-8 md:mb-8">
+                                             <div class="flex items-start md:justify-end">
+                                                  <div class="mt-1 mr-2.5">
+                                                       <img src="assets/img/icon/counter-6.png" alt="">
+                                                  </div>
+                                                  <div>
+                                                       <h4 class="text-4xl font-semibold mb-0.5">$0B+</h4>
+                                                       <p class="text-white/60">Trading Volume</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- MISSION -->
+
+          <!-- VIDEO -->
+          <section class="pb-28">
+               <div class="sl-container">
+                    <div class="relative">
+                         <img src="assets/img/banner/video-bg.jpg" alt="" class="rounded-3xl">
+                         <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 p-14 bg-white/10 border border-white/30 shadow-2xl shadow-slate-950/20 backdrop-blur rounded-full">
+                              <a href="" class="sl-play-animation relative w-20 h-20 leading-[5rem] text-center rounded-full text-purple-500 bg-white text-xl"><i class="fa-solid fa-play"></i></a>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- VIDEO -->
+
+          <!-- TEAM -->
+          <section>
+               <div class="sl-container">
+                    <div class="text-center mb-10">
+                         <span class="font-medium text-purple-500 uppercase">Team Member</span>
+                         <h3 class="sm:text-5xl text-3xl font-semibold mt-2">Meet our team member</h3>
+                    </div>
+                    <div class="flex flex-wrap">
+                         <div class="xl:w-1/5 lg:w-1/4 sm:w-1/2 w-full sm:px-3 mb-6">
+                              <div class="p-9 border-2 border-transparent rounded-2xl hover:border-purple-500 text-center sl-animation">
+                                   <a href="#"><img src="assets/img/team/team-1.jpg" alt="team" class="w-32 h-32 rounded-full mb-5"></a>
+                                   <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="profile.html">Bessie Cooper</a></h3>
+                                   <p class="text-white/60 mb-3">Co-founder</p>
+                                   <ul class="flex gap-2 justify-center">
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-linkedin"></i></a>
+                                        </li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="xl:w-1/5 lg:w-1/4 sm:w-1/2 w-full sm:px-3 mb-6">
+                              <div class="p-9 border-2 border-transparent rounded-2xl hover:border-purple-500 text-center sl-animation">
+                                   <a href="#"><img src="assets/img/team/team-2.jpg" alt="team" class="w-32 h-32 rounded-full mb-5"></a>
+                                   <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="profile.html">Wade Warren</a></h3>
+                                   <p class="text-white/60 mb-3">Finance</p>
+                                   <ul class="flex gap-2 justify-center">
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-linkedin"></i></a>
+                                        </li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="xl:w-1/5 lg:w-1/4 sm:w-1/2 w-full sm:px-3 mb-6">
+                              <div class="p-9 border-2 border-transparent rounded-2xl hover:border-purple-500 text-center sl-animation">
+                                   <a href="#"><img src="assets/img/team/team-3.jpg" alt="team" class="w-32 h-32 rounded-full mb-5"></a>
+                                   <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="profile.html">Esther Howard</a></h3>
+                                   <p class="text-white/60 mb-3">UI Designer</p>
+                                   <ul class="flex gap-2 justify-center">
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-linkedin"></i></a>
+                                        </li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="xl:w-1/5 lg:w-1/4 sm:w-1/2 w-full sm:px-3 mb-6">
+                              <div class="p-9 border-2 border-transparent rounded-2xl hover:border-purple-500 text-center sl-animation">
+                                   <a href="#"><img src="assets/img/team/team-4.jpg" alt="team" class="w-32 h-32 rounded-full mb-5"></a>
+                                   <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="profile.html">Guy Hawkins</a></h3>
+                                   <p class="text-white/60 mb-3">Manager</p>
+                                   <ul class="flex gap-2 justify-center">
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-linkedin"></i></a>
+                                        </li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="xl:w-1/5 lg:w-1/4 sm:w-1/2 w-full sm:px-3 mb-6">
+                              <div class="p-9 border-2 border-transparent rounded-2xl hover:border-purple-500 text-center sl-animation">
+                                   <a href="#"><img src="assets/img/team/team-5.jpg" alt="team" class="w-32 h-32 rounded-full mb-5"></a>
+                                   <h3 class="text-lg font-semibold mb-1 hover:text-purple-500"><a href="profile.html">Mark Cuban</a></h3>
+                                   <p class="text-white/60 mb-3">Co-founder</p>
+                                   <ul class="flex gap-2 justify-center">
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="" class="h-10 w-10 leading-10 rounded-full text-center border border-white/10 text-white/80 hover:bg-purple-500"><i class="fa-brands fa-linkedin"></i></a>
+                                        </li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="h-px w-full mb-24 mt-14 bg-gradient-to-r from-white/0 via-white/10 to-white/0"></div>
+               </div>
+          </section>
+          <!-- TEAM -->
+
+          <!-- BRAND -->
+          <section class="pb-20">
+               <div class="sl-container">
+                    <div class="flex flex-wrap justify-center">
+                         <div class="2xl:w-1/5 mb-8 px-2"><img src="assets/img/brand/brand-1.png" alt="brand"></div>
+                         <div class="2xl:w-1/5 mb-8 px-2"><img src="assets/img/brand/brand-2.png" alt="brand"></div>
+                         <div class="2xl:w-1/5 mb-8 px-2"><img src="assets/img/brand/brand-3.png" alt="brand"></div>
+                         <div class="2xl:w-1/5 mb-8 px-2"><img src="assets/img/brand/brand-4.png" alt="brand"></div>
+                         <div class="2xl:w-1/5 mb-8 px-2"><img src="assets/img/brand/brand-5.png" alt="brand"></div>
+                         <div class="2xl:w-1/5 mb-8 px-2"><img src="assets/img/brand/brand-6.png" alt="brand"></div>
+                         <div class="2xl:w-1/5 mb-8 px-2"><img src="assets/img/brand/brand-7.png" alt="brand"></div>
+                         <div class="2xl:w-1/5 mb-8 px-2"><img src="assets/img/brand/brand-8.png" alt="brand"></div>
+                         <div class="2xl:w-1/5 mb-8 px-2"><img src="assets/img/brand/brand-9.png" alt="brand"></div>
+                    </div>
+               </div>
+          </section>
+          <!-- BRAND -->
+
+          <!-- JOIN -->
+          <section class="pb-24">
+               <div class="sl-container">
+                    <h2 class="text-center text-2xl font-semibold mb-14">Interested in joining us?</h2>
+                    <div class="flex flex-wrap justify-center">
+                         <div class="lg:w-1/3 md:w-1/2 md:px-3 mb-8 text-center">
+                              <img src="assets/img/icon/counter-3.png" alt="" class="h-11 w-fit mx-auto mb-6">
+                              <h3 class="text-lg font-semibold mb-5 text-white/60">Join our <span class="font-bold text-white">Community</span></h3>
+                              <div>
+                                   <a href="" class="h-11 w-14 leading-[2.75rem] text-center bg-gradient-to-t from-white/10 via-white/10 to-white/5 rounded-s-full mr-1 hover:text-purple-500"><i class="fa-brands fa-facebook-f"></i></a>
+                                   <a href="" class="h-11 w-14 leading-[2.75rem] text-center bg-gradient-to-t from-white/10 via-white/10 to-white/5 mr-1 hover:text-purple-500"><i class="fa-brands fa-instagram"></i></a>
+                                   <a href="" class="h-11 w-14 leading-[2.75rem] text-center bg-gradient-to-t from-white/10 via-white/10 to-white/5 mr-1 hover:text-purple-500"><i class="fa-brands fa-discord"></i></a>
+                                   <a href="" class="h-11 w-14 leading-[2.75rem] text-center bg-gradient-to-t from-white/10 via-white/10 to-white/5 rounded-e-full mr-1 hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+                              </div>
+                         </div>
+                         <div class="lg:w-1/3 md:w-1/2 md:px-3 mb-8 text-center">
+                              <img src="assets/img/icon/counter-5.png" alt="" class="h-11 w-fit mx-auto mb-6">
+                              <h3 class="text-lg font-semibold mb-5 text-white/60">Become a <span class="font-bold text-white">Creator</span></h3>
+                              <a href="" class="font-semibold text-base capitalize text-white bg-purple-500 rounded-full py-2.5 px-20 border-2 border-purple-500 hover:border-white hover:bg-transparent">sign up</a>
+                         </div>
+                         <div class="lg:w-1/3 md:w-1/2 md:px-3 mb-8 text-center">
+                              <img src="assets/img/icon/counter-5.png" alt="" class="h-11 w-fit mx-auto mb-6">
+                              <h3 class="text-lg font-semibold mb-5 text-white/60">Become a <span class="font-bold text-white">Creator</span></h3>
+                              <a href="" class="font-semibold text-base capitalize text-white bg-gradient-to-t from-white/10 via-white/10 to-white/5 rounded-full py-2.5 px-20 border-2 border-purple-500 hover:border-white">team@Bitakon.com</a>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- JOIN -->
      </main>
      <!-- MAIN -->
 
