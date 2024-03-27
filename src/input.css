@@ -199,6 +199,14 @@
     animation: videoBtn 1.75s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     z-index: -2;
   }
+  @media (max-width: 992px) {
+
+    .sl-play-animation::after {
+      width: 90px;
+      height: 90px;
+    }
+    
+  }
   @keyframes videoBtn {
     0% {
       transform: translate(-50%, -50%) scale(0);
